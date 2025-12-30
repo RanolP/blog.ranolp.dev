@@ -1,5 +1,7 @@
-import { promises as fs } from 'fs';
-import path from 'path';
+'use server';
+
+import fs from 'node:fs/promises';
+import path from 'node:path';
 import * as v from 'valibot';
 import { PostSchema, type Post } from './types';
 
@@ -34,6 +36,7 @@ export async function getPostById(id: string): Promise<Post | null> {
     const filePath = path.join(POSTS_DIR, `${id}.json`);
     const content = await fs.readFile(filePath, 'utf-8');
     const parsedData = JSON.parse(content);
+
     return v.parse(PostSchema, parsedData);
   } catch (error) {
     if (error instanceof Error && 'code' in error && error.code === 'ENOENT') {
