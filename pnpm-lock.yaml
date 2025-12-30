@@ -32,6 +32,9 @@ importers:
       remix-flat-routes:
         specifier: ^0.8.5
         version: 0.8.5
+      valibot:
+        specifier: ^1.2.0
+        version: 1.2.0(typescript@5.9.3)
     devDependencies:
       '@react-router/dev':
         specifier: 7.10.1
