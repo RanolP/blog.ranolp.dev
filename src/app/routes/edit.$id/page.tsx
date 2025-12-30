@@ -1,6 +1,8 @@
 'use server';
 
-import { Form, useNavigation, redirect, Link } from 'react-router';
+import { Form, useNavigation, redirect } from 'react-router';
+import { Icon } from '@iconify/react';
+import { BackButton } from '~/components/BackButton';
 import { getPostById, writePost } from '~/services/posts/repository.server';
 import { extractTitleFromContent, type Post } from '~/services/posts/types';
 import type { JSONContent } from '~/features/tiptap';
@@ -87,12 +89,7 @@ export default async function EditPost({
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-6">
       <div className="flex items-center gap-4">
-        <Link
-          to="/"
-          className="px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
-        >
-          ← Back
-        </Link>
+        <BackButton />
         <h1 className="text-3xl font-bold">Edit Post</h1>
       </div>
 
@@ -105,8 +102,9 @@ export default async function EditPost({
           <button
             type="submit"
             disabled={isSubmitting}
-            className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            className="flex items-center gap-2 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
+            <Icon icon="lucide:save" className="w-4 h-4" />
             {isSubmitting ? 'Saving...' : 'Save Post'}
           </button>
         </div>

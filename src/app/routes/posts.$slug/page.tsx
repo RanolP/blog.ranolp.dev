@@ -1,6 +1,8 @@
 'use server';
 
 import { Link } from 'react-router';
+import { Icon } from '@iconify/react';
+import { BackButton } from '~/components/BackButton';
 import { getPostBySlug } from '~/services/posts/repository.server';
 import { extractTitleFromContent, type Post } from '~/services/posts/types';
 import { TiptapSSR } from '~/features/tiptap';
@@ -33,12 +35,7 @@ export default function PostPage({ loaderData: post }: Route.ComponentProps) {
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-6">
       <div className="flex items-center gap-4">
-        <Link
-          to="/"
-          className="px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
-        >
-          ← Back
-        </Link>
+        <BackButton />
         {post.metadata.publishedAt === null && (
           <span className="px-2 py-1 text-xs font-medium bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded">
             Draft
@@ -47,8 +44,9 @@ export default function PostPage({ loaderData: post }: Route.ComponentProps) {
         {import.meta.env.DEV && (
           <Link
             to={`/edit/${post.id}`}
-            className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
           >
+            <Icon icon="lucide:edit" className="w-4 h-4" />
             Edit
           </Link>
         )}
