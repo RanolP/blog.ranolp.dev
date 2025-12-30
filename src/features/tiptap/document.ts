@@ -27,26 +27,35 @@ export const PostDocument = Document.extend({
           const { tr } = newState;
           const firstChild = newState.doc.firstChild;
 
-          // Ensure first child is a heading with level 1
-          if (firstChild && firstChild.type.name === 'heading') {
-            const currentLevel = firstChild.attrs.level;
-            if (currentLevel !== 1) {
-              // Transform the first heading to h1
-              const pos = 1; // Position after the document node
-              tr.setNodeMarkup(pos, undefined, {
-                ...firstChild.attrs,
-                level: 1,
-              });
-              return tr;
-            }
-          } else if (firstChild && firstChild.type.name !== 'heading') {
-            // If first child is not a heading, we need to insert one
-            // This shouldn't happen due to schema, but handle it just in case
+          // If document is empty, insert an empty h1
+          if (!firstChild) {
             const heading = newState.schema.nodes.heading.create(
               { level: 1 },
               [],
             );
             tr.insert(1, heading);
+            return tr;
+          }
+
+          // Ensure first child is a heading with level 1
+          if (firstChild.type.name === 'heading') {
+            const currentLevel = firstChild.attrs.level;
+            if (currentLevel !== 1) {
+              // Position 1 is right after the document node, where the first child starts
+              tr.setNodeMarkup(1, undefined, {
+                ...firstChild.attrs,
+                level: 1,
+              });
+              return tr;
+            }
+          } else {
+            // If first child is not a heading, replace it with h1
+            // This shouldn't happen due to schema, but handle it just in case
+            const heading = newState.schema.nodes.heading.create(
+              { level: 1 },
+              firstChild.content,
+            );
+            tr.replaceWith(1, 1 + firstChild.nodeSize, heading);
             return tr;
           }
 

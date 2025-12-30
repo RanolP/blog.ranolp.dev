@@ -102,7 +102,7 @@ export function meta({ data }: Route.MetaArgs) {
   return [{ title: title ? `Edit ${title} - RanolP` : 'Edit Post - RanolP' }];
 }
 
-export default async function EditPost({
+export default function EditPost({
   loaderData: post,
   actionData,
 }: Route.ComponentProps) {

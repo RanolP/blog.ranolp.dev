@@ -5,7 +5,7 @@ import { flatRoutes } from 'remix-flat-routes';
 const routes = remixRoutesOptionAdapter((defineRoutes) =>
   flatRoutes('routes', defineRoutes, {
     appDir: 'src/app',
-    ignoredRouteFiles: ['!**/+(page|*_route|route|*_layout|layout).tsx'],
+    ignoredRouteFiles: ['!**/+(page|*_route|route|*_layout|layout).+(ts|tsx)'],
   }),
 ) satisfies RouteConfig;
 

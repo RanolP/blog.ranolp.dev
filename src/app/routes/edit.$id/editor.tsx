@@ -29,7 +29,50 @@ export function EditorClient({ initialContent, postId }: EditorClientProps) {
   }, [initialContent]);
 
   useEffect(() => {
-    editor?.commands.setContent(initialContent, false);
+    if (!editor) return;
+
+    // Save current cursor position before updating content
+    const { from, to } = editor.state.selection;
+
+    // Only update content if it's actually different to avoid unnecessary resets
+    const currentContent = editor.getJSON();
+    const contentChanged =
+      JSON.stringify(currentContent) !== JSON.stringify(initialContent);
+
+    if (contentChanged) {
+      // Set content without emitting update events
+      editor.commands.setContent(initialContent, false);
+
+      // Restore cursor position after content is set
+      // Use setTimeout with 0 to ensure it runs after the content update
+      setTimeout(() => {
+        try {
+          // Try to restore the exact position
+          const docSize = editor.state.doc.content.size;
+          const safeFrom = Math.min(from, docSize);
+          const safeTo = Math.min(to, docSize);
+
+          // Only restore if the position is still valid
+          if (
+            safeFrom >= 0 &&
+            safeTo >= 0 &&
+            safeFrom <= docSize &&
+            safeTo <= docSize
+          ) {
+            editor.commands.setTextSelection({
+              from: safeFrom,
+              to: safeTo,
+            });
+          } else {
+            // If position is invalid, just focus at the end
+            editor.commands.focus('end');
+          }
+        } catch (error) {
+          // If position restoration fails, just focus the editor at the end
+          editor.commands.focus('end');
+        }
+      }, 0);
+    }
   }, [editor, initialContent]);
 
   // Auto-save functionality
