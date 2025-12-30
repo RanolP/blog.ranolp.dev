@@ -4,9 +4,34 @@ import { Link } from 'react-router';
 import { Icon } from '@iconify/react';
 import { BackButton } from '~/components/BackButton';
 import { getPostBySlug } from '~/services/posts/repository.server';
-import { extractTitleFromContent, type Post } from '~/services/posts/types';
+import {
+  extractTitleFromContent,
+  formatTimestampAsDate,
+  type Post,
+} from '~/services/posts/types';
 import { TiptapSSR } from '~/features/tiptap';
+import type { JSONContent } from '@tiptap/core';
 import type { Route } from './+types/page';
+
+function extractH1AndRest(content: JSONContent): {
+  h1: JSONContent | null;
+  rest: JSONContent;
+} {
+  if (!content.content || content.content.length === 0) {
+    return { h1: null, rest: content };
+  }
+
+  const firstChild = content.content[0];
+  if (firstChild.type === 'heading' && firstChild.attrs?.level === 1) {
+    const rest: JSONContent = {
+      ...content,
+      content: content.content.slice(1),
+    };
+    return { h1: firstChild, rest };
+  }
+
+  return { h1: null, rest: content };
+}
 
 export async function loader({ params }: Route.LoaderArgs): Promise<Post> {
   const { slug } = params;
@@ -31,6 +56,7 @@ export function meta({ data }: Route.MetaArgs) {
 
 export default function PostPage({ loaderData: post }: Route.ComponentProps) {
   const title = extractTitleFromContent(post.content);
+  const { h1, rest } = extractH1AndRest(post.content);
 
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-6">
@@ -53,18 +79,38 @@ export default function PostPage({ loaderData: post }: Route.ComponentProps) {
       </div>
 
       <article>
-        <TiptapSSR
-          content={post.content}
-          className="prose prose-sm sm:prose-base lg:prose-lg xl:prose-xl max-w-none dark:prose-invert tiptap-content"
-        />
+        {h1 && (
+          <>
+            <TiptapSSR
+              content={{ type: 'doc', content: [h1] }}
+              className="prose prose-sm sm:prose-base lg:prose-lg xl:prose-xl max-w-none dark:prose-invert tiptap-content"
+            />
+            <div className="text-sm text-gray-600 dark:text-gray-400 mt-2 mb-6">
+              {post.metadata.publishedAt ? (
+                <>
+                  {formatTimestampAsDate(post.metadata.publishedAt)}
+                  {formatTimestampAsDate(post.metadata.publishedAt) !==
+                    formatTimestampAsDate(post.metadata.lastModifiedAt) && (
+                    <>
+                      {' ⋅ '}
+                      <span className="font-medium">last edit</span>{' '}
+                      {formatTimestampAsDate(post.metadata.lastModifiedAt)}
+                    </>
+                  )}
+                </>
+              ) : (
+                formatTimestampAsDate(post.metadata.lastModifiedAt)
+              )}
+            </div>
+          </>
+        )}
+        {rest.content && rest.content.length > 0 && (
+          <TiptapSSR
+            content={rest}
+            className="prose prose-sm sm:prose-base lg:prose-lg xl:prose-xl max-w-none dark:prose-invert tiptap-content"
+          />
+        )}
       </article>
-
-      {post.metadata.publishedAt && (
-        <div className="text-sm text-gray-600 dark:text-gray-400">
-          Published: {new Date(post.metadata.publishedAt).toLocaleDateString()}
-        </div>
-      )}
     </div>
   );
 }
-

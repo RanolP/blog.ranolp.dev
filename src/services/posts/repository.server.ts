@@ -37,12 +37,21 @@ export async function getPostById(id: string): Promise<Post | null> {
     const content = await fs.readFile(filePath, 'utf-8');
     const parsedData = JSON.parse(content);
 
-    return v.parse(PostSchema, parsedData);
+    // Try to parse with schema, return null if validation fails (e.g., old format)
+    const result = v.safeParse(PostSchema, parsedData);
+    if (!result.success) {
+      console.warn(`Post ${id} failed validation, skipping:`, result.issues);
+      return null;
+    }
+
+    return result.output;
   } catch (error) {
     if (error instanceof Error && 'code' in error && error.code === 'ENOENT') {
       return null;
     }
-    throw error;
+    // For other errors (like JSON parse errors), log and return null
+    console.warn(`Error reading post ${id}:`, error);
+    return null;
   }
 }
 
@@ -78,13 +87,9 @@ export async function getPublishedPosts(): Promise<Post[]> {
  */
 export function sortPostsByDate(posts: Post[]): Post[] {
   return [...posts].sort((a, b) => {
-    const aDate = a.metadata.publishedAt
-      ? new Date(a.metadata.publishedAt).getTime()
-      : new Date(a.metadata.lastModifiedAt).getTime();
-    const bDate = b.metadata.publishedAt
-      ? new Date(b.metadata.publishedAt).getTime()
-      : new Date(b.metadata.lastModifiedAt).getTime();
-    return bDate - aDate;
+    const aDate = a.metadata.publishedAt ?? a.metadata.lastModifiedAt;
+    const bDate = b.metadata.publishedAt ?? b.metadata.lastModifiedAt;
+    return bDate - aDate; // Unix timestamps are already in seconds, can compare directly
   });
 }
 
