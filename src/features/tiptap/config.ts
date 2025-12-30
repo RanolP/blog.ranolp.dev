@@ -71,11 +71,49 @@ async function searchTwitterUsers(username: string): Promise<MentionItem[]> {
 }
 
 /**
+ * GitHub search function
+ */
+async function searchGitHubUsers(username: string): Promise<MentionItem[]> {
+  console.log('Calling GitHub API for username:', username);
+  const response = await fetch(
+    `/api/mentions/github?q=${encodeURIComponent(username)}`,
+  );
+  console.log('GitHub API response status:', response.status);
+  if (response.ok) {
+    const data = await response.json();
+    console.log('GitHub API response data:', data);
+    return (data.users || []).map(
+      (user: {
+        id: string;
+        label: string;
+        username?: string;
+        displayName?: string;
+        avatar?: string;
+        verified?: boolean;
+      }) => ({
+        id: user.id,
+        label: user.label,
+        username: user.username,
+        displayName: user.displayName,
+        avatar: user.avatar,
+        verified: user.verified || false,
+      }),
+    );
+  }
+  console.error(
+    'GitHub API request failed:',
+    response.status,
+    response.statusText,
+  );
+  return [];
+}
+
+/**
  * Debounced Twitter search wrapper
  * Uses es-toolkit's debounce to delay API calls until user stops typing
  * Wraps the debounced function to return a promise
  */
-const pendingPromises = new Map<
+const pendingTwitterPromises = new Map<
   string,
   Array<{
     resolve: (value: MentionItem[]) => void;
@@ -83,8 +121,8 @@ const pendingPromises = new Map<
   }>
 >();
 
-const debouncedSearch = debounce(async (username: string) => {
-  const promises = pendingPromises.get(username);
+const debouncedTwitterSearchFn = debounce(async (username: string) => {
+  const promises = pendingTwitterPromises.get(username);
   if (!promises || promises.length === 0) {
     return;
   }
@@ -95,16 +133,78 @@ const debouncedSearch = debounce(async (username: string) => {
   } catch (error) {
     promises.forEach(({ reject }) => reject(error));
   } finally {
-    pendingPromises.delete(username);
+    pendingTwitterPromises.delete(username);
   }
 }, 300);
 
 const debouncedTwitterSearch = (username: string): Promise<MentionItem[]> => {
   return new Promise((resolve, reject) => {
-    const promises = pendingPromises.get(username) || [];
+    const promises = pendingTwitterPromises.get(username) || [];
     promises.push({ resolve, reject });
-    pendingPromises.set(username, promises);
-    debouncedSearch(username);
+    pendingTwitterPromises.set(username, promises);
+    debouncedTwitterSearchFn(username);
+  });
+};
+
+/**
+ * Debounced GitHub search wrapper
+ * Uses setTimeout-based debounce to delay API calls until user stops typing
+ * Wraps the debounced function to return a promise
+ */
+const pendingGitHubPromises = new Map<
+  string,
+  Array<{
+    resolve: (value: MentionItem[]) => void;
+    reject: (error: unknown) => void;
+  }>
+>();
+
+const githubDebounceTimers = new Map<string, ReturnType<typeof setTimeout>>();
+
+const debouncedGitHubSearch = (username: string): Promise<MentionItem[]> => {
+  console.log('[GitHub Search] debouncedGitHubSearch called for:', username);
+
+  // Clear existing timer for this username
+  const existingTimer = githubDebounceTimers.get(username);
+  if (existingTimer) {
+    clearTimeout(existingTimer);
+    githubDebounceTimers.delete(username);
+  }
+
+  return new Promise((resolve, reject) => {
+    // Add this promise to the pending list
+    const promises = pendingGitHubPromises.get(username) || [];
+    promises.push({ resolve, reject });
+    pendingGitHubPromises.set(username, promises);
+
+    // Set up debounced execution
+    const timer = setTimeout(async () => {
+      console.log(
+        '[GitHub Debounce] Executing debounced search for:',
+        username,
+      );
+      const currentPromises = pendingGitHubPromises.get(username);
+      if (!currentPromises || currentPromises.length === 0) {
+        console.log('[GitHub Debounce] No pending promises found');
+        githubDebounceTimers.delete(username);
+        return;
+      }
+
+      try {
+        console.log('[GitHub Debounce] Calling searchGitHubUsers');
+        const result = await searchGitHubUsers(username);
+        console.log('[GitHub Debounce] Search result:', result);
+        currentPromises.forEach(({ resolve }) => resolve(result));
+      } catch (error) {
+        console.error('[GitHub Debounce] Error:', error);
+        currentPromises.forEach(({ reject }) => reject(error));
+      } finally {
+        pendingGitHubPromises.delete(username);
+        githubDebounceTimers.delete(username);
+      }
+    }, 300);
+
+    githubDebounceTimers.set(username, timer);
   });
 };
 
@@ -154,18 +254,44 @@ const getMentionSuggestionItems: MentionOptions['suggestion']['items'] =
       return [];
     }
 
-    // If user has typed "gh:username", return the GitHub mention
+    // If user has typed "gh:username", fetch from API endpoint (debounced)
     if (githubMatch) {
       const username = githubMatch[1].trim();
+      console.log(
+        '[getMentionSuggestionItems] GitHub match found, username:',
+        username,
+      );
       if (username.length > 0) {
-        return [
-          {
-            id: `gh:${username}`,
-            label: `@gh:${username}`,
-          },
-        ];
+        try {
+          console.log(
+            '[getMentionSuggestionItems] Fetching GitHub user:',
+            username,
+          );
+          // Use debounced search to limit API calls
+          const users = await debouncedGitHubSearch(username);
+          console.log(
+            '[getMentionSuggestionItems] GitHub users fetched:',
+            users,
+          );
+          // Return users with all their data (avatar, displayName, etc.)
+          return users as MentionItem[];
+        } catch (error) {
+          console.error(
+            '[getMentionSuggestionItems] Error fetching GitHub users:',
+            error,
+          );
+          // Fallback to showing the typed username as-is
+          return [
+            {
+              id: `gh:${username}`,
+              label: `@gh:${username}`,
+              username: username,
+            },
+          ];
+        }
       }
       // If just "gh:" without username, return empty to keep menu open
+      console.log('[getMentionSuggestionItems] GitHub match but no username');
       return [];
     }
 
@@ -265,46 +391,36 @@ export const defaultExtensions: Extensions = [
         ? 'github'
         : null;
 
-      const displayName =
+      const rawDisplayName =
         attrs.displayName || attrs.username || attrs.label || attrs.id;
+      // Remove any existing @ prefix and add our own
+      const displayName = rawDisplayName.replace(/^@+/, '');
+      const displayNameWithAt = `@${displayName}`;
+
+      // Generate URL based on platform
+      const getMentionUrl = () => {
+        if (!platform || !attrs.username) {
+          return '#';
+        }
+        const username = attrs.username.replace(/^@+/, '');
+        if (platform === 'twitter') {
+          return `https://twitter.com/${username}`;
+        } else if (platform === 'github') {
+          return `https://github.com/${username}`;
+        }
+        return '#';
+      };
 
       // For SSR, we'll render a simpler HTML structure
       // The React NodeView will handle the full rendering in the editor
-      const content: any[] = [
-        'span',
-        { class: 'mention-content' },
-        attrs.avatar
-          ? [
-              'img',
-              {
-                class: 'mention-avatar',
-                src: attrs.avatar,
-                alt: displayName,
-              },
-            ]
-          : [
-              'span',
-              {
-                class: 'mention-avatar mention-avatar-placeholder',
-              },
-              (
-                attrs.displayName?.[0] ||
-                attrs.username?.[0] ||
-                '@'
-              ).toUpperCase(),
-            ],
-        [
-          'span',
-          { class: 'mention-text' },
-          ['span', { class: 'mention-name' }, displayName],
-        ],
-      ];
+      const content: any[] = ['span', { class: 'mention-content' }];
 
+      // Platform icon first
       if (platform) {
         content.push([
           'span',
           {
-            class: 'mention-platform',
+            class: `mention-platform mention-platform-${platform}`,
             'data-icon':
               platform === 'twitter'
                 ? 'mdi:twitter'
@@ -315,13 +431,49 @@ export const defaultExtensions: Extensions = [
         ]);
       }
 
+      // Avatar or placeholder
+      if (attrs.avatar) {
+        content.push([
+          'img',
+          {
+            class: 'mention-avatar',
+            src: attrs.avatar,
+            alt: displayNameWithAt,
+          },
+        ]);
+      } else {
+        content.push([
+          'span',
+          {
+            class: 'mention-avatar mention-avatar-placeholder',
+          },
+          (displayName[0] || '@').toUpperCase(),
+        ]);
+      }
+
+      // Text content
+      content.push([
+        'span',
+        { class: 'mention-text' },
+        ['span', { class: 'mention-name' }, displayNameWithAt],
+      ]);
+
       return [
         'span',
         {
           class: `mention mention-${platform || 'default'}`,
           'data-mention-id': attrs.id,
         },
-        content,
+        [
+          'a',
+          {
+            href: getMentionUrl(),
+            target: '_blank',
+            rel: 'noopener noreferrer',
+            class: 'mention-link',
+          },
+          content,
+        ],
       ] as const;
     },
     suggestion: {

@@ -18,8 +18,65 @@
         "type": "paragraph",
         "content": [
           {
+            "type": "mention",
+            "attrs": {
+              "id": "gh:finalchild",
+              "label": "@gh:finalchild",
+              "mentionSuggestionChar": "@",
+              "username": "finalchild",
+              "displayName": "finalchild",
+              "avatar": "https://avatars.githubusercontent.com/u/8557044?v=4",
+              "verified": false
+            }
+          },
+          {
             "type": "text",
-            "text": "@tw:finalchildmc"
+            "text": " kills "
+          },
+          {
+            "type": "mention",
+            "attrs": {
+              "id": "gh:kiwiyou",
+              "label": "@gh:kiwiyou",
+              "mentionSuggestionChar": "@",
+              "username": "kiwiyou",
+              "displayName": "kiwiyou",
+              "avatar": "https://avatars.githubusercontent.com/u/12986388?v=4",
+              "verified": false
+            }
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "mention",
+            "attrs": {
+              "id": "tw:ssogari_dev",
+              "label": "@tw:ssogari_dev",
+              "mentionSuggestionChar": "@",
+              "username": "ssogari_dev",
+              "displayName": "【쏘가리】팔로우 리밋-ing",
+              "avatar": "https://pbs.twimg.com/profile_images/1981622872650010624/wyFCeAbZ_normal.jpg",
+              "verified": false
+            }
+          },
+          {
+            "type": "text",
+            "text": " and "
+          },
+          {
+            "type": "mention",
+            "attrs": {
+              "id": "tw:RanolP_777",
+              "label": "@tw:RanolP_777",
+              "mentionSuggestionChar": "@",
+              "username": "RanolP_777",
+              "displayName": "🕯️Ranol☆P 🦋 ranolp.dev",
+              "avatar": "https://pbs.twimg.com/profile_images/1213688874884464640/PqCf6ZeN_normal.jpg",
+              "verified": false
+            }
           }
         ]
       },
@@ -34,7 +91,7 @@
   "id": "Q0h8PPiFHq",
   "metadata": {
     "publishedAt": null,
-    "lastModifiedAt": 1767128006
+    "lastModifiedAt": 1767128786
   },
   "slug": "Q0h8PPiFHq"
 }
