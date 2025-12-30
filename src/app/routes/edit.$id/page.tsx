@@ -1,6 +1,6 @@
 'use server';
 
-import { Form, useNavigation, redirect } from 'react-router';
+import { Form, useNavigation, redirect, Link } from 'react-router';
 import { getPostById, writePost } from '~/services/posts/repository.server';
 import { extractTitleFromContent, type Post } from '~/services/posts/types';
 import type { JSONContent } from '~/features/tiptap';
@@ -24,7 +24,6 @@ export async function loader({ params }: Route.LoaderArgs): Promise<Post> {
         content: [{ type: 'heading', attrs: { level: 1 }, content: [] }],
       },
       slug: id,
-      status: 'draft',
       metadata: {
         publishedAt: null,
         lastModifiedAt: now,
@@ -87,7 +86,15 @@ export default async function EditPost({
 
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-6">
-      <h1 className="text-3xl font-bold">Edit Post</h1>
+      <div className="flex items-center gap-4">
+        <Link
+          to="/"
+          className="px-4 py-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
+        >
+          ← Back
+        </Link>
+        <h1 className="text-3xl font-bold">Edit Post</h1>
+      </div>
 
       <Form method="post" className="space-y-6">
         <div className="border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 p-4 min-h-[400px]">

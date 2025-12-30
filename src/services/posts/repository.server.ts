@@ -47,6 +47,76 @@ export async function getPostById(id: string): Promise<Post | null> {
 }
 
 /**
+ * Gets all posts from the repository
+ * @returns Array of all valid Post objects
+ */
+export async function getAllPosts(): Promise<Post[]> {
+  try {
+    const postIds = await listPosts();
+    const posts = await Promise.all(postIds.map((id) => getPostById(id)));
+    return posts.filter((post): post is Post => post !== null);
+  } catch (error) {
+    console.error('Error getting all posts:', error);
+    return [];
+  }
+}
+
+/**
+ * Gets only published posts (posts where publishedAt is not null)
+ * @returns Array of published Post objects
+ */
+export async function getPublishedPosts(): Promise<Post[]> {
+  const allPosts = await getAllPosts();
+  return allPosts.filter((post) => post.metadata.publishedAt !== null);
+}
+
+/**
+ * Sorts posts by date (published date for published posts, lastModifiedAt for drafts)
+ * Newest first
+ * @param posts - Array of posts to sort
+ * @returns Sorted array of posts
+ */
+export function sortPostsByDate(posts: Post[]): Post[] {
+  return [...posts].sort((a, b) => {
+    const aDate = a.metadata.publishedAt
+      ? new Date(a.metadata.publishedAt).getTime()
+      : new Date(a.metadata.lastModifiedAt).getTime();
+    const bDate = b.metadata.publishedAt
+      ? new Date(b.metadata.publishedAt).getTime()
+      : new Date(b.metadata.lastModifiedAt).getTime();
+    return bDate - aDate;
+  });
+}
+
+/**
+ * Gets posts for listing (published only in production, all in dev mode)
+ * Sorted by date (newest first)
+ * @returns Array of Post objects ready for display
+ */
+export async function getPostsForListing(): Promise<Post[]> {
+  const posts = import.meta.env.DEV
+    ? await getAllPosts()
+    : await getPublishedPosts();
+  return sortPostsByDate(posts);
+}
+
+/**
+ * Gets a post by slug by searching through all posts
+ * @param slug - The post slug
+ * @returns The parsed Post object or null if not found
+ */
+export async function getPostBySlug(slug: string): Promise<Post | null> {
+  try {
+    const posts = await getAllPosts();
+    const post = posts.find((p) => p.slug === slug);
+    return post ?? null;
+  } catch (error) {
+    console.error('Error getting post by slug:', error);
+    return null;
+  }
+}
+
+/**
  * Writes a post to a JSON file with pretty formatting and sorted keys
  * This operation is idempotent since it receives the ID
  * @param post - The post to write

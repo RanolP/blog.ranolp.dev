@@ -78,7 +78,6 @@ body {
 /* Non-editable # symbols before headings based on level */
 .ProseMirror h1::before {
   content: '# ';
-  display: inline-block;
   opacity: 0.3;
   pointer-events: none;
   user-select: none;
@@ -205,4 +204,176 @@ body {
 
 .dark .ProseMirror hr {
   border-top-color: #4b5563;
+}
+
+/* Styles for SSR rendered TipTap content (not in .ProseMirror editor) */
+.tiptap-content {
+  /* Apply the same heading styles as .ProseMirror */
+}
+
+.tiptap-content h1,
+.tiptap-content h2,
+.tiptap-content h3,
+.tiptap-content h4,
+.tiptap-content h5,
+.tiptap-content h6 {
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.4;
+}
+
+.tiptap-content h1 {
+  font-size: 2em;
+}
+
+.tiptap-content h2 {
+  font-size: 1.5em;
+}
+
+.tiptap-content h3 {
+  font-size: 1.25em;
+}
+
+.tiptap-content p {
+  margin: 0.75em 0;
+}
+
+.tiptap-content p:first-child {
+  margin-top: 0;
+}
+
+.tiptap-content p:last-child {
+  margin-bottom: 0;
+}
+
+.tiptap-content ul,
+.tiptap-content ol {
+  padding-left: 1.5em;
+  margin: 0.75em 0;
+}
+
+.tiptap-content ul {
+  list-style-type: disc;
+}
+
+.tiptap-content ol {
+  list-style-type: decimal;
+}
+
+.tiptap-content li {
+  margin: 0.25em 0;
+}
+
+.tiptap-content blockquote {
+  border-left: 4px solid #e5e7eb;
+  padding-left: 1em;
+  margin: 1em 0;
+  font-style: italic;
+  color: #6b7280;
+}
+
+.dark .tiptap-content blockquote {
+  border-left-color: #4b5563;
+  color: #9ca3af;
+}
+
+.tiptap-content code {
+  background-color: #f3f4f6;
+  padding: 0.125em 0.25em;
+  border-radius: 0.25em;
+  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas,
+    'Liberation Mono', monospace;
+  font-size: 0.9em;
+}
+
+.dark .tiptap-content code {
+  background-color: #374151;
+}
+
+.tiptap-content pre {
+  background-color: #f3f4f6;
+  padding: 1em;
+  border-radius: 0.5em;
+  overflow-x: auto;
+  margin: 1em 0;
+}
+
+.dark .tiptap-content pre {
+  background-color: #1f2937;
+}
+
+.tiptap-content pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+.tiptap-content strong {
+  font-weight: 600;
+}
+
+.tiptap-content em {
+  font-style: italic;
+}
+
+.tiptap-content a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.dark .tiptap-content a {
+  color: #60a5fa;
+}
+
+.tiptap-content hr {
+  border: none;
+  border-top: 2px solid #e5e7eb;
+  margin: 2em 0;
+}
+
+.dark .tiptap-content hr {
+  border-top-color: #4b5563;
+}
+
+/* Non-editable # symbols before headings in rendered content */
+.tiptap-content h1::before {
+  content: '# ';
+  opacity: 0.3;
+  pointer-events: none;
+  user-select: none;
+}
+
+.tiptap-content h2::before {
+  content: '## ';
+  opacity: 0.3;
+  pointer-events: none;
+  user-select: none;
+}
+
+.tiptap-content h3::before {
+  content: '### ';
+  opacity: 0.3;
+  pointer-events: none;
+  user-select: none;
+}
+
+.tiptap-content h4::before {
+  content: '#### ';
+  opacity: 0.3;
+  pointer-events: none;
+  user-select: none;
+}
+
+.tiptap-content h5::before {
+  content: '##### ';
+  opacity: 0.3;
+  pointer-events: none;
+  user-select: none;
+}
+
+.tiptap-content h6::before {
+  content: '###### ';
+  opacity: 0.3;
+  pointer-events: none;
+  user-select: none;
 }
