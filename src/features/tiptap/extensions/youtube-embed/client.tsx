@@ -59,4 +59,3 @@ export function YouTubeClient({ url }: YouTubeClientProps) {
     </div>
   );
 }
-

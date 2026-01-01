@@ -63,4 +63,3 @@ export function YouTubeEmbedNodeView({ node }: NodeViewProps) {
     </NodeViewWrapper>
   );
 }
-

@@ -19,7 +19,7 @@ declare module '@tiptap/core' {
 /**
  * YouTube Embed Extension for TipTap
  * Similar to Twitter embed but uses YouTube iframe for rendering
- * 
+ *
  * Supports various YouTube URL formats:
  * - https://www.youtube.com/watch?v=VIDEO_ID
  * - https://youtu.be/VIDEO_ID
@@ -125,4 +125,3 @@ export function createYouTubeEmbedExtensionForSSR() {
     // No renderHTML needed - YouTube embeds are handled by React Server Components
   });
 }
-
