@@ -41,7 +41,7 @@ export function EditorClient({ initialContent, postId }: EditorClientProps) {
 
     if (contentChanged) {
       // Set content without emitting update events
-      editor.commands.setContent(initialContent, false);
+      editor.commands.setContent(initialContent, { emitUpdate: false });
 
       // Restore cursor position after content is set
       // Use setTimeout with 0 to ensure it runs after the content update

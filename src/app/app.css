@@ -187,12 +187,13 @@ body {
   font-style: italic;
 }
 
-.ProseMirror a {
+/* Link styles are applied via .tiptap-link class, not globally */
+.tiptap-link {
   color: #2563eb;
   text-decoration: underline;
 }
 
-.dark .ProseMirror a {
+.dark .tiptap-link {
   color: #60a5fa;
 }
 
@@ -316,12 +317,13 @@ body {
   font-style: italic;
 }
 
-.tiptap-content a {
+/* Link styles are applied via .tiptap-link class, not globally */
+.tiptap-content .tiptap-link {
   color: #2563eb;
   text-decoration: underline;
 }
 
-.dark .tiptap-content a {
+.dark .tiptap-content .tiptap-link {
   color: #60a5fa;
 }
 
@@ -551,38 +553,9 @@ body {
 /* Twitter Embed Styles */
 /* Using react-tweet library for rendering tweets */
 .twitter-embed {
-  margin: 1.5em 0;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-}
-
-/* react-tweet handles its own styling, we just need to contain it */
-.twitter-embed > * {
-  width: 100%;
-  max-width: 550px;
-}
-
-/* Style links in embedded tweets - sky blue color */
-.twitter-embed a {
-  color: #87ceeb !important; /* Sky blue */
-  text-decoration: none !important; /* Remove underline from all links by default */
-  transition: color 0.2s ease;
-}
-
-.twitter-embed a:hover {
-  color: #70b8d4 !important; /* Slightly darker sky blue on hover */
-}
-
-/* Keep underline only for links in tweet body text (content area) */
-.twitter-embed [class*='tweet-body'] a,
-.twitter-embed [class*='tweet-text'] a,
-.twitter-embed [data-text] a,
-.twitter-embed article a,
-.twitter-embed [role='article'] a {
-  text-decoration: underline !important;
-  text-decoration-color: #87ceeb !important;
-  text-underline-offset: 2px;
 }
 
 .twitter-embed-fallback {
@@ -604,10 +577,4 @@ body {
   border-color: #374151;
   background-color: #1f2937;
   color: #d1d5db;
-}
-
-/* Ensure Twitter embeds are properly spaced in both editor and SSR contexts */
-.ProseMirror .twitter-embed,
-.tiptap-content .twitter-embed {
-  margin: 1.5em 0;
 }

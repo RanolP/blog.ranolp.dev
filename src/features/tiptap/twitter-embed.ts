@@ -1,6 +1,22 @@
-import { Node, nodePasteRule, mergeAttributes } from '@tiptap/core';
+import {
+  Node,
+  nodePasteRule,
+  mergeAttributes,
+  type RawCommands,
+} from '@tiptap/core';
 import { ReactNodeViewRenderer } from '@tiptap/react';
 import { TwitterEmbedNode } from './twitter-embed-node';
+
+declare module '@tiptap/core' {
+  interface Commands<ReturnType> {
+    twitter: {
+      /**
+       * Insert a Twitter embed with the given URL
+       */
+      setTwitterEmbed: (options: { url: string }) => ReturnType;
+    };
+  }
+}
 
 /**
  * Twitter Embed Extension for TipTap

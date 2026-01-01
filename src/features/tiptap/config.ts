@@ -1,6 +1,7 @@
 import StarterKit from '@tiptap/starter-kit';
 import Placeholder from '@tiptap/extension-placeholder';
 import Heading from '@tiptap/extension-heading';
+import Link from '@tiptap/extension-link';
 import Mention from '@tiptap/extension-mention';
 import { textblockTypeInputRule } from '@tiptap/core';
 import type { Extensions } from '@tiptap/react';
@@ -531,6 +532,13 @@ export const defaultExtensions: Extensions = [
       node: 'paragraph',
     },
     heading: false,
+    link: false, // Disable default link extension, we'll configure it separately
+  }),
+  Link.configure({
+    HTMLAttributes: {
+      class: 'tiptap-link',
+    },
+    openOnClick: false,
   }),
   HeadingWithoutMarkdown,
   Mention.extend({
@@ -726,6 +734,13 @@ export const ssrExtensions: Extensions = [
       node: 'paragraph',
     },
     heading: false,
+    link: false, // Disable default link extension, we'll configure it separately
+  }),
+  Link.configure({
+    HTMLAttributes: {
+      class: 'tiptap-link',
+    },
+    openOnClick: false,
   }),
   HeadingWithoutMarkdown,
   createMentionExtensionForSSR(),
