@@ -21,6 +21,7 @@ declare module '@tiptap/core' {
 export interface LinkMentionAttributes {
   url: string;
   title?: string;
+  customTitle?: string;
   favicon?: string;
   hostname?: string;
 }
@@ -68,6 +69,20 @@ export const LinkMention = Node.create({
           };
         },
       },
+      customTitle: {
+        default: null,
+        parseHTML: (element) => {
+          return element.getAttribute('data-custom-title');
+        },
+        renderHTML: (attributes) => {
+          if (!attributes.customTitle) {
+            return {};
+          }
+          return {
+            'data-custom-title': attributes.customTitle,
+          };
+        },
+      },
       favicon: {
         default: null,
         parseHTML: (element) => {
@@ -112,6 +127,7 @@ export const LinkMention = Node.create({
             ? {
                 url,
                 title: element.getAttribute('data-title') || undefined,
+                customTitle: element.getAttribute('data-custom-title') || undefined,
                 favicon: element.getAttribute('data-favicon') || undefined,
                 hostname: element.getAttribute('data-hostname') || undefined,
               }
@@ -173,8 +189,8 @@ export function createLinkMentionExtensionForSSR() {
     },
     renderHTML({ node, HTMLAttributes }) {
       const attrs = node.attrs as LinkMentionAttributes;
-      const { url, title, favicon, hostname } = attrs;
-      const displayTitle = title || hostname || url;
+      const { url, title, customTitle, favicon, hostname } = attrs;
+      const displayTitle = customTitle || title || hostname || url;
 
       // Build content structure matching React NodeView exactly
       const content: any[] = ['span', { class: 'link-mention-content' }];

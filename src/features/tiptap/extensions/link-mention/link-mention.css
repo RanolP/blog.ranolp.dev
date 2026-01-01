@@ -265,3 +265,113 @@
 .dark .link-paste-suggestion-loading {
   color: var(--oc-gray-4);
 }
+
+/* Link Mention Popup (Change Title) Styles */
+.link-mention-popup {
+  z-index: 1000;
+}
+
+.link-mention-popup-content {
+  background-color: white;
+  border: 1px solid var(--oc-gray-3);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 12px;
+  min-width: 240px;
+  max-width: 320px;
+}
+
+.dark .link-mention-popup-content {
+  background-color: var(--oc-gray-9);
+  border-color: var(--oc-gray-7);
+}
+
+.link-mention-popup-input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid var(--oc-gray-3);
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+  color: var(--oc-gray-9);
+  outline: none;
+  transition: border-color 0.2s;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.dark .link-mention-popup-input {
+  background-color: var(--oc-gray-8);
+  border-color: var(--oc-gray-6);
+  color: var(--oc-gray-1);
+}
+
+.link-mention-popup-input:focus {
+  border-color: var(--oc-blue-5);
+}
+
+.dark .link-mention-popup-input:focus {
+  border-color: var(--oc-blue-5);
+}
+
+.link-mention-popup-input::placeholder {
+  color: var(--oc-gray-5);
+}
+
+.dark .link-mention-popup-input::placeholder {
+  color: var(--oc-gray-5);
+}
+
+.link-mention-popup-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.link-mention-popup-button {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s, outline 0.2s;
+  outline: none;
+}
+
+.link-mention-popup-button:focus-visible {
+  outline: 2px solid var(--oc-blue-6);
+  outline-offset: 2px;
+}
+
+.link-mention-popup-button-primary {
+  background-color: var(--oc-blue-6);
+  color: white;
+}
+
+.link-mention-popup-button-primary:hover {
+  background-color: var(--oc-blue-7);
+}
+
+.link-mention-popup-button-primary:focus-visible {
+  outline-color: var(--oc-blue-7);
+  background-color: var(--oc-blue-7);
+}
+
+.link-mention-popup-button-secondary {
+  background-color: var(--oc-gray-2);
+  color: var(--oc-gray-9);
+}
+
+.dark .link-mention-popup-button-secondary {
+  background-color: var(--oc-gray-7);
+  color: var(--oc-gray-1);
+}
+
+.link-mention-popup-button-secondary:hover {
+  background-color: var(--oc-gray-3);
+}
+
+.dark .link-mention-popup-button-secondary:hover {
+  background-color: var(--oc-gray-6);
+}

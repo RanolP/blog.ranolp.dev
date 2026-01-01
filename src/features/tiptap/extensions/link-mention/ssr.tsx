@@ -11,8 +11,8 @@ export interface LinkMentionSSRProps {
  * Standalone React component for rendering link mentions in SSR context
  */
 export function LinkMentionSSR({ attrs }: LinkMentionSSRProps) {
-  const { url, title, favicon, hostname } = attrs;
-  const displayTitle = title || hostname || url;
+  const { url, title, customTitle, favicon, hostname } = attrs;
+  const displayTitle = customTitle || title || hostname || url;
   const [faviconError, setFaviconError] = useState(false);
 
   return (
@@ -21,6 +21,7 @@ export function LinkMentionSSR({ attrs }: LinkMentionSSRProps) {
       data-type="link-mention"
       data-url={url}
       data-title={title}
+      data-custom-title={customTitle}
       data-favicon={favicon}
       data-hostname={hostname}
     >
