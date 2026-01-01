@@ -461,7 +461,9 @@ function createMentionExtensionForSSR() {
         ]);
       }
 
-      // Avatar or placeholder (matching React component behavior)
+      // Avatar or placeholder (matching React component behavior exactly)
+      // React component shows avatar if exists and no error, otherwise shows placeholder
+      // For SSR, we show avatar if it exists, placeholder otherwise (can't detect errors server-side)
       if (attrs.avatar) {
         content.push([
           'img',
@@ -471,17 +473,16 @@ function createMentionExtensionForSSR() {
             alt: displayNameWithAt,
           },
         ]);
+      } else {
+        // Only show placeholder if no avatar (matching React component's showPlaceholder logic)
+        content.push([
+          'span',
+          {
+            class: 'mention-avatar mention-avatar-placeholder',
+          },
+          (displayName[0] || '@').toUpperCase(),
+        ]);
       }
-      // Always include placeholder (React component shows it if no avatar or on error)
-      // We'll hide it with CSS if avatar exists
-      content.push([
-        'span',
-        {
-          class: 'mention-avatar mention-avatar-placeholder',
-          style: attrs.avatar ? 'display: none;' : undefined,
-        },
-        (displayName[0] || '@').toUpperCase(),
-      ]);
 
       // Text content - split displayName and username for styling
       const textContent: any[] = ['span', { class: 'mention-text' }];
@@ -493,6 +494,29 @@ function createMentionExtensionForSSR() {
         );
       } else {
         textContent.push(['span', { class: 'mention-handle' }, `@${username}`]);
+      }
+      // Add verified icon for Twitter mentions (matching React component)
+      if (attrs.verified && platform === 'twitter') {
+        const verifiedIconSvg = [
+          'svg',
+          {
+            xmlns: 'http://www.w3.org/2000/svg',
+            width: '14',
+            height: '14',
+            viewBox: '0 0 20 20',
+            fill: 'currentColor',
+            class: 'mention-verified',
+          },
+          [
+            'path',
+            {
+              'fill-rule': 'evenodd',
+              d: 'M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z',
+              'clip-rule': 'evenodd',
+            },
+          ],
+        ];
+        textContent.push(verifiedIconSvg);
       }
       content.push(textContent);
 

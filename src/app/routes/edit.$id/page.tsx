@@ -1,5 +1,3 @@
-'use server';
-
 import { getPostById, writePost } from '~/services/posts/repository.server';
 import { extractTitleFromContent, type Post } from '~/services/posts/types';
 import { SaveStateProvider } from './edit-wrapper';

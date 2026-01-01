@@ -2,7 +2,7 @@ import { Editor } from '@tiptap/core';
 import { generateHTML } from '@tiptap/html';
 import { defaultExtensions, ssrExtensions } from './config';
 import type { JSONContent } from '@tiptap/core';
-import { Tweet } from 'react-tweet';
+import { TweetClient } from './tweet-client';
 
 export interface TiptapSSRProps {
   content: string | JSONContent;
@@ -45,24 +45,21 @@ export function TiptapSSR({
     }
   };
 
-  content.content.forEach((node) => {
+  // Process nodes and render tweets
+  for (const node of content.content) {
     if (node.type === 'twitter') {
       flushHtml();
       const url = node.attrs?.url as string;
       if (url) {
         const tweetId = /\/status\/(\d+)/g.exec(url)?.[1];
         if (tweetId) {
-          parts.push(
-            <div key={parts.length} className="twitter-embed">
-              <Tweet id={tweetId} />
-            </div>,
-          );
+          parts.push(<TweetClient key={parts.length} tweetId={tweetId} />);
         }
       }
     } else {
       htmlNodes.push(node);
     }
-  });
+  }
 
   flushHtml();
 

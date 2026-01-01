@@ -80,20 +80,6 @@ export async function getPublishedPosts(): Promise<Post[]> {
 }
 
 /**
- * Sorts posts by date (published date for published posts, lastModifiedAt for drafts)
- * Newest first
- * @param posts - Array of posts to sort
- * @returns Sorted array of posts
- */
-export function sortPostsByDate(posts: Post[]): Post[] {
-  return [...posts].sort((a, b) => {
-    const aDate = a.metadata.publishedAt ?? a.metadata.lastModifiedAt;
-    const bDate = b.metadata.publishedAt ?? b.metadata.lastModifiedAt;
-    return bDate - aDate; // Unix timestamps are already in seconds, can compare directly
-  });
-}
-
-/**
  * Gets posts for listing (published only in production, all in dev mode)
  * Sorted by date (newest first)
  * @returns Array of Post objects ready for display
@@ -102,7 +88,11 @@ export async function getPostsForListing(): Promise<Post[]> {
   const posts = import.meta.env.DEV
     ? await getAllPosts()
     : await getPublishedPosts();
-  return sortPostsByDate(posts);
+  return posts.sort((a, b) => {
+    const aDate = a.metadata.publishedAt ?? a.metadata.lastModifiedAt;
+    const bDate = b.metadata.publishedAt ?? b.metadata.lastModifiedAt;
+    return bDate - aDate; // Unix timestamps are already in seconds, can compare directly
+  });
 }
 
 /**
