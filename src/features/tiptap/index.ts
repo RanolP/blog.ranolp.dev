@@ -13,7 +13,11 @@ export {
 } from './ssr';
 
 // Configuration
-export { defaultExtensions, ssrExtensions, defaultEditorOptions } from './config';
+export {
+  defaultExtensions,
+  ssrExtensions,
+  defaultEditorOptions,
+} from './config';
 
 // Extensions
 export { PostDocument } from './extensions/document';
@@ -31,6 +35,17 @@ export {
   createTwitterEmbedExtensionForSSR,
   TweetClient,
 } from './extensions/twitter-embed';
+export {
+  Gallery,
+  createGalleryExtensionForSSR,
+  GalleryClient,
+  type GalleryDisplayMode,
+} from './extensions/gallery';
+export {
+  SlashCommand,
+  SlashCommandMenu,
+  type SlashCommandItem,
+} from './extensions/slash-command';
 
 // Re-export commonly used types
 export type { JSONContent } from '@tiptap/core';

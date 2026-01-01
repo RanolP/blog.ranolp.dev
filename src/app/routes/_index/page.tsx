@@ -71,7 +71,7 @@ export default function Home({ loaderData: posts }: { loaderData: Post[] }) {
                 key={post.id}
                 className="group border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900 hover:shadow-lg transition-shadow"
               >
-                <Link to={`/posts/${post.slug}`} className="block">
+                <Link to={`/post/${post.slug}`} className="block">
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1">
                       <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">

@@ -46,14 +46,148 @@
         }
       },
       {
-        "type": "paragraph"
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "오후 반차를 쓰고 광나루로 이동했고 5시쯤 광나루역에 도착했습니다. 바로 이동하려다가, 럭키 드로우까지 생각하면 저녁 안 먹곤 힘들 거 같아서 햄버거 집으로 이동해 간단히 배를 채웠고, 나와서는 호텔 버스 승차 지점 어디지 어디지 하면서 움직이다가 놓치고 말았습니다. 흑흑... 다음 버스를 타고 빛의 라운지로 찾아갔습니다."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "소규모로 준비할 거라 생각하고 큰 기대 없이 터벅터벅 갔는데, 막상 가보니 사랑 듬뿍 담긴 시유니 등신대가 기다리고 있었습니다. 심지어 입장 시 배부되는 귀여운 아크릴 키링과 (아직도 풀지 못한) 고퀄리티 팔찌까지 운영진 분들의 노고가 눈에 선합니다."
+          }
+        ]
+      },
+      {
+        "type": "gallery",
+        "attrs": {
+          "images": [
+            "/images/f99a9653f7f83913.avif",
+            "/images/2fbaf8851399f834.avif"
+          ],
+          "displayMode": "grid",
+          "columns": 2
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "스태프 분들 옆 스크린에서는 별빛 세레나데 MV가 재생되고 있었고요. (사진을 찍지 못해 인용합니다)"
+          }
+        ]
+      },
+      {
+        "type": "twitter",
+        "attrs": {
+          "url": "https://x.com/ssogari_dev/status/1870066695232205201"
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "음료는 아메리카노 or 레몬티를 고를 수 있었는데, 수상할 정도로 채택률이 높은 레몬티 (아이스)로 골랐습니다. 고급스러운 내부 인테리어에 벽면 스크린에는 광고도 나오고 있었어요. 안으로 들어가 살펴보니, 부스러분들이 미니 이젤도 놓고, 인형도 장식하며 귀여운 굿즈들을 전시하고 계셨습니다. (혹시 광고 못 보신 분들은 아래 트윗으로 확인을)"
+          }
+        ]
+      },
+      {
+        "type": "twitter",
+        "attrs": {
+          "url": "https://twitter.com/FireflySnow_HS/status/1870092098135044571?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1870092098135044571%7Ctwgr%5Ef4098bb9bcbeaf20c7a229fff65a30229c46f758%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fcdn.iframe.ly%2Fapi%2Fiframe%3Fapp%3D1url%3Dhttps3A2F2Fx.com2FFireflySnow_HS2Fstatus2F1870092098135044571key%3Df38afa2868124b73c4f1b014d996b503"
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "그리고... 폰카가 안돼서 따로 카메라를 들고 다니는"
+          },
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "link",
+                "attrs": {
+                  "href": "https://x.com/ssogari_dev",
+                  "target": "_blank",
+                  "rel": "noreferrer nofollow",
+                  "class": "tiptap-link fhXegf iaOZrB"
+                }
+              }
+            ],
+            "text": " "
+          },
+          {
+            "type": "mention",
+            "attrs": {
+              "id": "tw:ssogari_dev",
+              "label": "@tw:ssogari_dev",
+              "mentionSuggestionChar": "@",
+              "username": "ssogari_dev",
+              "displayName": "【쏘가리】팔로우 리밋-ing",
+              "avatar": "https://pbs.twimg.com/profile_images/1981622872650010624/wyFCeAbZ_normal.jpg",
+              "verified": false
+            }
+          },
+          {
+            "type": "text",
+            "text": "를 만나서 같이 노가리 좀 까다가 쏘망님 발표를 들으러 이동했어요. 노래를 어떻게 만드셨는지 가사나 연주 등을 자세히 들을 수 있어서 좋았습니다. 다만 뒤쪽 의자에 앉으니까 발표 자료를 보기 어려웠고 프레젠테이션 자료가 있단 것도 사실은 의자에서 일어나고서야 알게 되어 아쉬웠네요. 그래서 방송으로 보려다가 방송 세팅 이슈를 마주하고... 앉아서 발표 듣기는 어려울 거 같아서 다른 곳을 둘러보러 떠났습니다."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "부스를 둘러보러 돌아오니, 미니 이젤에 일러스트를 거치하신다거나 앨범을 올려두시기도 하고, 네트망에 아크릴이나 포카 등 다양한 굿즈를 거치한 곳도 있었습니다. 그리고, 인형으로 귀여운 시유니를 꾸며주신 부스도 있었고요. 아쉽게도 지갑 사정상 다 살 수는 없어서 슬펐답니다. 그 외에도, 무료 배포 굿즈들을 올려둔 테이블도 있었어요. 좋은 작품 만들어주시는 금손 여러분들 항상 감사합니다. 사람들이 복작거리는 터라 사진을 많이 남기지 못해서 남은 사진은 이것뿐이네요."
+          }
+        ]
+      },
+      {
+        "type": "gallery",
+        "attrs": {
+          "images": [
+            "/images/518e96fa74a06d71.avif",
+            "/images/71e58a28b057d945.avif"
+          ],
+          "displayMode": "masonry",
+          "columns": 2
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "다음으로는 다시 발표 세션으로 돌아가, 팀 코다 및 미리보이스의 발표를 들었습니다. 예전에 OpenUTAU/DeepVocal을 잠깐 만진 적이 있는데요. 그때 잠깐 스쳐지나 갔던 키타네 스노가 여기서도 보이니 반가운 마음이 들었어요. 솔직히 세레버스 관련 비하인드 썰이 나오지 않을까 했는데 친숙한 테크 용어 들려서 희한한 느낌…."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "미리보이스 발표 세션에서는 IPA를 활용해 다국어를 지원하려는 점이 인상적이었어요. 확실히 ipadic을 활용하면 대모음추이 탓에 불규칙한 영어 발음이나 맥락별로 다른 일본어 한자 발음 등을 쉽게 알 수 있고 한글도 발음 규칙 기반 ipa 추출이 되니까 가능하죠. 외래어를 발음 규칙에 맞춰 한글화해주는 한글라이즈라는 서비스가 있는데, 들으면서 생각이 나더라고요."
+          }
+        ]
       }
     ]
   },
   "id": "BhUm5AIG5p",
   "metadata": {
     "publishedAt": null,
-    "lastModifiedAt": 1767252990
+    "lastModifiedAt": 1767264840
   },
   "slug": "BhUm5AIG5p"
 }

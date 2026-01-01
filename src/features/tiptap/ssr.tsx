@@ -3,6 +3,7 @@ import { generateHTML } from '@tiptap/html';
 import { defaultExtensions, ssrExtensions } from './config';
 import type { JSONContent } from '@tiptap/core';
 import { TweetClient } from './extensions/twitter-embed';
+import { GalleryClient } from './extensions/gallery';
 
 export interface TiptapSSRProps {
   content: string | JSONContent;
@@ -45,7 +46,7 @@ export function TiptapSSR({
     }
   };
 
-  // Process nodes and render tweets
+  // Process nodes and render custom components (tweets, galleries, etc.)
   for (const node of content.content) {
     if (node.type === 'twitter') {
       flushHtml();
@@ -55,6 +56,21 @@ export function TiptapSSR({
         if (tweetId) {
           parts.push(<TweetClient key={parts.length} tweetId={tweetId} />);
         }
+      }
+    } else if (node.type === 'gallery') {
+      flushHtml();
+      const images = (node.attrs?.images as string[]) || [];
+      const displayMode = (node.attrs?.displayMode as string) || 'grid';
+      const columns = (node.attrs?.columns as number) || 3;
+      if (images.length > 0) {
+        parts.push(
+          <GalleryClient
+            key={parts.length}
+            images={images}
+            displayMode={displayMode as any}
+            columns={columns}
+          />,
+        );
       }
     } else {
       htmlNodes.push(node);
