@@ -1,5 +1,6 @@
 import type { JSONContent } from '@tiptap/core';
 import { TweetClient } from './extensions/twitter-embed';
+import { YouTubeClient } from './extensions/youtube-embed';
 import { GalleryClient } from './extensions/gallery';
 import { MentionSSR } from './extensions/mention/ssr';
 import { LinkMentionSSR } from './extensions/link-mention/ssr';
@@ -177,6 +178,18 @@ function renderNode(node: JSONContent, key: string): React.ReactNode {
             </div>
           );
         }
+      }
+      return null;
+    }
+
+    case 'youtube': {
+      const url = node.attrs?.url as string;
+      if (url) {
+        return (
+          <div key={key} className="youtube-embed">
+            <YouTubeClient url={url} />
+          </div>
+        );
       }
       return null;
     }

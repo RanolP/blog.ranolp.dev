@@ -30,6 +30,11 @@ export {
   TweetClient,
 } from './extensions/twitter-embed';
 export {
+  YouTubeEmbed,
+  createYouTubeEmbedExtensionForSSR,
+  YouTubeClient,
+} from './extensions/youtube-embed';
+export {
   Gallery,
   createGalleryExtensionForSSR,
   GalleryClient,

@@ -5,6 +5,11 @@
   margin: 1em 0;
   font-style: italic;
   color: var(--oc-gray-6);
+  text-indent: 0;
+}
+
+.ProseMirror blockquote p {
+  text-indent: 0;
 }
 
 .dark .ProseMirror blockquote {
@@ -19,6 +24,11 @@
   margin: 1em 0;
   font-style: italic;
   color: var(--oc-gray-6);
+  text-indent: 0;
+}
+
+.tiptap-content blockquote p {
+  text-indent: 0;
 }
 
 .dark .tiptap-content blockquote {

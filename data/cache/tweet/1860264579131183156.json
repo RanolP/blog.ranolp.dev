@@ -1,0 +1,285 @@
+{
+  "__typename": "Tweet",
+  "lang": "ko",
+  "favorite_count": 121,
+  "possibly_sensitive": false,
+  "created_at": "2024-11-23T10:10:12.000Z",
+  "display_text_range": [
+    0,
+    19
+  ],
+  "entities": {
+    "hashtags": [],
+    "urls": [],
+    "user_mentions": [],
+    "symbols": [],
+    "media": [
+      {
+        "display_url": "pic.x.com/TllaEWvZOR",
+        "expanded_url": "https://x.com/Zzero_bass/status/1860264579131183156/photo/1",
+        "indices": [
+          20,
+          43
+        ],
+        "url": "https://t.co/TllaEWvZOR"
+      }
+    ]
+  },
+  "id_str": "1860264579131183156",
+  "text": "세레나데 유니버스 1일차 공연 끝! https://t.co/TllaEWvZOR",
+  "user": {
+    "id_str": "350868932",
+    "name": "Zzero",
+    "screen_name": "Zzero_bass",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/1983160386343034880/DW_oags8_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1860264579131183156"
+    ],
+    "editable_until_msecs": "1732360212000",
+    "is_edit_eligible": true,
+    "edits_remaining": "5"
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/TllaEWvZOR",
+      "expanded_url": "https://x.com/Zzero_bass/status/1860264579131183156/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        20,
+        43
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/GdD8xLbagAAcdmA.jpg",
+      "original_info": {
+        "height": 1153,
+        "width": 2048,
+        "focus_rects": [
+          {
+            "x": 0,
+            "y": 6,
+            "w": 2048,
+            "h": 1147
+          },
+          {
+            "x": 294,
+            "y": 0,
+            "w": 1153,
+            "h": 1153
+          },
+          {
+            "x": 365,
+            "y": 0,
+            "w": 1011,
+            "h": 1153
+          },
+          {
+            "x": 582,
+            "y": 0,
+            "w": 577,
+            "h": 1153
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 2048,
+            "h": 1153
+          }
+        ]
+      },
+      "sizes": {
+        "large": {
+          "h": 1153,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 676,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 383,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/TllaEWvZOR"
+    },
+    {
+      "display_url": "pic.x.com/TllaEWvZOR",
+      "expanded_url": "https://x.com/Zzero_bass/status/1860264579131183156/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        20,
+        43
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/GdD8xNRaYAAUPlz.jpg",
+      "original_info": {
+        "height": 2048,
+        "width": 1153,
+        "focus_rects": [
+          {
+            "x": 0,
+            "y": 1366,
+            "w": 1153,
+            "h": 646
+          },
+          {
+            "x": 0,
+            "y": 895,
+            "w": 1153,
+            "h": 1153
+          },
+          {
+            "x": 0,
+            "y": 734,
+            "w": 1153,
+            "h": 1314
+          },
+          {
+            "x": 51,
+            "y": 0,
+            "w": 1024,
+            "h": 2048
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 1153,
+            "h": 2048
+          }
+        ]
+      },
+      "sizes": {
+        "large": {
+          "h": 2048,
+          "resize": "fit",
+          "w": 1153
+        },
+        "medium": {
+          "h": 1200,
+          "resize": "fit",
+          "w": 676
+        },
+        "small": {
+          "h": 680,
+          "resize": "fit",
+          "w": 383
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/TllaEWvZOR"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "x": 0,
+          "y": 6,
+          "w": 2048,
+          "h": 1147
+        },
+        {
+          "x": 294,
+          "y": 0,
+          "w": 1153,
+          "h": 1153
+        },
+        {
+          "x": 365,
+          "y": 0,
+          "w": 1011,
+          "h": 1153
+        },
+        {
+          "x": 582,
+          "y": 0,
+          "w": 577,
+          "h": 1153
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 2048,
+          "h": 1153
+        }
+      ],
+      "expandedUrl": "https://x.com/Zzero_bass/status/1860264579131183156/photo/1",
+      "url": "https://pbs.twimg.com/media/GdD8xLbagAAcdmA.jpg",
+      "width": 2048,
+      "height": 1153
+    },
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "x": 0,
+          "y": 1366,
+          "w": 1153,
+          "h": 646
+        },
+        {
+          "x": 0,
+          "y": 895,
+          "w": 1153,
+          "h": 1153
+        },
+        {
+          "x": 0,
+          "y": 734,
+          "w": 1153,
+          "h": 1314
+        },
+        {
+          "x": 51,
+          "y": 0,
+          "w": 1024,
+          "h": 2048
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1153,
+          "h": 2048
+        }
+      ],
+      "expandedUrl": "https://x.com/Zzero_bass/status/1860264579131183156/photo/1",
+      "url": "https://pbs.twimg.com/media/GdD8xNRaYAAUPlz.jpg",
+      "width": 1153,
+      "height": 2048
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

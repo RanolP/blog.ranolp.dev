@@ -511,14 +511,827 @@
         ]
       },
       {
+        "type": "gallery",
+        "attrs": {
+          "images": [
+            "/images/37b1a6ff046d1af5.avif",
+            "/images/91eb2089a982ef38.avif",
+            "/images/4f04ce487813de06.avif",
+            "/images/93c61e7d65c14026.avif",
+            "/images/d4876b2bdccd919a.avif"
+          ],
+          "displayMode": "grid",
+          "columns": 3,
+          "gridSpans": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "그러곤 결국 리듬 공동 부스에서 봤던 플라티나 랩의 후원 패키지를 질렀습니다. 봉제 인형 귀엽잖아요."
+          }
+        ]
+      },
+      {
         "type": "paragraph"
+      },
+      {
+        "type": "gallery",
+        "attrs": {
+          "images": [
+            "/images/77042f2d56ba3676.avif"
+          ],
+          "displayMode": "grid",
+          "columns": 1,
+          "gridSpans": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "10월 말부터는 블루아카-파파존스 콜라보가 시작되었습니다. 사람들을 모아 3판을 시켜서 3중복을 당했습니다. 포켓몬-이삭토스트 콜라보도 하나 사봤습니다. 금새 품절이 되어 두번째 배지는 볼 수 없었습니다."
+          }
+        ]
+      },
+      {
+        "type": "gallery",
+        "attrs": {
+          "images": [
+            "/images/e7c282a15b15ecbe.avif",
+            "/images/0fad68e7d0bf574e.avif",
+            "/images/fc2338e4b59f2702.avif",
+            "/images/3a184ed7b6cab190.avif",
+            "/images/47353c16d43591a1.avif"
+          ],
+          "displayMode": "grid",
+          "columns": 3,
+          "gridSpans": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "그리고, 가장 중요한 것. 세레나데 유니버스 토요일 공연을 보고 왔습니다. 맨 앞 좌석이라 공연자 분이 찍은 사진에 아주 깔끔히 들어갔습니다."
+          }
+        ]
+      },
+      {
+        "type": "twitter",
+        "attrs": {
+          "url": "https://twitter.com/Zzero_bass/status/1860264579131183156?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1860264579131183156%7Ctwgr%5E762b598ed9ab347429b8d6cbcfc13da0cdaabae8%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fcdn.iframe.ly%2Fapi%2Fiframe%3Fapp%3D1url%3Dhttps3A2F2Fx.com2FZzero_bass2Fstatus2F1860264579131183156key%3Df38afa2868124b73c4f1b014d996b503"
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "한음사 주최 세레나데 유니버스 연말 파티도 즐기고 왔습니다. 해당 후기는 <TODO>에서 찾아보실 수 있습니다."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "컨퍼런스에서 만남을 추구하면 안 되는 걸까?"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "솔직히 컨퍼런스 가서 재밌는 발표를 듣는 경우는 손에 꼽을 정도인 것 같고, 그냥 사람들 만나는 게 재밌어서 가는데 올해에 간 곳 중 절반 정도는 성공한 것 같습니다. SLASH 24 라이트닝 토크 세션이나 아웃프콘이 정말 재밌었습니다."
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "gallery",
+        "attrs": {
+          "images": [
+            "/images/38ec0bb5affdcdfd.avif",
+            "/images/4be15cdf6011af3a.avif"
+          ],
+          "displayMode": "grid",
+          "columns": 2,
+          "gridSpans": []
+        }
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "외톨이의 물질계 공략"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "이번 해에도 이것저것 삶의 질 상승 아이템을 많이 샀습니다."
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "32QN650 모니터. 듀얼 모니터로 능률 향상에 도움을 주고 있습니다."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "WAVLINK USB-C/USB 3.0 Dual 4K Hub. Displaylink로 맥북에 듀얼 모니터 연결을 하고 있습니다."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Braun 시리즈 7. 전기 면도기가 망가져서…."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "삼성 에어컨. 없으니까 죽겠더라…."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "linkMention",
+                    "attrs": {
+                      "url": "https://keychron.kr/v1_max/",
+                      "title": "V1 PRO MAX – 키크론 Keychron",
+                      "customTitle": "Keychrone V1 Max",
+                      "favicon": "https://keychron.kr/wp-content/uploads/2019/08/cropped-tk-32x32.png",
+                      "hostname": "keychron.kr"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ". 집에서 쓸 기계식 키보드를 샀습니다."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Pico 4 Ultra. VR 헤드셋을 구매했습니다. 비트세이버 말곤 쓸 데를 사실 잘 모르겠습니다."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "이 멋진 게임에 축복을!"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "올해도 적당히 게임을 했습니다. 이하 평가는 올해 플레이했던 게임 중 평가이므로 출시 시기 같은 건 무관합니다."
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Honourable to Mention"
+                  },
+                  {
+                    "type": "text",
+                    "text": ": "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "underline"
+                      }
+                    ],
+                    "text": "Infinite Craft"
+                  },
+                  {
+                    "type": "text",
+                    "text": " - 정말로 파격적인 포맷의 웹게임이었습니다."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "gallery",
+        "attrs": {
+          "images": [
+            "/images/f4169c1c12dee3d4.avif",
+            "/images/3d730b648dd17aa6.avif",
+            "/images/909cfa09516e6a70.avif"
+          ],
+          "displayMode": "grid",
+          "columns": 3,
+          "gridSpans": []
+        }
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Best Co-op Game"
+                  },
+                  {
+                    "type": "text",
+                    "text": ": "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "underline"
+                      }
+                    ],
+                    "text": "Rabbit & Steel"
+                  },
+                  {
+                    "type": "text",
+                    "text": " - 멈춰 움직여 피해 돌아 산개 뭉쳐"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Good Co-op Game:"
+                  },
+                  {
+                    "type": "text",
+                    "text": " "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "underline"
+                      }
+                    ],
+                    "text": "Granblue Fantasy Relink"
+                  },
+                  {
+                    "type": "text",
+                    "text": " - 잘 만들었는데 코옵 구간이 너무 짧고 반복적"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Best VR Game"
+                  },
+                  {
+                    "type": "text",
+                    "text": ": "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "underline"
+                      }
+                    ],
+                    "text": "Beat Saber"
+                  },
+                  {
+                    "type": "text",
+                    "text": " - VR겜올타임베스트인듯"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Best Metroidvania"
+                  },
+                  {
+                    "type": "text",
+                    "text": ": "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "underline"
+                      }
+                    ],
+                    "text": "Ender Lilies"
+                  },
+                  {
+                    "type": "text",
+                    "text": " - 적당한 난이도의 전투, 썩 괜찮은 이야기, 예쁜 캐디(중요)"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Best Platformer"
+                  },
+                  {
+                    "type": "text",
+                    "text": ": "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "underline"
+                      }
+                    ],
+                    "text": "Celeste (Strawberry Jam Collab)"
+                  },
+                  {
+                    "type": "text",
+                    "text": " - 아직도 다 못 깨서 내년에도 이거일듯"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Best Ongoing"
+                  },
+                  {
+                    "type": "text",
+                    "text": ": "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "underline"
+                      }
+                    ],
+                    "text": "Mahjong Soul"
+                  },
+                  {
+                    "type": "text",
+                    "text": " - 마작에 결국 발을 들였습니다."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Most Anticipated"
+                  },
+                  {
+                    "type": "text",
+                    "text": ": "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "underline"
+                      }
+                    ],
+                    "text": "사니양 연구실"
+                  },
+                  {
+                    "type": "text",
+                    "text": " - 사긴 했는데 아직 플레이를 못 했습니다."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "속삭이듯 예술을 노래하다"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "세레나데 유니버스 이후로 시유니가 너무 좋아졌습니다. 맨처음 만들고 싶었던 건 세레나데 유니버스 아는 만큼 들리는 노래여서 편곡용 에이블톤 라이브를 사고, 그러다보니 단순 편곡으론 안되겠다 싶어서 유니 라이브러리와 보컬로이드 에디터를 사고, 본격적인 악기 작업도 해보고 싶어서 미디 건반을 사고, 지금은 클립 스튜디오를 사서 그림을 그릴까 고민하고 있습니다."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "과연 이 모험의 끝은 어디로 가게 될지?"
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "gallery",
+        "attrs": {
+          "images": [
+            "/images/47d3eb81c0a53618.avif"
+          ],
+          "displayMode": "grid",
+          "columns": 1,
+          "gridSpans": []
+        }
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "흔해빠진 코딩으로 세계최강"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "올해에는 사이드 프로젝트를 별로 못했습니다. 회사 일 재밌었던 건 앞에 이야기했고, 이력서 코딩도 재밌었습니다만은 완성한 사이드 프로젝트로 이거다 싶은 게 없어서 조금 슬프네요. 기록할만한 건 이 정도 있겠습니다."
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "http://ocha.ranolp.dev",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": "tiptap-link"
+                        }
+                      }
+                    ],
+                    "text": "ocha.ranolp.dev"
+                  },
+                  {
+                    "type": "text",
+                    "text": " - 아웃프콘 보조 페이지"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "http://watch.ranolp.dev",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": "tiptap-link"
+                        }
+                      }
+                    ],
+                    "text": "watch.ranolp.dev"
+                  },
+                  {
+                    "type": "text",
+                    "text": " - 벅스 투표 보조 페이지"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "이 나라는 너무나 불완전하다"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "여기까지였다면 큰 사건 없이 평범한 한 해였으리라 생각합니다. 예에 12월 3일 계엄만 아니었어도 말입니다. 아마 저거 아니었으면 그냥 AGF 가서 놀고 그랬을 거 같은데, 스트레스성 과수면인지 잠만 죽어라 자게 돼서 여의도나 갔었습니다. 한덕수 권한 대행도 탄핵됐고 그런데 헌재가 어떻게 될지 지금 감도 안 잡힙니다. 민주주의가 승리하는 건 당연한 건데, 그 과정에서 어떤 일이 일어날지 정말 모르겠군요. 최대한 피해가 적기를 바랍니다. 솔직히 12월 한 달 간 일어난 일이 너무 많아서 뇌가 처리도 못하고 여전히 12월 3일에 머물러 있는 것 같습니다. 부디 이 글을 읽는 필멸자와 불멸자 분들은 몸 건강을 우선시하며 의견 펴고 다니시기 바랍니다."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Carpe Diem!"
+          }
+        ]
+      },
+      {
+        "type": "youtube",
+        "attrs": {
+          "url": "https://youtu.be/32lHz_pATAs?si=MvDKR4g-bgrOXaWt"
+        }
+      },
+      {
+        "type": "blockquote",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "평생에 한 번 뿐인 오늘, 인생에 한 번 뿐인 오늘"
+              },
+              {
+                "type": "hardBreak"
+              },
+              {
+                "type": "text",
+                "text": "집으로 돌아가는 길이 아쉽지 않고"
+              },
+              {
+                "type": "hardBreak"
+              },
+              {
+                "type": "text",
+                "text": "내일을 맞이할 준비가 순조롭기를"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "그럼에도 우리는 오늘을 살아가야 합니다. 올해의 곡은 Carpe Diem! 으로 정했습니다. 매일매일을 후회 없이 살고, 내일을 맞이할 준비가 순조롭기를 바랍니다."
+          }
+        ]
       }
     ]
   },
   "id": "installHook.js.map",
   "metadata": {
     "publishedAt": null,
-    "lastModifiedAt": 1767281453
+    "lastModifiedAt": 1767282243
   },
   "slug": "installHook.js.map"
 }

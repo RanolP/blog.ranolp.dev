@@ -1,0 +1,63 @@
+/* YouTube Embed Styles */
+.youtube-embed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 1.5em auto;
+}
+
+.youtube-embed-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.dark .youtube-embed-container {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3),
+    0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.youtube-embed-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.youtube-embed-error {
+  padding: 2em;
+  text-align: center;
+  border: 1px solid var(--oc-gray-3);
+  border-radius: 0.5rem;
+  background-color: var(--oc-gray-0);
+}
+
+.dark .youtube-embed-error {
+  border-color: var(--oc-gray-7);
+  background-color: var(--oc-gray-8);
+  color: var(--oc-gray-4);
+}
+
+.youtube-embed-error a {
+  display: inline-block;
+  margin-top: 0.5em;
+  color: var(--oc-red-6);
+  text-decoration: none;
+}
+
+.dark .youtube-embed-error a {
+  color: var(--oc-red-4);
+}
+
+.youtube-embed-error a:hover {
+  text-decoration: underline;
+}
+

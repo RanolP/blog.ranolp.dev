@@ -14,6 +14,10 @@ import {
   TwitterEmbed,
   createTwitterEmbedExtensionForSSR,
 } from './extensions/twitter-embed';
+import {
+  YouTubeEmbed,
+  createYouTubeEmbedExtensionForSSR,
+} from './extensions/youtube-embed';
 import { Gallery, createGalleryExtensionForSSR } from './extensions/gallery';
 import { SlashCommand } from './extensions/slash-command';
 import {
@@ -44,6 +48,7 @@ export const defaultExtensions: Extensions = [
   TiptapMention,
   TiptapPlaceholder,
   TwitterEmbed,
+  YouTubeEmbed,
   Gallery,
   SlashCommand,
   LinkMention,
@@ -67,6 +72,7 @@ export const ssrExtensions: Extensions = [
   HeadingWithoutMarkdown,
   createMentionExtensionForSSR(),
   createTwitterEmbedExtensionForSSR(),
+  createYouTubeEmbedExtensionForSSR(),
   createGalleryExtensionForSSR(),
   createLinkMentionExtensionForSSR(),
   TiptapPlaceholder,

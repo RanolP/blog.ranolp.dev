@@ -21,5 +21,6 @@
 @import './extensions/placeholder/placeholder.css';
 @import './extensions/mention/mention.css';
 @import './extensions/twitter-embed/twitter-embed.css';
+@import './extensions/youtube-embed/youtube-embed.css';
 @import './extensions/gallery/gallery.css';
 @import './extensions/link-mention/link-mention.css';

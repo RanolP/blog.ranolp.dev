@@ -50,6 +50,19 @@ const getSlashCommandItems = async ({
         }
       },
     },
+    {
+      id: 'youtube',
+      title: 'YouTube Embed',
+      description: 'Embed a YouTube video',
+      icon: '▶️',
+      group: 'media',
+      command: (editor) => {
+        const url = prompt('Enter YouTube URL:');
+        if (url) {
+          editor.commands.setYouTubeEmbed({ url });
+        }
+      },
+    },
     // Content
     {
       id: 'heading1',
