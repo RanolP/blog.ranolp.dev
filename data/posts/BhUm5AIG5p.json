@@ -297,9 +297,13 @@
       {
         "type": "gallery",
         "attrs": {
-          "images": [],
-          "displayMode": "grid",
-          "columns": 3
+          "images": [
+            "/images/8d1f0906b6829970.avif",
+            "/images/72e9ec0ba392d9a1.avif",
+            "/images/9c2b6f1581d4ffc3.avif"
+          ],
+          "displayMode": "masonry",
+          "columns": 2
         }
       },
       {
@@ -310,7 +314,7 @@
   "id": "BhUm5AIG5p",
   "metadata": {
     "publishedAt": null,
-    "lastModifiedAt": 1767269805
+    "lastModifiedAt": 1767270296
   },
   "slug": "BhUm5AIG5p"
 }

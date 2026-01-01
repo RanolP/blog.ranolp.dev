@@ -32,6 +32,17 @@ export function GalleryNodeView({
   const uploadZoneRef = useRef<HTMLDivElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
+  // Use ref to avoid stale closure in Uppy callbacks
+  const imagesRef = useRef<string[]>(images);
+  useEffect(() => {
+    imagesRef.current = images;
+  }, [images]);
+
+  const updateAttributesRef = useRef(updateAttributes);
+  useEffect(() => {
+    updateAttributesRef.current = updateAttributes;
+  }, [updateAttributes]);
+
   // Initialize Uppy instance
   const [uppy] = useState(() => {
     const instance = new Uppy({
@@ -56,9 +67,9 @@ export function GalleryNodeView({
 
     instance.on('upload-success', (file, response) => {
       if (file && response?.body?.url) {
-        // Always append to existing images
-        const currentImages = (node.attrs.images as string[]) || [];
-        updateAttributes({ images: [...currentImages, response.body.url] });
+        // Always append to existing images - use ref to get fresh value
+        const currentImages = imagesRef.current;
+        updateAttributesRef.current({ images: [...currentImages, response.body.url] });
         instance.removeFile(file.id);
       }
       setUploadProgress({ progress: 0, fileName: null });
