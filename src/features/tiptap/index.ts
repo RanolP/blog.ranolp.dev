@@ -3,14 +3,8 @@
  * Provides both SSR and client-side editor functionality
  */
 
-// SSR components and utilities
-export {
-  TiptapSSR,
-  createSSREditor,
-  tiptapToHTML,
-  htmlToTiptap,
-  type TiptapSSRProps,
-} from './ssr';
+// SSR components (client-compatible version)
+export { TiptapSSR, type TiptapSSRProps } from './ssr';
 
 // Configuration
 export {

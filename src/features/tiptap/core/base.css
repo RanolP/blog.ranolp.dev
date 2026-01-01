@@ -2,4 +2,9 @@
 .ProseMirror {
   outline: none;
   min-height: 300px;
+  word-break: keep-all;
+}
+
+.tiptap-content {
+  word-break: keep-all;
 }

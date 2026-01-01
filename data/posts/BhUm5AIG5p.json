@@ -395,9 +395,7 @@
       {
         "type": "gallery",
         "attrs": {
-          "images": [
-            "/images/e783075c1b63ab2c.avif"
-          ],
+          "images": ["/images/e783075c1b63ab2c.avif"],
           "displayMode": "grid",
           "columns": 1,
           "gridSpans": []
@@ -410,7 +408,7 @@
   },
   "id": "BhUm5AIG5p",
   "metadata": {
-    "publishedAt": 1767272089,
+    "publishedAt": 1734793200,
     "lastModifiedAt": 1767272138
   },
   "slug": "BhUm5AIG5p"

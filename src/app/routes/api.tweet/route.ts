@@ -1,5 +1,9 @@
 import { getTweet, fetchTweet } from 'react-tweet/api';
-import { getCachedTweet, cacheTweet, removeCachedTweet } from '~/services/tweets/cache.server';
+import {
+  getCachedTweet,
+  cacheTweet,
+  removeCachedTweet,
+} from '~/services/tweets/cache.server';
 
 /**
  * API route for fetching and caching tweets
@@ -66,7 +70,7 @@ export async function loader({ request }: { request: Request }) {
     return Response.json({ error: 'Tweet not found' }, { status: 404 });
   } catch (error) {
     console.error('Error fetching tweet:', error);
-    
+
     // Try to return cached version even if fetch failed
     const cachedTweet = await getCachedTweet(tweetId);
     if (cachedTweet) {
@@ -78,10 +82,6 @@ export async function loader({ request }: { request: Request }) {
       });
     }
 
-    return Response.json(
-      { error: 'Failed to fetch tweet' },
-      { status: 500 },
-    );
+    return Response.json({ error: 'Failed to fetch tweet' }, { status: 500 });
   }
 }
-

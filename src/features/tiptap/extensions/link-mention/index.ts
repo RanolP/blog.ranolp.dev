@@ -169,7 +169,7 @@ export const LinkMention = Node.create({
 export function createLinkMentionExtensionForSSR() {
   return LinkMention.extend({
     addNodeView() {
-      return undefined;
+      return null;
     },
     renderHTML({ node, HTMLAttributes }) {
       const attrs = node.attrs as LinkMentionAttributes;

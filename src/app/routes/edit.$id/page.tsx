@@ -1,9 +1,9 @@
 import { getPostById, writePost } from '~/services/posts/repository.server';
 import { extractTitleFromContent, type Post } from '~/services/posts/types';
 import { SaveStateProvider } from './edit-wrapper';
-import { EditorClient } from './editor';
 import { EditHeader } from './header';
 import type { Route } from './+types/page';
+import { EditorClient } from './editor';
 
 export async function loader({ params }: Route.LoaderArgs): Promise<Post> {
   const { id } = params;

@@ -421,7 +421,9 @@ export function createMentionExtensionForSSR() {
       }
       // Add verified icon for Twitter mentions (using shared icon data)
       if (attrs.verified && platform === 'twitter') {
-        textContent.push(iconToSSR(verifiedIconData, 'mention-verified', 14, 14));
+        textContent.push(
+          iconToSSR(verifiedIconData, 'mention-verified', 14, 14),
+        );
       }
       content.push(textContent);
 

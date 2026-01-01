@@ -4,12 +4,16 @@ import { NodeViewWrapper } from '@tiptap/react';
 import type { NodeViewProps } from '@tiptap/react';
 import { EmbeddedTweet, TweetNotFound } from 'react-tweet';
 import type { Tweet } from 'react-tweet/api';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 
 export function TwitterEmbedNodeView({ node }: NodeViewProps) {
   const url = node.attrs.url as string;
-  const tweetIdRegex = /\/status\/(\d+)/g;
-  const id = tweetIdRegex.exec(url)?.[1];
+  const id = useMemo(() => {
+    if (!url) return undefined;
+    const match = /\/status\/(\d+)/.exec(url);
+    return match?.[1];
+  }, [url]);
+
   const [tweet, setTweet] = useState<Tweet | null>(null);
   const [error, setError] = useState<Error | null>(null);
   const [loading, setLoading] = useState(true);
@@ -20,22 +24,35 @@ export function TwitterEmbedNodeView({ node }: NodeViewProps) {
       return;
     }
 
+    let cancelled = false;
+    setLoading(true);
+    setError(null);
+
     async function fetchTweet() {
       try {
         const response = await fetch(`/api/tweet?id=${id}`);
+        if (cancelled) return;
         if (!response.ok) {
           throw new Error('Failed to fetch tweet');
         }
         const data = await response.json();
+        if (cancelled) return;
         setTweet(data);
       } catch (err) {
+        if (cancelled) return;
         setError(err instanceof Error ? err : new Error('Unknown error'));
       } finally {
-        setLoading(false);
+        if (!cancelled) {
+          setLoading(false);
+        }
       }
     }
 
     fetchTweet();
+
+    return () => {
+      cancelled = true;
+    };
   }, [id]);
 
   if (!id) {

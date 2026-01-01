@@ -4,8 +4,8 @@ import { TwitterEmbedNodeView } from './node-view';
 
 // Re-export client component for client-side usage
 export { TweetClient } from './client';
-// Re-export server component for SSR usage
-export { TweetServer } from './server';
+// Note: TweetServer should be imported directly from './server' where needed
+// to avoid bundling server-only code in client bundles
 
 declare module '@tiptap/core' {
   interface Commands<ReturnType> {
