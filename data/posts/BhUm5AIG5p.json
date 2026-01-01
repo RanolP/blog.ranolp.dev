@@ -19,6 +19,15 @@
         "content": [
           {
             "type": "text",
+            "text": "feat. 〈세레나데 유니버스〉 뒷풀이 간담회"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
             "text": "2024년 12월 20일, "
           },
           {
@@ -372,14 +381,37 @@
         }
       },
       {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "그나저나 이 팔찌 푸는 법 아시는 분…. 여태 못 풀었는데 어카죠…."
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "gallery",
+        "attrs": {
+          "images": [
+            "/images/e783075c1b63ab2c.avif"
+          ],
+          "displayMode": "grid",
+          "columns": 1,
+          "gridSpans": []
+        }
+      },
+      {
         "type": "paragraph"
       }
     ]
   },
   "id": "BhUm5AIG5p",
   "metadata": {
-    "publishedAt": null,
-    "lastModifiedAt": 1767271973
+    "publishedAt": 1767272089,
+    "lastModifiedAt": 1767272089
   },
   "slug": "BhUm5AIG5p"
 }

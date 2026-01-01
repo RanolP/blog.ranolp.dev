@@ -113,17 +113,17 @@
 /* Upload Indicator */
 .gallery-upload-indicator {
   position: absolute;
-  bottom: 1rem;
+  top: 1rem;
   right: 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  min-width: 150px;
+  min-width: 120px;
   max-width: 250px;
-  padding: 0.5rem;
+  padding: 0.5rem 0.75rem;
   background-color: var(--oc-white);
   border: 1px solid var(--oc-gray-3);
-  border-radius: 0.25rem;
+  border-radius: 0.5rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   z-index: 20;
 }
@@ -132,6 +132,16 @@
   background-color: var(--oc-gray-8);
   border-color: var(--oc-gray-6);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 480px) {
+  .gallery-upload-indicator {
+    top: 0.5rem;
+    right: 0.5rem;
+    left: 0.5rem;
+    max-width: none;
+    min-width: 0;
+  }
 }
 
 .gallery-upload-indicator-bar {
