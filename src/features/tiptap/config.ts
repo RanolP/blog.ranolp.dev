@@ -16,6 +16,11 @@ import {
 } from './extensions/twitter-embed';
 import { Gallery, createGalleryExtensionForSSR } from './extensions/gallery';
 import { SlashCommand } from './extensions/slash-command';
+import {
+  LinkMention,
+  createLinkMentionExtensionForSSR,
+} from './extensions/link-mention';
+import { LinkPasteHandler } from './extensions/link-mention/paste-extension';
 
 /**
  * Default Tiptap extensions configuration for client-side editor
@@ -41,6 +46,8 @@ export const defaultExtensions: Extensions = [
   TwitterEmbed,
   Gallery,
   SlashCommand,
+  LinkMention,
+  LinkPasteHandler,
 ];
 
 /**
@@ -61,6 +68,7 @@ export const ssrExtensions: Extensions = [
   createMentionExtensionForSSR(),
   createTwitterEmbedExtensionForSSR(),
   createGalleryExtensionForSSR(),
+  createLinkMentionExtensionForSSR(),
   TiptapPlaceholder,
 ];
 

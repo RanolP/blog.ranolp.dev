@@ -6,6 +6,7 @@ import { useFetcher } from 'react-router';
 import { defaultEditorOptions } from '~/features/tiptap/config';
 import type { JSONContent } from '~/features/tiptap';
 import { useSaveState } from './edit-wrapper';
+import { LinkPasteSuggestion } from '~/features/tiptap/extensions/link-mention/paste-handler';
 
 interface EditorClientProps {
   initialContent: JSONContent;
@@ -17,6 +18,10 @@ export function EditorClient({ initialContent, postId }: EditorClientProps) {
   const fetcher = useFetcher();
   const saveTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const { setIsSaving, setLastSavedAt } = useSaveState();
+  const [linkPasteState, setLinkPasteState] = useState<{
+    url: string;
+  } | null>(null);
+  const editorRef = useRef<HTMLDivElement>(null);
 
   const editor = useEditor({
     ...defaultEditorOptions,
@@ -121,10 +126,71 @@ export function EditorClient({ initialContent, postId }: EditorClientProps) {
     }
   }, [fetcher.state, fetcher.data, setIsSaving, setLastSavedAt]);
 
+  // Handle link paste events
+  useEffect(() => {
+    if (!editor) return;
+
+    const editorElement = editor.view.dom;
+    const handleLinkPaste = (event: Event) => {
+      const customEvent = event as CustomEvent<{
+        url: string;
+      }>;
+      if (customEvent.detail) {
+        setLinkPasteState({
+          url: customEvent.detail.url,
+        });
+      }
+    };
+
+    editorElement.addEventListener('linkPaste', handleLinkPaste);
+
+    return () => {
+      editorElement.removeEventListener('linkPaste', handleLinkPaste);
+    };
+  }, [editor]);
+
+  const handleLinkInsert = (
+    url: string,
+    metadata: { title?: string; favicon?: string; hostname?: string },
+  ) => {
+    if (!editor) return;
+
+    editor.commands.setLinkMention({
+      url,
+      title: metadata.title,
+      favicon: metadata.favicon,
+      hostname: metadata.hostname,
+    });
+
+    setLinkPasteState(null);
+  };
+
+  const handleLinkCancel = () => {
+    if (!editor) return;
+
+    // Insert the URL as a regular link instead
+    const url = linkPasteState?.url;
+    if (url) {
+      editor.commands.setLink({ href: url });
+    }
+
+    setLinkPasteState(null);
+  };
+
   return (
-    <EditorContent
-      editor={editor}
-      className="prose prose-sm sm:prose-base lg:prose-lg xl:prose-xl max-w-none dark:prose-invert tiptap-content focus:outline-none min-h-[300px]"
-    />
+    <div ref={editorRef} className="relative">
+      <EditorContent
+        editor={editor}
+        className="prose prose-sm sm:prose-base lg:prose-lg xl:prose-xl max-w-none dark:prose-invert tiptap-content focus:outline-none min-h-[300px]"
+      />
+      {linkPasteState && editor && (
+        <LinkPasteSuggestion
+          editor={editor}
+          url={linkPasteState.url}
+          onInsert={handleLinkInsert}
+          onCancel={handleLinkCancel}
+        />
+      )}
+    </div>
   );
 }

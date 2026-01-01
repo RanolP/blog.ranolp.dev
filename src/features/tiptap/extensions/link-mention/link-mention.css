@@ -1,0 +1,267 @@
+/* Link Mention Styles */
+.link-mention {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.link-mention-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 4px;
+  padding: 2px 6px;
+  background-color: var(--oc-gray-1);
+  border: 1px solid var(--oc-gray-3);
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.dark .link-mention-link {
+  background-color: var(--oc-gray-9);
+  border-color: var(--oc-gray-7);
+}
+
+.link-mention-link:hover {
+  background-color: var(--oc-gray-2);
+  border-color: var(--oc-gray-4);
+}
+
+.dark .link-mention-link:hover {
+  background-color: var(--oc-gray-8);
+  border-color: var(--oc-gray-6);
+}
+
+.link-mention-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.link-mention-favicon {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.link-mention-favicon-placeholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  font-size: 12px;
+  background-color: var(--oc-gray-2);
+  border-radius: 2px;
+}
+
+.dark .link-mention-favicon-placeholder {
+  background-color: var(--oc-gray-8);
+}
+
+.link-mention-title {
+  font-size: 0.9em;
+  color: var(--oc-blue-7);
+  font-weight: 500;
+}
+
+.dark .link-mention-title {
+  color: var(--oc-blue-4);
+}
+
+/* SSR/tiptap-content link mention styles */
+.tiptap-content .link-mention {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.tiptap-content .link-mention-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 4px;
+  padding: 2px 6px;
+  background-color: var(--oc-gray-1);
+  border: 1px solid var(--oc-gray-3);
+}
+
+.dark .tiptap-content .link-mention-link {
+  background-color: var(--oc-gray-9);
+  border-color: var(--oc-gray-7);
+}
+
+.tiptap-content .link-mention-content {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tiptap-content .link-mention-favicon {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.tiptap-content .link-mention-favicon-placeholder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  font-size: 12px;
+  background-color: var(--oc-gray-2);
+  border-radius: 2px;
+}
+
+.dark .tiptap-content .link-mention-favicon-placeholder {
+  background-color: var(--oc-gray-8);
+}
+
+.tiptap-content .link-mention-title {
+  font-size: 0.9em;
+  color: var(--oc-blue-7);
+  font-weight: 500;
+}
+
+.dark .tiptap-content .link-mention-title {
+  color: var(--oc-blue-4);
+}
+
+/* Link Paste Suggestion Styles */
+.link-paste-suggestion {
+  z-index: 1000;
+}
+
+.link-paste-suggestion-content {
+  background-color: white;
+  border: 1px solid var(--oc-gray-3);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 12px;
+  min-width: 280px;
+  max-width: 400px;
+}
+
+.dark .link-paste-suggestion-content {
+  background-color: var(--oc-gray-9);
+  border-color: var(--oc-gray-7);
+}
+
+.link-paste-suggestion-header {
+  margin-bottom: 8px;
+}
+
+.link-paste-suggestion-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--oc-gray-9);
+}
+
+.dark .link-paste-suggestion-title {
+  color: var(--oc-gray-1);
+}
+
+.link-paste-suggestion-preview {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  background-color: var(--oc-gray-1);
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.dark .link-paste-suggestion-preview {
+  background-color: var(--oc-gray-8);
+}
+
+.link-paste-suggestion-favicon {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.link-paste-suggestion-preview-title {
+  font-size: 13px;
+  color: var(--oc-gray-7);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dark .link-paste-suggestion-preview-title {
+  color: var(--oc-gray-3);
+}
+
+.link-paste-suggestion-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.link-paste-suggestion-button {
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s, outline 0.2s;
+  outline: none;
+}
+
+.link-paste-suggestion-button:focus-visible {
+  outline: 2px solid var(--oc-blue-6);
+  outline-offset: 2px;
+}
+
+.link-paste-suggestion-button-primary {
+  background-color: var(--oc-blue-6);
+  color: white;
+}
+
+.link-paste-suggestion-button-primary:hover {
+  background-color: var(--oc-blue-7);
+}
+
+.link-paste-suggestion-button-primary:focus-visible {
+  outline-color: var(--oc-blue-7);
+  background-color: var(--oc-blue-7);
+}
+
+.link-paste-suggestion-button-secondary {
+  background-color: var(--oc-gray-2);
+  color: var(--oc-gray-9);
+}
+
+.dark .link-paste-suggestion-button-secondary {
+  background-color: var(--oc-gray-7);
+  color: var(--oc-gray-1);
+}
+
+.link-paste-suggestion-button-secondary:hover {
+  background-color: var(--oc-gray-3);
+}
+
+.dark .link-paste-suggestion-button-secondary:hover {
+  background-color: var(--oc-gray-6);
+}
+
+.link-paste-suggestion-loading {
+  padding: 12px;
+  text-align: center;
+  color: var(--oc-gray-6);
+  font-size: 13px;
+}
+
+.dark .link-paste-suggestion-loading {
+  color: var(--oc-gray-4);
+}
