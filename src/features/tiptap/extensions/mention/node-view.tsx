@@ -5,6 +5,11 @@ import { NodeViewWrapper } from '@tiptap/react';
 import { Icon } from '@iconify/react';
 import type { ReactNodeViewProps } from '@tiptap/react';
 import type { MentionItem } from './types';
+import {
+  twitterIconData,
+  githubIconData,
+  verifiedIconData,
+} from './icons';
 
 export function MentionNodeView({ node }: ReactNodeViewProps) {
   const attrs = node.attrs as MentionItem;
@@ -64,14 +69,14 @@ export function MentionNodeView({ node }: ReactNodeViewProps) {
             <span className={`mention-platform mention-platform-${platform}`}>
               {platform === 'twitter' ? (
                 <Icon
-                  icon="mdi:twitter"
+                  icon={twitterIconData}
                   className="mention-platform-icon"
                   width={16}
                   height={16}
                 />
               ) : platform === 'github' ? (
                 <Icon
-                  icon="mdi:github"
+                  icon={githubIconData}
                   className="mention-platform-icon"
                   width={16}
                   height={16}
@@ -105,7 +110,7 @@ export function MentionNodeView({ node }: ReactNodeViewProps) {
             )}
             {attrs.verified && platform === 'twitter' && (
               <Icon
-                icon="mdi:check-circle"
+                icon={verifiedIconData}
                 className="mention-verified"
                 width={14}
                 height={14}

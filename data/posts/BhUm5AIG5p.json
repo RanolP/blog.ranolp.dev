@@ -170,7 +170,7 @@
             "/images/518e96fa74a06d71.avif",
             "/images/71e58a28b057d945.avif"
           ],
-          "displayMode": "masonry",
+          "displayMode": "grid",
           "columns": 2,
           "gridSpans": []
         }
@@ -411,7 +411,7 @@
   "id": "BhUm5AIG5p",
   "metadata": {
     "publishedAt": 1767272089,
-    "lastModifiedAt": 1767272089
+    "lastModifiedAt": 1767272138
   },
   "slug": "BhUm5AIG5p"
 }

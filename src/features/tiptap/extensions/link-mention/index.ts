@@ -164,11 +164,59 @@ export const LinkMention = Node.create({
 
 /**
  * Create Link Mention extension for SSR
+ * Renders full HTML structure matching the client NodeView to prevent hydration mismatch
  */
 export function createLinkMentionExtensionForSSR() {
   return LinkMention.extend({
     addNodeView() {
-      return null;
+      return undefined;
+    },
+    renderHTML({ node, HTMLAttributes }) {
+      const attrs = node.attrs as LinkMentionAttributes;
+      const { url, title, favicon, hostname } = attrs;
+      const displayTitle = title || hostname || url;
+
+      // Build content structure matching React NodeView exactly
+      const content: any[] = ['span', { class: 'link-mention-content' }];
+
+      // Favicon or placeholder (matching React component behavior)
+      if (favicon) {
+        content.push([
+          'img',
+          {
+            class: 'link-mention-favicon',
+            src: favicon,
+            alt: '',
+          },
+        ]);
+      } else {
+        content.push([
+          'span',
+          { class: 'link-mention-favicon link-mention-favicon-placeholder' },
+          hostname?.[0]?.toUpperCase() || '🌐',
+        ]);
+      }
+
+      // Title
+      content.push(['span', { class: 'link-mention-title' }, displayTitle]);
+
+      return [
+        'span',
+        mergeAttributes(HTMLAttributes, {
+          'data-type': 'link-mention',
+          class: 'link-mention',
+        }),
+        [
+          'a',
+          {
+            href: url,
+            target: '_blank',
+            rel: 'noopener noreferrer',
+            class: 'link-mention-link',
+          },
+          content,
+        ],
+      ];
     },
   });
 }
