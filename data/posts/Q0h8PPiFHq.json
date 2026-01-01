@@ -10,7 +10,7 @@
         "content": [
           {
             "type": "text",
-            "text": "asdf"
+            "text": "2024년 회고"
           }
         ]
       },
@@ -18,32 +18,8 @@
         "type": "paragraph",
         "content": [
           {
-            "type": "mention",
-            "attrs": {
-              "id": "gh:finalchild",
-              "label": "@gh:finalchild",
-              "mentionSuggestionChar": "@",
-              "username": "finalchild",
-              "displayName": "finalchild",
-              "avatar": "https://avatars.githubusercontent.com/u/8557044?v=4",
-              "verified": false
-            }
-          },
-          {
             "type": "text",
-            "text": " kills "
-          },
-          {
-            "type": "mention",
-            "attrs": {
-              "id": "gh:kiwiyou",
-              "label": "@gh:kiwiyou",
-              "mentionSuggestionChar": "@",
-              "username": "kiwiyou",
-              "displayName": "kiwiyou",
-              "avatar": "https://avatars.githubusercontent.com/u/12986388?v=4",
-              "verified": false
-            }
+            "text": "평범한 한 해였습니다, 12월을 제외하면요."
           }
         ]
       },
@@ -51,32 +27,1302 @@
         "type": "paragraph",
         "content": [
           {
-            "type": "mention",
+            "type": "text",
+            "text": "오타쿠로서 저는 항상 ‘다음을 기약할 수 있을지 모르는 굿즈는 있을 때 챙기자’라는 모토를 갖고 살려고 합니다. 가끔 예약을 까먹거나, 지갑 사정의 문제로 못 사거나 하지만요."
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "gallery",
+        "attrs": {
+          "images": [
+            "/images/72d6f8cf5a9fd9af.avif"
+          ],
+          "displayMode": "grid",
+          "columns": 1,
+          "gridSpans": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "올해도 저는 평화롭게 덕질을 하고, 덕질하려고 돈 벌고, 또 다시 덕질을 하며 살고 있었습니다. 12월까지는요. 그 이야기는 잠시 미뤄두고, 12월 이전의 이야기부터 마무리 지어볼까요."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "사무실, 업무 보통, 간식 딸림."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "작년 말에 WeWork를 벗어나 IFC Smart Suites로 이전했고, 6월 경 완전히 자리 잡았습니다. "
+          },
+          {
+            "type": "linkMention",
             "attrs": {
-              "id": "tw:ssogari_dev",
-              "label": "@tw:ssogari_dev",
-              "mentionSuggestionChar": "@",
-              "username": "ssogari_dev",
-              "displayName": "【쏘가리】팔로우 리밋-ing",
-              "avatar": "https://pbs.twimg.com/profile_images/1981622872650010624/wyFCeAbZ_normal.jpg",
-              "verified": false
+              "url": "https://blog.laftel.net/post/31",
+              "title": "라프텔 팀 블로그 - 라프텔, 유목민 생활을 끝내다!",
+              "customTitle": "회사 블로그",
+              "favicon": "https://blog.laftel.net/favicon.ico",
+              "hostname": "blog.laftel.net"
             }
           },
           {
             "type": "text",
-            "text": " and "
+            "text": "에서도 살펴볼 수 있습니다. WeWork에 있었을 땐 배달음식을 시켜먹기 좋았었는데 여기는 빡빡해서 슬픕니다. 하지만 지표면과 마주하지 않고 더현대 서울, IFC MALL, 여의도역 인근 빌딩 식당가까지 접근할 수 있다는 건 크나큰 장점이기도 합니다. 솔직히 외투 입고 나가기 번거롭긴 하니까요. 또, 사내에 간식바도 생기고 해서 매일매일 과자 쓰레기와 음료 쓰레기가 제 자리에서 발견된다고 하네요."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "사무실 이야기는 이정도면 되었으니 각설하고, 업무 이야기를 남기고 싶습니다. 먼저 올해는 1월 말부터 신규 스쿼드를 진행하며 대대적인 다운로드 기능 개선이 있었는데요 (관련 회사 블로그 글은 "
           },
           {
-            "type": "mention",
+            "type": "linkMention",
             "attrs": {
-              "id": "tw:RanolP_777",
-              "label": "@tw:RanolP_777",
-              "mentionSuggestionChar": "@",
-              "username": "RanolP_777",
-              "displayName": "🕯️Ranol☆P 🦋 ranolp.dev",
-              "avatar": "https://pbs.twimg.com/profile_images/1213688874884464640/PqCf6ZeN_normal.jpg",
-              "verified": false
+              "url": "https://blog.laftel.net/post/28",
+              "title": "라프텔 팀 블로그 - 넷플릭스에는 없는 전체 다운로드 기능, 라프텔엔 왜 있을까?",
+              "customTitle": "여기",
+              "favicon": "https://blog.laftel.net/favicon.ico",
+              "hostname": "blog.laftel.net"
             }
+          },
+          {
+            "type": "text",
+            "text": "에). 많은 어려움이 있었고, 대표적인 어려움으론 이런 게 있었네요."
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Apple 측 개발자 문서의 미비"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "익숙지 않은 Swift 코드 이해"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "오랜만에 다루는 다중 스레드 환경"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "모바일 앱의 라이프사이클 이해"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "OS 자체 저장공간 관리정책"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "유동적으로 변경된 기획"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "여러모로 배우고 기억해내고 고통받아야 할 일이 많았던 작업이었습니다. 심지어 모종의 사유로 인해 배포도 9월까지 미뤄졌고요."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "그래도 하반기 중에는 인력이 스쿼드에 묶여는 있는데 뭔가 막상 해야 할 일은 없는 상태였기에 미뤄뒀던 기술 과업을 해결해보는 시간을 가졌습니다. 정리하자면 다음과 같은 문제를 풀었는데 이중 몇몇은 어딘가에서 발표할 기회가 생기면 좋겠네요."
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Android Lint, Ktlint, Swiftlint, ESLint 등을 reviewdog에 통합해 GitHub에 리뷰해주는 CI Action"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Zod를 활용한 선언형 Growth Log 관리 프레임워크. 시간 나면 자동으로 로그 메타데이터 타입을 추출하는 게 목표."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Swagger 기반 API Client Codegen 리서치"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Next.js App Router 환경에서 페이지 단위 데이터 불러오기 및 클라이언트 측 다시 불러오기 프레임워크"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "EC2에 Grafana 및 OpenObserve 설치"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "모노레포 도입 (일부)"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "상반기에는 고통스러웠고 하반기에는 재밌지만 프론트엔드가 이런 걸 하나 싶은 생각이 들었습니다. Toss의 프론트엔드 플랫폼 팀 같은 느낌이었기도 하고요. 그래도 이제 하고 있는 작업이 일단 화면 그리는 프론트엔드 작업이고 고통 20% 재미 60% 정도 되는 작업이기도 해서 다행입니다. 레거시랑 싸우지 않아도 돼서 괜찮은 걸지도…."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "어리석은 이력서는 typst와 춤춘다"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "첫 삽을 떴을 당시에는 react-pdf로 만들어서 더 풍부한 기능이 있는 웹과 정적인 출판물을 동시에 커버하기라든가, CSS Print 같은 걸 생각했었는데, typst가 재밌어 보여서 typst를 배우면서 이력서를 만들게 됐어요. 그리고… LaTeX가 달리 얘는 언어가…… 매우 좋음……."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "평범한 문서가 글자 나열인 것과 달리, typst에 있는 엑셀보다 강력한 수식 지원으로 이력서에서 프로그래밍이 됩니다. 날짜 계산이 가능하고, JSON 자료도 가져와 참고할 수 있어서 오픈소스 생태계에 기여한 내역이나 문제풀이 개수 등을 포함하고 있습니다."
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "gallery",
+        "attrs": {
+          "images": [
+            "/images/10afff848e244b5a.avif",
+            "/images/fd75f4f3cd109176.avif"
+          ],
+          "displayMode": "list",
+          "columns": 3,
+          "gridSpans": []
+        }
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "내 지갑에 위험한 녀석"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "올해도 정말 다양한 곳에 돈을 쓰며 살았습니다. 타임라인에 따라 간략히 정리해봅시다."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "가장 먼저 2월, 제3회 일러스타 페스가 있었습니다. 선행 입장권을 산 건 다행이었지만 줄은 끔찍하게도 길었습니다. 어찌저찌 줄을 뚫고 들어가서는 “표준 라이브러리” 부스에서 태그 외우기 이벤트를 하고, 선입금해둔 여러 굿즈도 잔뜩 품에 안아왔어요. 밥 먹고 돌아와서는 신기하게도 태그 외우기 1등을 했다고 하셔서 한별이 쿠션을 받아왔습니다. 그 외에는 인디 게임 부스도 둘러보고, 식스타 게임 키도 샀었네요. 당시 기록이 생생하게 남은 자세한 후기는 "
+          },
+          {
+            "type": "linkMention",
+            "attrs": {
+              "url": "https://velog.io/@asdhugh1/include-stdlib.h",
+              "title": "일러스타 페스 후기 - #include \"stdlib.h\"",
+              "customTitle": "여기에",
+              "favicon": "https://static.velog.io/favicon.ico",
+              "hostname": "velog.io"
+            }
+          },
+          {
+            "type": "text",
+            "text": " 있습니다."
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "gallery",
+        "attrs": {
+          "images": [
+            "/images/004277dc99415838.avif",
+            "/images/90d3146c15be9a50.avif",
+            "/images/c4e5e4c06eb5c3dd.avif"
+          ],
+          "displayMode": "grid",
+          "columns": 3,
+          "gridSpans": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "4월 말에는 고등학교 동창과 만났다가 오후 시간이 남아서 요루시카 카페를 방문했습니다. 5월에는 스타레일-부어치킨 콜라보를 갔고, 블루아카 띠부씰 모은다고 빵을 좀 많이 사먹기도 했었네요. PlayX4에 방문해 이것저것 구경하기도 했습니다. 굿즈를 열심히 정리하기도 했습니다."
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "gallery",
+        "attrs": {
+          "images": [
+            "/images/10c5072d5ab13e0e.avif",
+            "/images/9bec28abd3eff234.avif",
+            "/images/fa998fd9bf898909.avif",
+            "/images/c479024d1f2d9fe2.avif",
+            "/images/739efc66dec82c59.avif",
+            "/images/c1adfc942fee06a3.avif",
+            "/images/61ed637576972b40.avif",
+            "/images/08356731935ad438.avif"
+          ],
+          "displayMode": "grid",
+          "columns": 6,
+          "gridSpans": [
+            {
+              "col": 2,
+              "row": 1
+            },
+            {
+              "col": 2,
+              "row": 1
+            },
+            {
+              "col": 2,
+              "row": 1
+            },
+            {
+              "col": 2,
+              "row": 1
+            },
+            {
+              "col": 2,
+              "row": 1
+            },
+            {
+              "col": 2,
+              "row": 1
+            },
+            {
+              "col": 3,
+              "row": 1
+            },
+            {
+              "col": 3,
+              "row": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "9월엔 블루아카-맘스터치 콜라보가 한창이었습니다. 근데 왜 얘네는 자꾸 1인분 어치보다 더 많은 양을 콜라보 메뉴로 선정하는 걸까요? 음식물 쓰레기 다량 발생 사건을 일으키는 저의를 알 수가 없습니다…. 아 그리고 〈일러스타 페스 in 부천국제만화축제 2024〉에 방문했습니다. 리듬 공동 부스도 찍고, maimai.ac 부스에서 선입금한 굿즈와 배포 엽서를 수령했으며, 서울 인디 아이돌 공연을 관람하기도 했습니다. 네키루의 깃발 흔드는 퍼포먼스가 장난이 아니더라고요. 팬 분들이 받아서 흔드는 것도 신기한 문화였습니다."
+          }
+        ]
+      },
+      {
+        "type": "gallery",
+        "attrs": {
+          "images": [
+            "/images/37b1a6ff046d1af5.avif",
+            "/images/91eb2089a982ef38.avif",
+            "/images/4f04ce487813de06.avif",
+            "/images/93c61e7d65c14026.avif",
+            "/images/d4876b2bdccd919a.avif"
+          ],
+          "displayMode": "grid",
+          "columns": 3,
+          "gridSpans": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "그러곤 결국 리듬 공동 부스에서 봤던 플라티나 랩의 후원 패키지를 질렀습니다. 봉제 인형 귀엽잖아요."
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "gallery",
+        "attrs": {
+          "images": [
+            "/images/77042f2d56ba3676.avif"
+          ],
+          "displayMode": "grid",
+          "columns": 1,
+          "gridSpans": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "10월 말부터는 블루아카-파파존스 콜라보가 시작되었습니다. 사람들을 모아 3판을 시켜서 3중복을 당했습니다. 포켓몬-이삭토스트 콜라보도 하나 사봤습니다. 금새 품절이 되어 두번째 배지는 볼 수 없었습니다."
+          }
+        ]
+      },
+      {
+        "type": "gallery",
+        "attrs": {
+          "images": [
+            "/images/e7c282a15b15ecbe.avif",
+            "/images/0fad68e7d0bf574e.avif",
+            "/images/fc2338e4b59f2702.avif",
+            "/images/3a184ed7b6cab190.avif",
+            "/images/47353c16d43591a1.avif"
+          ],
+          "displayMode": "grid",
+          "columns": 3,
+          "gridSpans": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "그리고, 가장 중요한 것. 세레나데 유니버스 토요일 공연을 보고 왔습니다. 맨 앞 좌석이라 공연자 분이 찍은 사진에 아주 깔끔히 들어갔습니다."
+          }
+        ]
+      },
+      {
+        "type": "twitter",
+        "attrs": {
+          "url": "https://twitter.com/Zzero_bass/status/1860264579131183156?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1860264579131183156%7Ctwgr%5E762b598ed9ab347429b8d6cbcfc13da0cdaabae8%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fcdn.iframe.ly%2Fapi%2Fiframe%3Fapp%3D1url%3Dhttps3A2F2Fx.com2FZzero_bass2Fstatus2F1860264579131183156key%3Df38afa2868124b73c4f1b014d996b503"
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "한음사 주최 세레나데 유니버스 연말 파티도 즐기고 왔습니다. 해당 후기는 <TODO>에서 찾아보실 수 있습니다."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "컨퍼런스에서 만남을 추구하면 안 되는 걸까?"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "솔직히 컨퍼런스 가서 재밌는 발표를 듣는 경우는 손에 꼽을 정도인 것 같고, 그냥 사람들 만나는 게 재밌어서 가는데 올해에 간 곳 중 절반 정도는 성공한 것 같습니다. SLASH 24 라이트닝 토크 세션이나 아웃프콘이 정말 재밌었습니다."
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "gallery",
+        "attrs": {
+          "images": [
+            "/images/38ec0bb5affdcdfd.avif",
+            "/images/4be15cdf6011af3a.avif"
+          ],
+          "displayMode": "grid",
+          "columns": 2,
+          "gridSpans": []
+        }
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "외톨이의 물질계 공략"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "이번 해에도 이것저것 삶의 질 상승 아이템을 많이 샀습니다."
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "32QN650 모니터. 듀얼 모니터로 능률 향상에 도움을 주고 있습니다."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "WAVLINK USB-C/USB 3.0 Dual 4K Hub. Displaylink로 맥북에 듀얼 모니터 연결을 하고 있습니다."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Braun 시리즈 7. 전기 면도기가 망가져서…."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "삼성 에어컨. 없으니까 죽겠더라…."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "linkMention",
+                    "attrs": {
+                      "url": "https://keychron.kr/v1_max/",
+                      "title": "V1 PRO MAX – 키크론 Keychron",
+                      "customTitle": "Keychrone V1 Max",
+                      "favicon": "https://keychron.kr/wp-content/uploads/2019/08/cropped-tk-32x32.png",
+                      "hostname": "keychron.kr"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": ". 집에서 쓸 기계식 키보드를 샀습니다."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Pico 4 Ultra. VR 헤드셋을 구매했습니다. 비트세이버 말곤 쓸 데를 사실 잘 모르겠습니다."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "이 멋진 게임에 축복을!"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "올해도 적당히 게임을 했습니다. 이하 평가는 올해 플레이했던 게임 중 평가이므로 출시 시기 같은 건 무관합니다."
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Honourable to Mention"
+                  },
+                  {
+                    "type": "text",
+                    "text": ": "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "underline"
+                      }
+                    ],
+                    "text": "Infinite Craft"
+                  },
+                  {
+                    "type": "text",
+                    "text": " - 정말로 파격적인 포맷의 웹게임이었습니다."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "gallery",
+        "attrs": {
+          "images": [
+            "/images/f4169c1c12dee3d4.avif",
+            "/images/3d730b648dd17aa6.avif",
+            "/images/909cfa09516e6a70.avif"
+          ],
+          "displayMode": "grid",
+          "columns": 3,
+          "gridSpans": []
+        }
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Best Co-op Game"
+                  },
+                  {
+                    "type": "text",
+                    "text": ": "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "underline"
+                      }
+                    ],
+                    "text": "Rabbit & Steel"
+                  },
+                  {
+                    "type": "text",
+                    "text": " - 멈춰 움직여 피해 돌아 산개 뭉쳐"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Good Co-op Game:"
+                  },
+                  {
+                    "type": "text",
+                    "text": " "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "underline"
+                      }
+                    ],
+                    "text": "Granblue Fantasy Relink"
+                  },
+                  {
+                    "type": "text",
+                    "text": " - 잘 만들었는데 코옵 구간이 너무 짧고 반복적"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Best VR Game"
+                  },
+                  {
+                    "type": "text",
+                    "text": ": "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "underline"
+                      }
+                    ],
+                    "text": "Beat Saber"
+                  },
+                  {
+                    "type": "text",
+                    "text": " - VR겜올타임베스트인듯"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Best Metroidvania"
+                  },
+                  {
+                    "type": "text",
+                    "text": ": "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "underline"
+                      }
+                    ],
+                    "text": "Ender Lilies"
+                  },
+                  {
+                    "type": "text",
+                    "text": " - 적당한 난이도의 전투, 썩 괜찮은 이야기, 예쁜 캐디(중요)"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Best Platformer"
+                  },
+                  {
+                    "type": "text",
+                    "text": ": "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "underline"
+                      }
+                    ],
+                    "text": "Celeste (Strawberry Jam Collab)"
+                  },
+                  {
+                    "type": "text",
+                    "text": " - 아직도 다 못 깨서 내년에도 이거일듯"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Best Ongoing"
+                  },
+                  {
+                    "type": "text",
+                    "text": ": "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "underline"
+                      }
+                    ],
+                    "text": "Mahjong Soul"
+                  },
+                  {
+                    "type": "text",
+                    "text": " - 마작에 결국 발을 들였습니다."
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Most Anticipated"
+                  },
+                  {
+                    "type": "text",
+                    "text": ": "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "underline"
+                      }
+                    ],
+                    "text": "사니양 연구실"
+                  },
+                  {
+                    "type": "text",
+                    "text": " - 사긴 했는데 아직 플레이를 못 했습니다."
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "속삭이듯 예술을 노래하다"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "세레나데 유니버스 이후로 시유니가 너무 좋아졌습니다. 맨처음 만들고 싶었던 건 세레나데 유니버스 아는 만큼 들리는 노래여서 편곡용 에이블톤 라이브를 사고, 그러다보니 단순 편곡으론 안되겠다 싶어서 유니 라이브러리와 보컬로이드 에디터를 사고, 본격적인 악기 작업도 해보고 싶어서 미디 건반을 사고, 지금은 클립 스튜디오를 사서 그림을 그릴까 고민하고 있습니다."
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "과연 이 모험의 끝은 어디로 가게 될지?"
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "gallery",
+        "attrs": {
+          "images": [
+            "/images/47d3eb81c0a53618.avif"
+          ],
+          "displayMode": "grid",
+          "columns": 1,
+          "gridSpans": []
+        }
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "흔해빠진 코딩으로 세계최강"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "올해에는 사이드 프로젝트를 별로 못했습니다. 회사 일 재밌었던 건 앞에 이야기했고, 이력서 코딩도 재밌었습니다만은 완성한 사이드 프로젝트로 이거다 싶은 게 없어서 조금 슬프네요. 기록할만한 건 이 정도 있겠습니다."
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "http://ocha.ranolp.dev",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": "tiptap-link"
+                        }
+                      }
+                    ],
+                    "text": "ocha.ranolp.dev"
+                  },
+                  {
+                    "type": "text",
+                    "text": " - 아웃프콘 보조 페이지"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "link",
+                        "attrs": {
+                          "href": "http://watch.ranolp.dev",
+                          "target": "_blank",
+                          "rel": "noopener noreferrer nofollow",
+                          "class": "tiptap-link"
+                        }
+                      }
+                    ],
+                    "text": "watch.ranolp.dev"
+                  },
+                  {
+                    "type": "text",
+                    "text": " - 벅스 투표 보조 페이지"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "이 나라는 너무나 불완전하다"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "여기까지였다면 큰 사건 없이 평범한 한 해였으리라 생각합니다. 예에 12월 3일 계엄만 아니었어도 말입니다. 아마 저거 아니었으면 그냥 AGF 가서 놀고 그랬을 거 같은데, 스트레스성 과수면인지 잠만 죽어라 자게 돼서 여의도나 갔었습니다. 한덕수 권한 대행도 탄핵됐고 그런데 헌재가 어떻게 될지 지금 감도 안 잡힙니다. 민주주의가 승리하는 건 당연한 건데, 그 과정에서 어떤 일이 일어날지 정말 모르겠군요. 최대한 피해가 적기를 바랍니다. 솔직히 12월 한 달 간 일어난 일이 너무 많아서 뇌가 처리도 못하고 여전히 12월 3일에 머물러 있는 것 같습니다. 부디 이 글을 읽는 필멸자와 불멸자 분들은 몸 건강을 우선시하며 의견 펴고 다니시기 바랍니다."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "marks": [
+              {
+                "type": "bold"
+              }
+            ],
+            "text": "Carpe Diem!"
+          }
+        ]
+      },
+      {
+        "type": "youtube",
+        "attrs": {
+          "url": "https://youtu.be/32lHz_pATAs?si=MvDKR4g-bgrOXaWt"
+        }
+      },
+      {
+        "type": "blockquote",
+        "content": [
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "type": "text",
+                "text": "평생에 한 번 뿐인 오늘, 인생에 한 번 뿐인 오늘"
+              },
+              {
+                "type": "hardBreak"
+              },
+              {
+                "type": "text",
+                "text": "집으로 돌아가는 길이 아쉽지 않고"
+              },
+              {
+                "type": "hardBreak"
+              },
+              {
+                "type": "text",
+                "text": "내일을 맞이할 준비가 순조롭기를"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "그럼에도 우리는 오늘을 살아가야 합니다. 올해의 곡은 Carpe Diem! 으로 정했습니다. 매일매일을 후회 없이 살고, 내일을 맞이할 준비가 순조롭기를 바랍니다."
           }
         ]
       }
@@ -84,8 +1330,8 @@
   },
   "id": "Q0h8PPiFHq",
   "metadata": {
-    "publishedAt": null,
-    "lastModifiedAt": 1767250814
+    "publishedAt": 1735398000,
+    "lastModifiedAt": 1767282567
   },
-  "slug": "Q0h8PPiFHq"
+  "slug": "review-2024"
 }

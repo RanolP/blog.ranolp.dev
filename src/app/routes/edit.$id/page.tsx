@@ -1,4 +1,8 @@
-import { getPostById, writePost } from '~/services/posts/repository.server';
+import {
+  getPostById,
+  writePost,
+  getAllPosts,
+} from '~/services/posts/repository.server';
 import { extractTitleFromContent, type Post } from '~/services/posts/types';
 import { SaveStateProvider } from './edit-wrapper';
 import { EditHeader } from './header';
@@ -66,6 +70,40 @@ export async function action({ params, request }: Route.ActionArgs) {
         lastModifiedAt: now,
       },
     };
+  } else if (formData.get('slug')) {
+    // Handle slug update
+    const newSlug = (formData.get('slug') as string).trim();
+
+    // Validate slug format
+    if (!/^[a-zA-Z0-9_-]+$/.test(newSlug)) {
+      return {
+        success: false,
+        error:
+          'Slug can only contain letters, numbers, hyphens, and underscores',
+      };
+    }
+
+    // Check for slug uniqueness (excluding current post)
+    const allPosts = await getAllPosts();
+    const slugExists = allPosts.some(
+      (post) => post.slug === newSlug && post.id !== id,
+    );
+
+    if (slugExists) {
+      return {
+        success: false,
+        error: 'This slug is already in use by another post',
+      };
+    }
+
+    updatedPost = {
+      ...existingPost,
+      slug: newSlug,
+      metadata: {
+        ...existingPost.metadata,
+        lastModifiedAt: now,
+      },
+    };
   } else {
     // Handle content save
     const contentJson = formData.get('content') as string;
@@ -110,6 +148,7 @@ export default function EditPost({
         <EditHeader
           isDraft={post.metadata.publishedAt === null}
           postId={post.id}
+          currentSlug={post.slug}
         />
         <div className="space-y-6">
           <EditorClient initialContent={post.content} postId={post.id} />

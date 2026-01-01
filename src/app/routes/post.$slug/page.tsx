@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router';
 import { Icon } from '@iconify/react';
 import { BackButton } from '~/components/BackButton';
@@ -55,6 +56,18 @@ export function meta({ data }: Route.MetaArgs) {
 export default function PostPage({ loaderData: post }: Route.ComponentProps) {
   const title = extractTitleFromContent(post.content);
   const { h1, rest } = extractH1AndRest(post.content);
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyLink = async () => {
+    const postUrl = `${window.location.origin}/post/${post.slug}`;
+    try {
+      await navigator.clipboard.writeText(postUrl);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (error) {
+      console.error('Failed to copy link:', error);
+    }
+  };
 
   return (
     <div className="max-w-4xl mx-auto p-6 space-y-6">
@@ -65,6 +78,17 @@ export default function PostPage({ loaderData: post }: Route.ComponentProps) {
             Draft
           </span>
         )}
+        <button
+          onClick={handleCopyLink}
+          className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+          title="Copy post link"
+        >
+          <Icon
+            icon={copied ? 'lucide:check' : 'lucide:link'}
+            className="w-4 h-4"
+          />
+          {copied ? 'Copied!' : 'Copy Link'}
+        </button>
         {import.meta.env.DEV && (
           <Link
             to={`/edit/${post.id}`}

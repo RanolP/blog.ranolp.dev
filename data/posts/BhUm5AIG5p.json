@@ -395,7 +395,9 @@
       {
         "type": "gallery",
         "attrs": {
-          "images": ["/images/e783075c1b63ab2c.avif"],
+          "images": [
+            "/images/e783075c1b63ab2c.avif"
+          ],
           "displayMode": "grid",
           "columns": 1,
           "gridSpans": []
@@ -409,7 +411,7 @@
   "id": "BhUm5AIG5p",
   "metadata": {
     "publishedAt": 1734793200,
-    "lastModifiedAt": 1767272138
+    "lastModifiedAt": 1767282466
   },
-  "slug": "BhUm5AIG5p"
+  "slug": "year-end--korea-voice-banks-2024"
 }
