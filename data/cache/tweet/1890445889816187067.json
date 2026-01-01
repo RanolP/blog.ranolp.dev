@@ -1,0 +1,460 @@
+{
+  "__typename": "Tweet",
+  "lang": "ko",
+  "favorite_count": 4,
+  "created_at": "2025-02-14T16:59:57.000Z",
+  "display_text_range": [
+    0,
+    32
+  ],
+  "entities": {
+    "hashtags": [],
+    "urls": [],
+    "user_mentions": [],
+    "symbols": []
+  },
+  "id_str": "1890445889816187067",
+  "text": "이제야 2일페 때 샀던 펭쓰어 회지를 읽었는데 얘네 기엽다",
+  "user": {
+    "id_str": "2697912330",
+    "name": "🕯️Ranol☆P 🦋 ranolp.dev",
+    "screen_name": "RanolP_777",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/1213688874884464640/PqCf6ZeN_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1890445889816187067"
+    ],
+    "editable_until_msecs": "1739555997000",
+    "is_edit_eligible": true,
+    "edits_remaining": "5"
+  },
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "lang": "ko",
+    "reply_count": 0,
+    "retweet_count": 20,
+    "favorite_count": 37,
+    "possibly_sensitive": false,
+    "created_at": "2023-09-16T13:46:52.000Z",
+    "display_text_range": [
+      0,
+      102
+    ],
+    "entities": {
+      "hashtags": [
+        {
+          "indices": [
+            81,
+            86
+          ],
+          "text": "일러스타"
+        },
+        {
+          "indices": [
+            87,
+            94
+          ],
+          "text": "일러스타페스"
+        },
+        {
+          "indices": [
+            95,
+            100
+          ],
+          "text": "보카스타"
+        }
+      ],
+      "urls": [],
+      "user_mentions": [],
+      "symbols": [],
+      "media": [
+        {
+          "display_url": "pic.x.com/gDOU9quTQ6",
+          "expanded_url": "https://x.com/emperorponguin/status/1703042771328880898/photo/1",
+          "indices": [
+            101,
+            124
+          ],
+          "url": "https://t.co/gDOU9quTQ6"
+        }
+      ]
+    },
+    "id_str": "1703042771328880898",
+    "text": "이번 보카스타존에 우타우 네림이와 제아가 나오는 짧은 회지를 내게 되었습니다!\n전연령, 축전 포함 약 20p입니다\n많은 관심 부탁드립니다..🐧🚯\n#일러스타 #일러스타페스 #보카스타 https://t.co/gDOU9quTQ6",
+    "user": {
+      "id_str": "1577208394829942784",
+      "name": "ponguin(계이함)",
+      "screen_name": "emperorponguin",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1824769402207907840/F8oCE9g6_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1703042771328880898"
+      ],
+      "editable_until_msecs": "1694875612000",
+      "is_edit_eligible": true,
+      "edits_remaining": "5"
+    },
+    "mediaDetails": [
+      {
+        "display_url": "pic.x.com/gDOU9quTQ6",
+        "expanded_url": "https://x.com/emperorponguin/status/1703042771328880898/photo/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          101,
+          124
+        ],
+        "media_url_https": "https://pbs.twimg.com/media/F6JsXyBakAAneYF.jpg",
+        "original_info": {
+          "height": 2048,
+          "width": 1444,
+          "focus_rects": [
+            {
+              "x": 0,
+              "y": 1078,
+              "w": 1444,
+              "h": 809
+            },
+            {
+              "x": 0,
+              "y": 604,
+              "w": 1444,
+              "h": 1444
+            },
+            {
+              "x": 0,
+              "y": 402,
+              "w": 1444,
+              "h": 1646
+            },
+            {
+              "x": 420,
+              "y": 0,
+              "w": 1024,
+              "h": 2048
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "w": 1444,
+              "h": 2048
+            }
+          ]
+        },
+        "sizes": {
+          "large": {
+            "h": 2048,
+            "resize": "fit",
+            "w": 1444
+          },
+          "medium": {
+            "h": 1200,
+            "resize": "fit",
+            "w": 846
+          },
+          "small": {
+            "h": 680,
+            "resize": "fit",
+            "w": 479
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "photo",
+        "url": "https://t.co/gDOU9quTQ6"
+      },
+      {
+        "display_url": "pic.x.com/gDOU9quTQ6",
+        "expanded_url": "https://x.com/emperorponguin/status/1703042771328880898/photo/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          101,
+          124
+        ],
+        "media_url_https": "https://pbs.twimg.com/media/F6JsXyBaQAAtMkk.jpg",
+        "original_info": {
+          "height": 2048,
+          "width": 1444,
+          "focus_rects": [
+            {
+              "x": 0,
+              "y": 567,
+              "w": 1444,
+              "h": 809
+            },
+            {
+              "x": 0,
+              "y": 249,
+              "w": 1444,
+              "h": 1444
+            },
+            {
+              "x": 0,
+              "y": 148,
+              "w": 1444,
+              "h": 1646
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "w": 1024,
+              "h": 2048
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "w": 1444,
+              "h": 2048
+            }
+          ]
+        },
+        "sizes": {
+          "large": {
+            "h": 2048,
+            "resize": "fit",
+            "w": 1444
+          },
+          "medium": {
+            "h": 1200,
+            "resize": "fit",
+            "w": 846
+          },
+          "small": {
+            "h": 680,
+            "resize": "fit",
+            "w": 479
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "photo",
+        "url": "https://t.co/gDOU9quTQ6"
+      },
+      {
+        "display_url": "pic.x.com/gDOU9quTQ6",
+        "expanded_url": "https://x.com/emperorponguin/status/1703042771328880898/photo/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          101,
+          124
+        ],
+        "media_url_https": "https://pbs.twimg.com/media/F6JsXx-bsAAZuql.jpg",
+        "original_info": {
+          "height": 2048,
+          "width": 1444,
+          "focus_rects": [
+            {
+              "x": 0,
+              "y": 567,
+              "w": 1444,
+              "h": 809
+            },
+            {
+              "x": 0,
+              "y": 249,
+              "w": 1444,
+              "h": 1444
+            },
+            {
+              "x": 0,
+              "y": 148,
+              "w": 1444,
+              "h": 1646
+            },
+            {
+              "x": 420,
+              "y": 0,
+              "w": 1024,
+              "h": 2048
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "w": 1444,
+              "h": 2048
+            }
+          ]
+        },
+        "sizes": {
+          "large": {
+            "h": 2048,
+            "resize": "fit",
+            "w": 1444
+          },
+          "medium": {
+            "h": 1200,
+            "resize": "fit",
+            "w": 846
+          },
+          "small": {
+            "h": 680,
+            "resize": "fit",
+            "w": 479
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "photo",
+        "url": "https://t.co/gDOU9quTQ6"
+      }
+    ],
+    "photos": [
+      {
+        "backgroundColor": {
+          "red": 204,
+          "green": 214,
+          "blue": 221
+        },
+        "cropCandidates": [
+          {
+            "x": 0,
+            "y": 1078,
+            "w": 1444,
+            "h": 809
+          },
+          {
+            "x": 0,
+            "y": 604,
+            "w": 1444,
+            "h": 1444
+          },
+          {
+            "x": 0,
+            "y": 402,
+            "w": 1444,
+            "h": 1646
+          },
+          {
+            "x": 420,
+            "y": 0,
+            "w": 1024,
+            "h": 2048
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 1444,
+            "h": 2048
+          }
+        ],
+        "expandedUrl": "https://x.com/emperorponguin/status/1703042771328880898/photo/1",
+        "url": "https://pbs.twimg.com/media/F6JsXyBakAAneYF.jpg",
+        "width": 1444,
+        "height": 2048
+      },
+      {
+        "backgroundColor": {
+          "red": 204,
+          "green": 214,
+          "blue": 221
+        },
+        "cropCandidates": [
+          {
+            "x": 0,
+            "y": 567,
+            "w": 1444,
+            "h": 809
+          },
+          {
+            "x": 0,
+            "y": 249,
+            "w": 1444,
+            "h": 1444
+          },
+          {
+            "x": 0,
+            "y": 148,
+            "w": 1444,
+            "h": 1646
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 1024,
+            "h": 2048
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 1444,
+            "h": 2048
+          }
+        ],
+        "expandedUrl": "https://x.com/emperorponguin/status/1703042771328880898/photo/1",
+        "url": "https://pbs.twimg.com/media/F6JsXyBaQAAtMkk.jpg",
+        "width": 1444,
+        "height": 2048
+      },
+      {
+        "backgroundColor": {
+          "red": 204,
+          "green": 214,
+          "blue": 221
+        },
+        "cropCandidates": [
+          {
+            "x": 0,
+            "y": 567,
+            "w": 1444,
+            "h": 809
+          },
+          {
+            "x": 0,
+            "y": 249,
+            "w": 1444,
+            "h": 1444
+          },
+          {
+            "x": 0,
+            "y": 148,
+            "w": 1444,
+            "h": 1646
+          },
+          {
+            "x": 420,
+            "y": 0,
+            "w": 1024,
+            "h": 2048
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 1444,
+            "h": 2048
+          }
+        ],
+        "expandedUrl": "https://x.com/emperorponguin/status/1703042771328880898/photo/1",
+        "url": "https://pbs.twimg.com/media/F6JsXx-bsAAZuql.jpg",
+        "width": 1444,
+        "height": 2048
+      }
+    ],
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

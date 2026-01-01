@@ -1,0 +1,170 @@
+{
+  "__typename": "Tweet",
+  "lang": "ko",
+  "favorite_count": 5,
+  "possibly_sensitive": false,
+  "created_at": "2025-02-14T08:23:07.000Z",
+  "display_text_range": [
+    0,
+    17
+  ],
+  "entities": {
+    "hashtags": [],
+    "urls": [],
+    "user_mentions": [],
+    "symbols": [],
+    "media": [
+      {
+        "display_url": "pic.x.com/mvQitF6YLq",
+        "expanded_url": "https://x.com/RanolP_777/status/1890315825254650109/photo/1",
+        "indices": [
+          18,
+          41
+        ],
+        "url": "https://t.co/mvQitF6YLq"
+      }
+    ]
+  },
+  "id_str": "1890315825254650109",
+  "text": "너무 많은 걸 받아서 부담스럽다 https://t.co/mvQitF6YLq",
+  "user": {
+    "id_str": "2697912330",
+    "name": "🕯️Ranol☆P 🦋 ranolp.dev",
+    "screen_name": "RanolP_777",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/1213688874884464640/PqCf6ZeN_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1890315825254650109"
+    ],
+    "editable_until_msecs": "1739524987000",
+    "is_edit_eligible": true,
+    "edits_remaining": "5"
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/mvQitF6YLq",
+      "expanded_url": "https://x.com/RanolP_777/status/1890315825254650109/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        18,
+        41
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/GjvAOAuacAADKwO.jpg",
+      "original_info": {
+        "height": 1536,
+        "width": 2048,
+        "focus_rects": [
+          {
+            "x": 0,
+            "y": 297,
+            "w": 2048,
+            "h": 1147
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 1536,
+            "h": 1536
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 1347,
+            "h": 1536
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 768,
+            "h": 1536
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 2048,
+            "h": 1536
+          }
+        ]
+      },
+      "sizes": {
+        "large": {
+          "h": 1536,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 900,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 510,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/mvQitF6YLq"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "x": 0,
+          "y": 297,
+          "w": 2048,
+          "h": 1147
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1536,
+          "h": 1536
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1347,
+          "h": 1536
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 768,
+          "h": 1536
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 2048,
+          "h": 1536
+        }
+      ],
+      "expandedUrl": "https://x.com/RanolP_777/status/1890315825254650109/photo/1",
+      "url": "https://pbs.twimg.com/media/GjvAOAuacAADKwO.jpg",
+      "width": 2048,
+      "height": 1536
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

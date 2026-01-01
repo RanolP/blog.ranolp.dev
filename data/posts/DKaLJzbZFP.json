@@ -1,0 +1,510 @@
+{
+  "content": {
+    "type": "doc",
+    "content": [
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "2025년 회고"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "2025년 절반도 제대로 못 쓴 거 같은데 환불 안 되나요?"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "윤석열을 파면하라"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "연초엔 추운 날이 이어졌습니다."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Bought This Year"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "linkMention",
+                    "attrs": {
+                      "url": "https://huionshop.com/graphictabletwireless/?idx=399",
+                      "title": "휴이온 HUION Inspiroy Frego L610 블루투스 타블렛 : 휴이온샵",
+                      "customTitle": "휴이온 Inspiroy Frego L610",
+                      "favicon": "https://cdn.imweb.me/thumbnail/S2016083157c5d1d1a2d92/favicon_196x196.png",
+                      "hostname": "huionshop.com"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " - 적당한 가성비의 중형 판 타블렛"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "linkMention",
+                    "attrs": {
+                      "url": "https://www.xencelabs.com/kr/products/xencelabs-quick-keys-remote",
+                      "title": "디지털 아트용 전문 드로잉 태블릿 & 펜 디스플레이 | Xencelabs Korea",
+                      "customTitle": "Xencelabs 퀵 키",
+                      "favicon": "https://www.xencelabs.com/favicon.ico",
+                      "hostname": "www.xencelabs.com"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " - 태블릿과 같이 쓰기 좋은 매크로 패드"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "linkMention",
+                    "attrs": {
+                      "url": "https://www.clipstudio.net/kr/",
+                      "title": "CLIP STUDIO PAINT - 디지털 일러스트, 만화, 애니메이션 제작 앱",
+                      "customTitle": "CLIP STUDIO PAINT",
+                      "favicon": "https://www.clipstudio.net/view/img/common/favicon.ico?02",
+                      "hostname": "www.clipstudio.net"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "text": " - 업계 표준 그리기 도구"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Learn This Year"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Call by Push Value: A noble approach "
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Perceus"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "Bidirectional Typing"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "덕질 This Year"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "유니 생일 카페"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "2일페"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "일러스타 샵에서 일러스타펜라+세레버스펜라2+시유인형겟"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "플라티나랩방문"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "펭쓰어 회지 구매"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "디제이타임"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "text": "세레버스 리와인드"
+                  }
+                ]
+              },
+              {
+                "type": "twitter",
+                "attrs": {
+                  "url": "https://x.com/RanolP_777/status/1890445889816187067?s=20"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "유니 생일 카페"
+          }
+        ]
+      },
+      {
+        "type": "twitter",
+        "attrs": {
+          "url": "https://x.com/unibusday_214/status/1876611988199244057?s=20"
+        }
+      },
+      {
+        "type": "twitter",
+        "attrs": {
+          "url": "https://x.com/RanolP_777/status/1890315825254650109?s=20"
+        }
+      },
+      {
+        "type": "twitter",
+        "attrs": {
+          "url": "https://x.com/RanolP_777/status/1890328797133615414?s=20"
+        }
+      },
+      {
+        "type": "twitter",
+        "attrs": {
+          "url": "https://x.com/RanolP_777/status/1892450426890420691?s=20"
+        }
+      },
+      {
+        "type": "twitter",
+        "attrs": {
+          "url": "https://x.com/RanolP_777/status/1896358673192255642?s=20"
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "유니 신스븨2라는 사라진 역사가 다가왔다는 게 슬플 따름입니다."
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "세레버스 × 일러카페"
+          }
+        ]
+      },
+      {
+        "type": "twitter",
+        "attrs": {
+          "url": "https://x.com/RanolP_777/status/1895021770190790919?s=20"
+        }
+      },
+      {
+        "type": "twitter",
+        "attrs": {
+          "url": "https://x.com/RanolP_777/status/1896411215687229798?s=20"
+        }
+      },
+      {
+        "type": "twitter",
+        "attrs": {
+          "url": "https://x.com/RanolP_777/status/1896415308103274921?s=20"
+        }
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "플라티나랩"
+          }
+        ]
+      },
+      {
+        "type": "twitter",
+        "attrs": {
+          "url": "https://x.com/RanolP_777/status/1896366520919548386?s=20"
+        }
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 2
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "례술을 하고 싶엇다..."
+          }
+        ]
+      },
+      {
+        "type": "twitter",
+        "attrs": {
+          "url": "https://x.com/RanolP_777/status/1886127621966332316?s=20"
+        }
+      },
+      {
+        "type": "twitter",
+        "attrs": {
+          "url": "https://x.com/RanolP_777/status/1886807193502249321?s=20"
+        }
+      },
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 3
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "Game of The Year"
+          }
+        ]
+      },
+      {
+        "type": "bulletList",
+        "content": [
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph",
+                "content": [
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "bold"
+                      }
+                    ],
+                    "text": "Best Co-op Game"
+                  },
+                  {
+                    "type": "text",
+                    "text": " - "
+                  },
+                  {
+                    "type": "text",
+                    "marks": [
+                      {
+                        "type": "underline"
+                      }
+                    ],
+                    "text": "Split Fiction"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "listItem",
+            "content": [
+              {
+                "type": "paragraph"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      }
+    ]
+  },
+  "id": "DKaLJzbZFP",
+  "metadata": {
+    "publishedAt": null,
+    "lastModifiedAt": 1767289750
+  },
+  "slug": "review-2025"
+}

@@ -1,0 +1,170 @@
+{
+  "__typename": "Tweet",
+  "lang": "ko",
+  "favorite_count": 11,
+  "possibly_sensitive": false,
+  "created_at": "2025-02-02T19:00:42.000Z",
+  "display_text_range": [
+    0,
+    4
+  ],
+  "entities": {
+    "hashtags": [],
+    "urls": [],
+    "user_mentions": [],
+    "symbols": [],
+    "media": [
+      {
+        "display_url": "pic.x.com/w2AmDmNe0r",
+        "expanded_url": "https://x.com/RanolP_777/status/1886127621966332316/photo/1",
+        "indices": [
+          5,
+          28
+        ],
+        "url": "https://t.co/w2AmDmNe0r"
+      }
+    ]
+  },
+  "id_str": "1886127621966332316",
+  "text": "클튜삿음 https://t.co/w2AmDmNe0r",
+  "user": {
+    "id_str": "2697912330",
+    "name": "🕯️Ranol☆P 🦋 ranolp.dev",
+    "screen_name": "RanolP_777",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/1213688874884464640/PqCf6ZeN_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1886127621966332316"
+    ],
+    "editable_until_msecs": "1738526442000",
+    "is_edit_eligible": true,
+    "edits_remaining": "5"
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/w2AmDmNe0r",
+      "expanded_url": "https://x.com/RanolP_777/status/1886127621966332316/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        5,
+        28
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/GizfDUfaYAAwfKx.jpg",
+      "original_info": {
+        "height": 1404,
+        "width": 2689,
+        "focus_rects": [
+          {
+            "x": 24,
+            "y": 0,
+            "w": 2507,
+            "h": 1404
+          },
+          {
+            "x": 575,
+            "y": 0,
+            "w": 1404,
+            "h": 1404
+          },
+          {
+            "x": 661,
+            "y": 0,
+            "w": 1232,
+            "h": 1404
+          },
+          {
+            "x": 926,
+            "y": 0,
+            "w": 702,
+            "h": 1404
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 2689,
+            "h": 1404
+          }
+        ]
+      },
+      "sizes": {
+        "large": {
+          "h": 1069,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 627,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 355,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/w2AmDmNe0r"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "x": 24,
+          "y": 0,
+          "w": 2507,
+          "h": 1404
+        },
+        {
+          "x": 575,
+          "y": 0,
+          "w": 1404,
+          "h": 1404
+        },
+        {
+          "x": 661,
+          "y": 0,
+          "w": 1232,
+          "h": 1404
+        },
+        {
+          "x": 926,
+          "y": 0,
+          "w": 702,
+          "h": 1404
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 2689,
+          "h": 1404
+        }
+      ],
+      "expandedUrl": "https://x.com/RanolP_777/status/1886127621966332316/photo/1",
+      "url": "https://pbs.twimg.com/media/GizfDUfaYAAwfKx.jpg",
+      "width": 2689,
+      "height": 1404
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

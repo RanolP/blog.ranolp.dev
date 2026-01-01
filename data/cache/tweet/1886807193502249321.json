@@ -1,0 +1,285 @@
+{
+  "__typename": "Tweet",
+  "lang": "ko",
+  "favorite_count": 5,
+  "possibly_sensitive": false,
+  "created_at": "2025-02-04T16:01:04.000Z",
+  "display_text_range": [
+    0,
+    24
+  ],
+  "entities": {
+    "hashtags": [],
+    "urls": [],
+    "user_mentions": [],
+    "symbols": [],
+    "media": [
+      {
+        "display_url": "pic.x.com/vCXGgxxPMx",
+        "expanded_url": "https://x.com/RanolP_777/status/1886807193502249321/photo/1",
+        "indices": [
+          25,
+          48
+        ],
+        "url": "https://t.co/vCXGgxxPMx"
+      }
+    ]
+  },
+  "id_str": "1886807193502249321",
+  "text": "타블렛이 왔어요\n테스트용으로 유니도 그렸어요 https://t.co/vCXGgxxPMx",
+  "user": {
+    "id_str": "2697912330",
+    "name": "🕯️Ranol☆P 🦋 ranolp.dev",
+    "screen_name": "RanolP_777",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/1213688874884464640/PqCf6ZeN_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1886807193502249321"
+    ],
+    "editable_until_msecs": "1738688464000",
+    "is_edit_eligible": false,
+    "edits_remaining": "5"
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/vCXGgxxPMx",
+      "expanded_url": "https://x.com/RanolP_777/status/1886807193502249321/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        25,
+        48
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/Gi9JExCa4AQGRUi.jpg",
+      "original_info": {
+        "height": 1424,
+        "width": 1899,
+        "focus_rects": [
+          {
+            "x": 0,
+            "y": 0,
+            "w": 1899,
+            "h": 1063
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 1424,
+            "h": 1424
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 1249,
+            "h": 1424
+          },
+          {
+            "x": 71,
+            "y": 0,
+            "w": 712,
+            "h": 1424
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 1899,
+            "h": 1424
+          }
+        ]
+      },
+      "sizes": {
+        "large": {
+          "h": 1424,
+          "resize": "fit",
+          "w": 1899
+        },
+        "medium": {
+          "h": 900,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 510,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/vCXGgxxPMx"
+    },
+    {
+      "display_url": "pic.x.com/vCXGgxxPMx",
+      "expanded_url": "https://x.com/RanolP_777/status/1886807193502249321/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        25,
+        48
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/Gi9JFeeaEAA0jMR.png",
+      "original_info": {
+        "height": 1575,
+        "width": 2615,
+        "focus_rects": [
+          {
+            "x": 0,
+            "y": 0,
+            "w": 2615,
+            "h": 1464
+          },
+          {
+            "x": 322,
+            "y": 0,
+            "w": 1575,
+            "h": 1575
+          },
+          {
+            "x": 418,
+            "y": 0,
+            "w": 1382,
+            "h": 1575
+          },
+          {
+            "x": 715,
+            "y": 0,
+            "w": 788,
+            "h": 1575
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 2615,
+            "h": 1575
+          }
+        ]
+      },
+      "sizes": {
+        "large": {
+          "h": 1233,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 723,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 410,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/vCXGgxxPMx"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1899,
+          "h": 1063
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1424,
+          "h": 1424
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1249,
+          "h": 1424
+        },
+        {
+          "x": 71,
+          "y": 0,
+          "w": 712,
+          "h": 1424
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1899,
+          "h": 1424
+        }
+      ],
+      "expandedUrl": "https://x.com/RanolP_777/status/1886807193502249321/photo/1",
+      "url": "https://pbs.twimg.com/media/Gi9JExCa4AQGRUi.jpg",
+      "width": 1899,
+      "height": 1424
+    },
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 2615,
+          "h": 1464
+        },
+        {
+          "x": 322,
+          "y": 0,
+          "w": 1575,
+          "h": 1575
+        },
+        {
+          "x": 418,
+          "y": 0,
+          "w": 1382,
+          "h": 1575
+        },
+        {
+          "x": 715,
+          "y": 0,
+          "w": 788,
+          "h": 1575
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 2615,
+          "h": 1575
+        }
+      ],
+      "expandedUrl": "https://x.com/RanolP_777/status/1886807193502249321/photo/1",
+      "url": "https://pbs.twimg.com/media/Gi9JFeeaEAA0jMR.png",
+      "width": 2615,
+      "height": 1575
+    }
+  ],
+  "conversation_count": 1,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

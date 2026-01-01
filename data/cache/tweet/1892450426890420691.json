@@ -1,0 +1,245 @@
+{
+  "__typename": "Tweet",
+  "lang": "ko",
+  "favorite_count": 10,
+  "created_at": "2025-02-20T05:45:16.000Z",
+  "display_text_range": [
+    0,
+    14
+  ],
+  "entities": {
+    "hashtags": [],
+    "urls": [],
+    "user_mentions": [],
+    "symbols": []
+  },
+  "id_str": "1892450426890420691",
+  "text": "뭐뭐야 당첨됐어??? \n헐",
+  "user": {
+    "id_str": "2697912330",
+    "name": "🕯️Ranol☆P 🦋 ranolp.dev",
+    "screen_name": "RanolP_777",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/1213688874884464640/PqCf6ZeN_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1892450426890420691"
+    ],
+    "editable_until_msecs": "1740033916000",
+    "is_edit_eligible": true,
+    "edits_remaining": "5"
+  },
+  "conversation_count": 2,
+  "news_action_type": "conversation",
+  "quoted_tweet": {
+    "lang": "ko",
+    "reply_count": 1,
+    "retweet_count": 3,
+    "favorite_count": 13,
+    "possibly_sensitive": false,
+    "created_at": "2025-02-20T05:34:46.000Z",
+    "display_text_range": [
+      0,
+      94
+    ],
+    "entities": {
+      "hashtags": [],
+      "urls": [],
+      "user_mentions": [
+        {
+          "id_str": "1239070150529183744",
+          "indices": [
+            55,
+            62
+          ],
+          "name": "솨🕯",
+          "screen_name": "thk_29"
+        },
+        {
+          "id_str": "1818610837722218496",
+          "indices": [
+            63,
+            71
+          ],
+          "name": "유피",
+          "screen_name": "yu1p111"
+        },
+        {
+          "id_str": "2697912330",
+          "indices": [
+            72,
+            83
+          ],
+          "name": "🕯️Ranol☆P 🦋 ranolp.dev",
+          "screen_name": "RanolP_777"
+        },
+        {
+          "id_str": "883352791581769728",
+          "indices": [
+            84,
+            92
+          ],
+          "name": "테누카🌨️Tenucca",
+          "screen_name": "Tenucca"
+        }
+      ],
+      "symbols": [],
+      "media": [
+        {
+          "display_url": "pic.x.com/yU2ORT8vNh",
+          "expanded_url": "https://x.com/unibusday_214/status/1892447785435197542/photo/1",
+          "indices": [
+            93,
+            116
+          ],
+          "url": "https://t.co/yU2ORT8vNh"
+        }
+      ]
+    },
+    "id_str": "1892447785435197542",
+    "text": "😊!해시태그 이벤트 당첨자 발표!😊\n계정의 DM으로 받으실 주소, 성함, 연락처를 남겨주세요. \n\n@thk_29\n@yu1p111\n@RanolP_777\n@Tenucca https://t.co/yU2ORT8vNh",
+    "user": {
+      "id_str": "1736407824715194368",
+      "name": "2025 UNI 생일 이벤트",
+      "screen_name": "unibusday_214",
+      "is_blue_verified": false,
+      "profile_image_shape": "Circle",
+      "verified": false,
+      "profile_image_url_https": "https://pbs.twimg.com/profile_images/1736408404414046208/WmUZQENV_normal.jpg"
+    },
+    "edit_control": {
+      "edit_tweet_ids": [
+        "1892447785435197542"
+      ],
+      "editable_until_msecs": "1740033286000",
+      "is_edit_eligible": false,
+      "edits_remaining": "5"
+    },
+    "mediaDetails": [
+      {
+        "display_url": "pic.x.com/yU2ORT8vNh",
+        "expanded_url": "https://x.com/unibusday_214/status/1892447785435197542/photo/1",
+        "ext_media_availability": {
+          "status": "Available"
+        },
+        "indices": [
+          93,
+          116
+        ],
+        "media_url_https": "https://pbs.twimg.com/media/GkNS9ZXbUAACxcc.png",
+        "original_info": {
+          "height": 195,
+          "width": 225,
+          "focus_rects": [
+            {
+              "x": 0,
+              "y": 10,
+              "w": 225,
+              "h": 126
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "w": 195,
+              "h": 195
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "w": 171,
+              "h": 195
+            },
+            {
+              "x": 1,
+              "y": 0,
+              "w": 98,
+              "h": 195
+            },
+            {
+              "x": 0,
+              "y": 0,
+              "w": 225,
+              "h": 195
+            }
+          ]
+        },
+        "sizes": {
+          "large": {
+            "h": 195,
+            "resize": "fit",
+            "w": 225
+          },
+          "medium": {
+            "h": 195,
+            "resize": "fit",
+            "w": 225
+          },
+          "small": {
+            "h": 195,
+            "resize": "fit",
+            "w": 225
+          },
+          "thumb": {
+            "h": 150,
+            "resize": "crop",
+            "w": 150
+          }
+        },
+        "type": "photo",
+        "url": "https://t.co/yU2ORT8vNh"
+      }
+    ],
+    "photos": [
+      {
+        "backgroundColor": {
+          "red": 204,
+          "green": 214,
+          "blue": 221
+        },
+        "cropCandidates": [
+          {
+            "x": 0,
+            "y": 10,
+            "w": 225,
+            "h": 126
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 195,
+            "h": 195
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 171,
+            "h": 195
+          },
+          {
+            "x": 1,
+            "y": 0,
+            "w": 98,
+            "h": 195
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 225,
+            "h": 195
+          }
+        ],
+        "expandedUrl": "https://x.com/unibusday_214/status/1892447785435197542/photo/1",
+        "url": "https://pbs.twimg.com/media/GkNS9ZXbUAACxcc.png",
+        "width": 225,
+        "height": 195
+      }
+    ],
+    "isEdited": false,
+    "isStaleEdit": false
+  },
+  "isEdited": false,
+  "isStaleEdit": false
+}

@@ -1,0 +1,170 @@
+{
+  "__typename": "Tweet",
+  "lang": "ko",
+  "favorite_count": 1,
+  "possibly_sensitive": false,
+  "created_at": "2025-03-03T00:35:14.000Z",
+  "display_text_range": [
+    0,
+    124
+  ],
+  "entities": {
+    "hashtags": [],
+    "urls": [],
+    "user_mentions": [],
+    "symbols": [],
+    "media": [
+      {
+        "display_url": "pic.x.com/oJcv0OjFAm",
+        "expanded_url": "https://x.com/RanolP_777/status/1896358673192255642/photo/1",
+        "indices": [
+          125,
+          148
+        ],
+        "url": "https://t.co/oJcv0OjFAm"
+      }
+    ]
+  },
+  "id_str": "1896358673192255642",
+  "text": "(((배송 온 건 02/27인데 이제야 뜯고 있음)))\n\n아니 키링 하나가 담겨있다기엔 박스가 크다고 생각하고 있었는데\n키링 뿐만 아니라 이것저것 챙겨주셨군요...!!!\n\n양일특전 포카 갖고 싶었는데 얻게돼서 요캇타.... https://t.co/oJcv0OjFAm",
+  "user": {
+    "id_str": "2697912330",
+    "name": "🕯️Ranol☆P 🦋 ranolp.dev",
+    "screen_name": "RanolP_777",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/1213688874884464640/PqCf6ZeN_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1896358673192255642"
+    ],
+    "editable_until_msecs": "1740965714000",
+    "is_edit_eligible": true,
+    "edits_remaining": "5"
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/oJcv0OjFAm",
+      "expanded_url": "https://x.com/RanolP_777/status/1896358673192255642/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        125,
+        148
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/GlE3S0BbMAANc8i.jpg",
+      "original_info": {
+        "height": 1093,
+        "width": 1459,
+        "focus_rects": [
+          {
+            "x": 0,
+            "y": 0,
+            "w": 1459,
+            "h": 817
+          },
+          {
+            "x": 366,
+            "y": 0,
+            "w": 1093,
+            "h": 1093
+          },
+          {
+            "x": 500,
+            "y": 0,
+            "w": 959,
+            "h": 1093
+          },
+          {
+            "x": 710,
+            "y": 0,
+            "w": 547,
+            "h": 1093
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 1459,
+            "h": 1093
+          }
+        ]
+      },
+      "sizes": {
+        "large": {
+          "h": 1093,
+          "resize": "fit",
+          "w": 1459
+        },
+        "medium": {
+          "h": 899,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 509,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/oJcv0OjFAm"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1459,
+          "h": 817
+        },
+        {
+          "x": 366,
+          "y": 0,
+          "w": 1093,
+          "h": 1093
+        },
+        {
+          "x": 500,
+          "y": 0,
+          "w": 959,
+          "h": 1093
+        },
+        {
+          "x": 710,
+          "y": 0,
+          "w": 547,
+          "h": 1093
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1459,
+          "h": 1093
+        }
+      ],
+      "expandedUrl": "https://x.com/RanolP_777/status/1896358673192255642/photo/1",
+      "url": "https://pbs.twimg.com/media/GlE3S0BbMAANc8i.jpg",
+      "width": 1459,
+      "height": 1093
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

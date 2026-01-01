@@ -1,0 +1,530 @@
+{
+  "__typename": "Tweet",
+  "lang": "ko",
+  "favorite_count": 6,
+  "possibly_sensitive": false,
+  "created_at": "2025-02-14T09:14:40.000Z",
+  "display_text_range": [
+    0,
+    165
+  ],
+  "entities": {
+    "hashtags": [
+      {
+        "indices": [
+          0,
+          18
+        ],
+        "text": "어제도_오늘도_내일도_U_n_I"
+      },
+      {
+        "indices": [
+          20,
+          36
+        ],
+        "text": "우주_경계선_너머의_너에게로"
+      }
+    ],
+    "urls": [],
+    "user_mentions": [],
+    "symbols": [],
+    "media": [
+      {
+        "display_url": "pic.x.com/F4qwXrO7kg",
+        "expanded_url": "https://x.com/RanolP_777/status/1890328797133615414/photo/1",
+        "indices": [
+          166,
+          189
+        ],
+        "url": "https://t.co/F4qwXrO7kg"
+      }
+    ]
+  },
+  "id_str": "1890328797133615414",
+  "text": "#어제도_오늘도_내일도_U_n_I \n#우주_경계선_너머의_너에게로\n\n유니야 생일 축하해!!\n라이브러리 사놓고 안 꺼내는 마스터라 미안..\n하지만 생일 축하해주러 시유랑 한별이 데리고 왔다구\n\n+ 말씀은 못 드렸지만 생일 카페 협력하신 분들 모두 고생 많으셨고 퀄리티 높게 준비해주셔서 감사합니다! https://t.co/F4qwXrO7kg",
+  "user": {
+    "id_str": "2697912330",
+    "name": "🕯️Ranol☆P 🦋 ranolp.dev",
+    "screen_name": "RanolP_777",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/1213688874884464640/PqCf6ZeN_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1890328797133615414"
+    ],
+    "editable_until_msecs": "1739528080000",
+    "is_edit_eligible": false,
+    "edits_remaining": "5"
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/F4qwXrO7kg",
+      "expanded_url": "https://x.com/RanolP_777/status/1890328797133615414/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        166,
+        189
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/GjvMAooaIAAaSU4.jpg",
+      "original_info": {
+        "height": 1536,
+        "width": 2048,
+        "focus_rects": [
+          {
+            "x": 0,
+            "y": 389,
+            "w": 2048,
+            "h": 1147
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 1536,
+            "h": 1536
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 1347,
+            "h": 1536
+          },
+          {
+            "x": 179,
+            "y": 0,
+            "w": 768,
+            "h": 1536
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 2048,
+            "h": 1536
+          }
+        ]
+      },
+      "sizes": {
+        "large": {
+          "h": 1536,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 900,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 510,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/F4qwXrO7kg"
+    },
+    {
+      "display_url": "pic.x.com/F4qwXrO7kg",
+      "expanded_url": "https://x.com/RanolP_777/status/1890328797133615414/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        166,
+        189
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/GjvMAooaIAEO5df.jpg",
+      "original_info": {
+        "height": 1536,
+        "width": 2048,
+        "focus_rects": [
+          {
+            "x": 0,
+            "y": 389,
+            "w": 2048,
+            "h": 1147
+          },
+          {
+            "x": 102,
+            "y": 0,
+            "w": 1536,
+            "h": 1536
+          },
+          {
+            "x": 197,
+            "y": 0,
+            "w": 1347,
+            "h": 1536
+          },
+          {
+            "x": 486,
+            "y": 0,
+            "w": 768,
+            "h": 1536
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 2048,
+            "h": 1536
+          }
+        ]
+      },
+      "sizes": {
+        "large": {
+          "h": 1536,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 900,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 510,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/F4qwXrO7kg"
+    },
+    {
+      "display_url": "pic.x.com/F4qwXrO7kg",
+      "expanded_url": "https://x.com/RanolP_777/status/1890328797133615414/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        166,
+        189
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/GjvMAqebIAAaa6J.jpg",
+      "original_info": {
+        "height": 1536,
+        "width": 2048,
+        "focus_rects": [
+          {
+            "x": 0,
+            "y": 0,
+            "w": 2048,
+            "h": 1147
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 1536,
+            "h": 1536
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 1347,
+            "h": 1536
+          },
+          {
+            "x": 76,
+            "y": 0,
+            "w": 768,
+            "h": 1536
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 2048,
+            "h": 1536
+          }
+        ]
+      },
+      "sizes": {
+        "large": {
+          "h": 1536,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 900,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 510,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/F4qwXrO7kg"
+    },
+    {
+      "display_url": "pic.x.com/F4qwXrO7kg",
+      "expanded_url": "https://x.com/RanolP_777/status/1890328797133615414/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        166,
+        189
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/GjvMAomaEAArnQh.jpg",
+      "original_info": {
+        "height": 1536,
+        "width": 2048,
+        "focus_rects": [
+          {
+            "x": 0,
+            "y": 0,
+            "w": 2048,
+            "h": 1147
+          },
+          {
+            "x": 409,
+            "y": 0,
+            "w": 1536,
+            "h": 1536
+          },
+          {
+            "x": 504,
+            "y": 0,
+            "w": 1347,
+            "h": 1536
+          },
+          {
+            "x": 793,
+            "y": 0,
+            "w": 768,
+            "h": 1536
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 2048,
+            "h": 1536
+          }
+        ]
+      },
+      "sizes": {
+        "large": {
+          "h": 1536,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 900,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 510,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/F4qwXrO7kg"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "x": 0,
+          "y": 389,
+          "w": 2048,
+          "h": 1147
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1536,
+          "h": 1536
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1347,
+          "h": 1536
+        },
+        {
+          "x": 179,
+          "y": 0,
+          "w": 768,
+          "h": 1536
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 2048,
+          "h": 1536
+        }
+      ],
+      "expandedUrl": "https://x.com/RanolP_777/status/1890328797133615414/photo/1",
+      "url": "https://pbs.twimg.com/media/GjvMAooaIAAaSU4.jpg",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "x": 0,
+          "y": 389,
+          "w": 2048,
+          "h": 1147
+        },
+        {
+          "x": 102,
+          "y": 0,
+          "w": 1536,
+          "h": 1536
+        },
+        {
+          "x": 197,
+          "y": 0,
+          "w": 1347,
+          "h": 1536
+        },
+        {
+          "x": 486,
+          "y": 0,
+          "w": 768,
+          "h": 1536
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 2048,
+          "h": 1536
+        }
+      ],
+      "expandedUrl": "https://x.com/RanolP_777/status/1890328797133615414/photo/1",
+      "url": "https://pbs.twimg.com/media/GjvMAooaIAEO5df.jpg",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 2048,
+          "h": 1147
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1536,
+          "h": 1536
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1347,
+          "h": 1536
+        },
+        {
+          "x": 76,
+          "y": 0,
+          "w": 768,
+          "h": 1536
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 2048,
+          "h": 1536
+        }
+      ],
+      "expandedUrl": "https://x.com/RanolP_777/status/1890328797133615414/photo/1",
+      "url": "https://pbs.twimg.com/media/GjvMAqebIAAaa6J.jpg",
+      "width": 2048,
+      "height": 1536
+    },
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 2048,
+          "h": 1147
+        },
+        {
+          "x": 409,
+          "y": 0,
+          "w": 1536,
+          "h": 1536
+        },
+        {
+          "x": 504,
+          "y": 0,
+          "w": 1347,
+          "h": 1536
+        },
+        {
+          "x": 793,
+          "y": 0,
+          "w": 768,
+          "h": 1536
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 2048,
+          "h": 1536
+        }
+      ],
+      "expandedUrl": "https://x.com/RanolP_777/status/1890328797133615414/photo/1",
+      "url": "https://pbs.twimg.com/media/GjvMAomaEAArnQh.jpg",
+      "width": 2048,
+      "height": 1536
+    }
+  ],
+  "conversation_count": 1,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}
