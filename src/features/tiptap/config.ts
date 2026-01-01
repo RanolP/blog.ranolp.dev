@@ -10,6 +10,7 @@ import { debounce } from 'es-toolkit/function';
 import { PostDocument } from './document';
 import { MentionList, type MentionItem } from './mention-menu';
 import { MentionNode } from './mention-node';
+import { TwitterEmbed } from './twitter-embed';
 
 /**
  * Custom heading extension that disables only the "#" markdown shortcut (h1)
@@ -697,7 +698,22 @@ export const defaultExtensions: Extensions = [
     showOnlyWhenEditable: true,
     showOnlyCurrent: false,
   }),
+  TwitterEmbed,
 ];
+
+/**
+ * Create Twitter embed extension for SSR
+ * Since we use React Server Components, we don't need renderHTML for Twitter embeds
+ * They're extracted and rendered directly as React components in TiptapSSR
+ */
+function createTwitterEmbedExtensionForSSR() {
+  return TwitterEmbed.extend({
+    addNodeView() {
+      return null;
+    },
+    // No renderHTML needed - Twitter embeds are handled by React Server Components
+  });
+}
 
 /**
  * SSR-specific extensions (without NodeView, so renderHTML is used)
@@ -713,6 +729,7 @@ export const ssrExtensions: Extensions = [
   }),
   HeadingWithoutMarkdown,
   createMentionExtensionForSSR(),
+  createTwitterEmbedExtensionForSSR(),
   Placeholder.configure({
     placeholder: ({ node }) => {
       // Only show placeholder on h1 headings (level 1)

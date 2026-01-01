@@ -15,6 +15,37 @@
         ]
       },
       {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "2024년 12월 20일, "
+          },
+          {
+            "type": "mention",
+            "attrs": {
+              "id": "tw:KoreaVoiceBanks",
+              "label": "@tw:KoreaVoiceBanks",
+              "mentionSuggestionChar": "@",
+              "username": "KoreaVoiceBanks",
+              "displayName": "한국 음합엔 캐릭터 사랑회",
+              "avatar": "https://pbs.twimg.com/profile_images/1997625211425071104/6XzMJhRF_normal.jpg",
+              "verified": false
+            }
+          },
+          {
+            "type": "text",
+            "text": "에서 주최한 음성합성엔진 연말 파티가 있었습니다."
+          }
+        ]
+      },
+      {
+        "type": "twitter",
+        "attrs": {
+          "url": "https://x.com/KoreaVoiceBanks/status/1861250525360193770?s=20"
+        }
+      },
+      {
         "type": "paragraph"
       }
     ]
@@ -22,7 +53,7 @@
   "id": "BhUm5AIG5p",
   "metadata": {
     "publishedAt": null,
-    "lastModifiedAt": 1767129691
+    "lastModifiedAt": 1767252990
   },
   "slug": "BhUm5AIG5p"
 }

@@ -547,3 +547,67 @@ body {
 .dark .mention-platform-github .mention-platform-icon {
   color: #24292e;
 }
+
+/* Twitter Embed Styles */
+/* Using react-tweet library for rendering tweets */
+.twitter-embed {
+  margin: 1.5em 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* react-tweet handles its own styling, we just need to contain it */
+.twitter-embed > * {
+  width: 100%;
+  max-width: 550px;
+}
+
+/* Style links in embedded tweets - sky blue color */
+.twitter-embed a {
+  color: #87ceeb !important; /* Sky blue */
+  text-decoration: none !important; /* Remove underline from all links by default */
+  transition: color 0.2s ease;
+}
+
+.twitter-embed a:hover {
+  color: #70b8d4 !important; /* Slightly darker sky blue on hover */
+}
+
+/* Keep underline only for links in tweet body text (content area) */
+.twitter-embed [class*='tweet-body'] a,
+.twitter-embed [class*='tweet-text'] a,
+.twitter-embed [data-text] a,
+.twitter-embed article a,
+.twitter-embed [role='article'] a {
+  text-decoration: underline !important;
+  text-decoration-color: #87ceeb !important;
+  text-underline-offset: 2px;
+}
+
+.twitter-embed-fallback {
+  display: inline-block;
+  padding: 1em;
+  color: #87ceeb;
+  text-decoration: none;
+}
+
+.twitter-embed-error {
+  padding: 2em;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  background-color: #f9fafb;
+}
+
+.dark .twitter-embed-error {
+  border-color: #374151;
+  background-color: #1f2937;
+  color: #d1d5db;
+}
+
+/* Ensure Twitter embeds are properly spaced in both editor and SSR contexts */
+.ProseMirror .twitter-embed,
+.tiptap-content .twitter-embed {
+  margin: 1.5em 0;
+}

@@ -33,6 +33,7 @@
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-router": "7.10.1",
+    "react-tweet": "^3.3.0",
     "remix-flat-routes": "^0.8.5",
     "rettiwt-api": "^6.1.7",
     "valibot": "^1.2.0"

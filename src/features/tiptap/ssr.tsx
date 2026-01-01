@@ -2,45 +2,71 @@ import { Editor } from '@tiptap/core';
 import { generateHTML } from '@tiptap/html';
 import { defaultExtensions, ssrExtensions } from './config';
 import type { JSONContent } from '@tiptap/core';
+import { Tweet } from 'react-tweet';
 
 export interface TiptapSSRProps {
-  /**
-   * Content to render (HTML string or JSON)
-   */
   content: string | JSONContent;
-  /**
-   * Additional CSS classes for the container
-   */
   className?: string;
-  /**
-   * Additional extensions to use for rendering
-   */
   extensions?: typeof defaultExtensions;
 }
 
-/**
- * Server-side rendering component for Tiptap content
- * Renders Tiptap content as HTML without requiring client-side JavaScript
- * Use this component when you need to display Tiptap content in SSR contexts
- */
 export function TiptapSSR({
   content,
   className,
-  extensions = ssrExtensions, // Use SSR extensions by default (without NodeView)
+  extensions = ssrExtensions,
 }: TiptapSSRProps) {
-  let html: string;
-
   if (typeof content === 'string') {
-    // If content is already HTML, use it directly
-    html = content;
-  } else {
-    // If content is JSON, convert it to HTML
-    html = generateHTML(content, extensions);
+    return (
+      <div
+        className={className}
+        dangerouslySetInnerHTML={{ __html: content }}
+      />
+    );
   }
 
-  return (
-    <div className={className} dangerouslySetInnerHTML={{ __html: html }} />
-  );
+  if (!content.content) {
+    return <div className={className} />;
+  }
+
+  // Render as React Server Component - extract Twitter embeds and render as Tweet components
+  const parts: React.ReactNode[] = [];
+  let htmlNodes: JSONContent[] = [];
+
+  const flushHtml = () => {
+    if (htmlNodes.length > 0) {
+      const html = generateHTML(
+        { type: 'doc', content: htmlNodes },
+        extensions,
+      );
+      parts.push(
+        <div key={parts.length} dangerouslySetInnerHTML={{ __html: html }} />,
+      );
+      htmlNodes = [];
+    }
+  };
+
+  content.content.forEach((node) => {
+    if (node.type === 'twitter') {
+      flushHtml();
+      const url = node.attrs?.url as string;
+      if (url) {
+        const tweetId = /\/status\/(\d+)/g.exec(url)?.[1];
+        if (tweetId) {
+          parts.push(
+            <div key={parts.length} className="twitter-embed">
+              <Tweet id={tweetId} />
+            </div>,
+          );
+        }
+      }
+    } else {
+      htmlNodes.push(node);
+    }
+  });
+
+  flushHtml();
+
+  return <div className={className}>{parts}</div>;
 }
 
 /**

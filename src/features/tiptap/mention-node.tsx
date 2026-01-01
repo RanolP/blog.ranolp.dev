@@ -20,8 +20,7 @@ export function MentionNode({ node }: ReactNodeViewProps) {
   const displayName = rawDisplayName.replace(/^@+/, '');
   const username = attrs.username?.replace(/^@+/, '') || displayName;
   // Determine if we should show displayName separately
-  const showDisplayName =
-    attrs.displayName && attrs.displayName !== username;
+  const showDisplayName = attrs.displayName && attrs.displayName !== username;
   // For alt text, use the full format
   const displayNameWithAt = showDisplayName
     ? `${attrs.displayName} @${username}`
