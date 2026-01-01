@@ -46,6 +46,9 @@ jobs:
       - name: Remove dev routes
         run: rm -rf src/app/routes/_dev
 
+      - name: Generate OG images
+        run: pnpm run generate:og
+
       - name: Build
         run: pnpm build
 

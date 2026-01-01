@@ -6,4 +6,7 @@
 /.react-router/
 /build/
 
+# Generated OG images
+/public/og/
+
 .env.local

@@ -12,17 +12,27 @@ export async function loader(): Promise<Post[]> {
   return await getPostsForListing();
 }
 
-export function meta({}: {
-  params: Record<string, string | undefined>;
-  data: Post[];
-}) {
+export function meta() {
+  const title = 'Blog - RanolP';
+  const description =
+    'Blog by RanolP - A collection of thoughts, tutorials, and insights';
+  const ogImageUrl = 'https://blog.ranolp.dev/og/index.png';
+
   return [
-    { title: 'Blog - RanolP' },
-    {
-      name: 'description',
-      content:
-        'Blog by RanolP - A collection of thoughts, tutorials, and insights',
-    },
+    { title },
+    { name: 'description', content: description },
+    { property: 'og:title', content: title },
+    { property: 'og:description', content: description },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://blog.ranolp.dev' },
+    { property: 'og:image', content: ogImageUrl },
+    { property: 'og:image:width', content: '1200' },
+    { property: 'og:image:height', content: '630' },
+    { property: 'og:site_name', content: 'Blog - RanolP' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: title },
+    { name: 'twitter:description', content: description },
+    { name: 'twitter:image', content: ogImageUrl },
   ];
 }
 

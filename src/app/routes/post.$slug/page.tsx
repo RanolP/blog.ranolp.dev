@@ -58,8 +58,23 @@ export async function loader({ params }: Route.LoaderArgs): Promise<LoaderData> 
 }
 
 export function meta({ data }: Route.MetaArgs) {
-  const title = extractTitleFromContent(data.post.content);
-  return [{ title: title ? `${title} - RanolP` : 'Post - RanolP' }];
+  const title = extractTitleFromContent(data.post.content) || 'Untitled';
+  const pageTitle = `${title} - RanolP`;
+  const ogImageUrl = `https://blog.ranolp.dev/og/post/${data.post.slug}.png`;
+
+  return [
+    { title: pageTitle },
+    { property: 'og:title', content: title },
+    { property: 'og:type', content: 'article' },
+    { property: 'og:url', content: `https://blog.ranolp.dev/post/${data.post.slug}` },
+    { property: 'og:image', content: ogImageUrl },
+    { property: 'og:image:width', content: '1200' },
+    { property: 'og:image:height', content: '630' },
+    { property: 'og:site_name', content: 'Blog - RanolP' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: title },
+    { name: 'twitter:image', content: ogImageUrl },
+  ];
 }
 
 export default function PostPage({ loaderData }: Route.ComponentProps) {
