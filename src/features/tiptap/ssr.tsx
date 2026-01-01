@@ -62,6 +62,7 @@ export function TiptapSSR({
       const images = (node.attrs?.images as string[]) || [];
       const displayMode = (node.attrs?.displayMode as string) || 'grid';
       const columns = (node.attrs?.columns as number) || 3;
+      const gridSpans = (node.attrs?.gridSpans as { col: number; row: number }[]) || [];
       if (images.length > 0) {
         parts.push(
           <GalleryClient
@@ -69,6 +70,7 @@ export function TiptapSSR({
             images={images}
             displayMode={displayMode as any}
             columns={columns}
+            gridSpans={gridSpans}
           />,
         );
       }

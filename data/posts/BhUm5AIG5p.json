@@ -71,7 +71,8 @@
             "/images/2fbaf8851399f834.avif"
           ],
           "displayMode": "grid",
-          "columns": 2
+          "columns": 2,
+          "gridSpans": []
         }
       },
       {
@@ -161,7 +162,8 @@
             "/images/71e58a28b057d945.avif"
           ],
           "displayMode": "masonry",
-          "columns": 2
+          "columns": 2,
+          "gridSpans": []
         }
       },
       {
@@ -302,8 +304,71 @@
             "/images/72e9ec0ba392d9a1.avif",
             "/images/9c2b6f1581d4ffc3.avif"
           ],
-          "displayMode": "masonry",
-          "columns": 2
+          "displayMode": "grid",
+          "columns": 2,
+          "gridSpans": [
+            {
+              "col": 1,
+              "row": 1
+            },
+            {
+              "col": 1,
+              "row": 1
+            },
+            {
+              "col": 2,
+              "row": 1
+            }
+          ]
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "다음으로는 종이컵과 달력! 종이컵은 회사 비품으로 쓰고, 달력은 제 책상 위에 올려둔 채 넘기며 쓸 것 같네요."
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "gallery",
+        "attrs": {
+          "images": [
+            "/images/179d6d27c58ab682.avif",
+            "/images/b395d1c1708c7944.avif"
+          ],
+          "displayMode": "grid",
+          "columns": 2,
+          "gridSpans": []
+        }
+      },
+      {
+        "type": "paragraph",
+        "content": [
+          {
+            "type": "text",
+            "text": "그 외에도 띠부씰, 스티커, 포카 등등 다양한 굿즈를 사고 더불어 무료 배포 중인 굿즈까지 잘 챙겨왔습니다."
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      },
+      {
+        "type": "gallery",
+        "attrs": {
+          "images": [
+            "/images/6dfd412946a433d1.avif",
+            "/images/ea64f9751c5adc5c.avif",
+            "/images/40cb3cf28356c8f1.avif"
+          ],
+          "displayMode": "grid",
+          "columns": 3,
+          "gridSpans": []
         }
       },
       {
@@ -314,7 +379,7 @@
   "id": "BhUm5AIG5p",
   "metadata": {
     "publishedAt": null,
-    "lastModifiedAt": 1767270296
+    "lastModifiedAt": 1767271973
   },
   "slug": "BhUm5AIG5p"
 }

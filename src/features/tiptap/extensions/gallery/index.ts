@@ -5,7 +5,12 @@ import { GalleryNodeView } from './node-view';
 // Re-export client component for SSR usage
 export { GalleryClient } from './client';
 
-export type GalleryDisplayMode = 'carousel' | 'masonry' | 'grid' | 'list';
+export type GalleryDisplayMode = 'carousel' | 'grid' | 'list';
+
+export interface GridSpan {
+  col: number;
+  row: number;
+}
 
 declare module '@tiptap/core' {
   interface Commands<ReturnType> {
@@ -17,6 +22,7 @@ declare module '@tiptap/core' {
         images: string[];
         displayMode?: GalleryDisplayMode;
         columns?: number;
+        gridSpans?: GridSpan[];
       }) => ReturnType;
     };
   }
@@ -83,6 +89,26 @@ export const Gallery = Node.create({
           };
         },
       },
+      gridSpans: {
+        default: [],
+        parseHTML: (element) => {
+          const spansAttr = element.getAttribute('data-grid-spans');
+          if (!spansAttr) return [];
+          try {
+            return JSON.parse(spansAttr);
+          } catch {
+            return [];
+          }
+        },
+        renderHTML: (attributes) => {
+          if (!attributes.gridSpans || !Array.isArray(attributes.gridSpans)) {
+            return {};
+          }
+          return {
+            'data-grid-spans': JSON.stringify(attributes.gridSpans),
+          };
+        },
+      },
     };
   },
 
@@ -101,6 +127,15 @@ export const Gallery = Node.create({
             if (!Array.isArray(images) || images.length === 0) {
               return false;
             }
+            let gridSpans: GridSpan[] = [];
+            const spansAttr = element.getAttribute('data-grid-spans');
+            if (spansAttr) {
+              try {
+                gridSpans = JSON.parse(spansAttr);
+              } catch {
+                gridSpans = [];
+              }
+            }
             return {
               images,
               displayMode:
@@ -111,6 +146,7 @@ export const Gallery = Node.create({
                 element.getAttribute('data-columns') || '3',
                 10,
               ),
+              gridSpans,
             };
           } catch {
             return false;
@@ -131,6 +167,7 @@ export const Gallery = Node.create({
           images: string[];
           displayMode?: GalleryDisplayMode;
           columns?: number;
+          gridSpans?: GridSpan[];
         }) =>
         ({ commands }) => {
           if (!options.images || !Array.isArray(options.images)) {
@@ -143,6 +180,7 @@ export const Gallery = Node.create({
               images: options.images,
               displayMode: options.displayMode || 'grid',
               columns: options.columns || 3,
+              gridSpans: options.gridSpans || [],
             },
           });
         },

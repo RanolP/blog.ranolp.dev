@@ -6,7 +6,7 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import Uppy from '@uppy/core';
 import XHRUpload from '@uppy/xhr-upload';
 import '@uppy/core/css/style.css';
-import type { GalleryDisplayMode } from './index';
+import type { GalleryDisplayMode, GridSpan } from './index';
 
 const IMAGE_ERROR_PLACEHOLDER =
   'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="400" height="300"%3E%3Crect fill="%23ddd" width="400" height="300"/%3E%3Ctext fill="%23999" font-family="sans-serif" font-size="18" x="50%25" y="50%25" text-anchor="middle" dy=".3em"%3EImage not found%3C/text%3E%3C/svg%3E';
@@ -23,11 +23,21 @@ export function GalleryNodeView({
   const images = (node.attrs.images as string[]) || [];
   const displayMode = (node.attrs.displayMode as GalleryDisplayMode) || 'grid';
   const columns = (node.attrs.columns as number) || 3;
+  const gridSpans = (node.attrs.gridSpans as GridSpan[]) || [];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [uploadProgress, setUploadProgress] = useState<{
     progress: number;
     fileName: string | null;
   }>({ progress: 0, fileName: null });
+  const [resizing, setResizing] = useState<{
+    index: number;
+    direction: 'col' | 'row' | 'both';
+    startX: number;
+    startY: number;
+    startCol: number;
+    startRow: number;
+  } | null>(null);
+  const gridRef = useRef<HTMLDivElement>(null);
 
   const uploadZoneRef = useRef<HTMLDivElement>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -199,6 +209,87 @@ export function GalleryNodeView({
     [updateAttributes],
   );
 
+  // Get span for an image, defaulting to { col: 1, row: 1 }
+  const getSpan = useCallback(
+    (index: number): GridSpan => {
+      return gridSpans[index] || { col: 1, row: 1 };
+    },
+    [gridSpans],
+  );
+
+  // Update span for an image
+  const updateSpan = useCallback(
+    (index: number, span: GridSpan) => {
+      const newSpans = [...gridSpans];
+      // Ensure array is long enough
+      while (newSpans.length <= index) {
+        newSpans.push({ col: 1, row: 1 });
+      }
+      newSpans[index] = {
+        col: Math.max(1, Math.min(columns, span.col)),
+        row: Math.max(1, span.row),
+      };
+      updateAttributes({ gridSpans: newSpans });
+    },
+    [gridSpans, columns, updateAttributes],
+  );
+
+  // Resize handlers
+  const handleResizeStart = useCallback(
+    (
+      e: React.MouseEvent,
+      index: number,
+      direction: 'col' | 'row' | 'both',
+    ) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const span = getSpan(index);
+      setResizing({
+        index,
+        direction,
+        startX: e.clientX,
+        startY: e.clientY,
+        startCol: span.col,
+        startRow: span.row,
+      });
+    },
+    [getSpan],
+  );
+
+  useEffect(() => {
+    if (!resizing) return;
+
+    const handleMouseMove = (e: MouseEvent) => {
+      const deltaX = e.clientX - resizing.startX;
+      const deltaY = e.clientY - resizing.startY;
+      const step = 80; // Fixed step size for span changes
+
+      let newCol = resizing.startCol;
+      let newRow = resizing.startRow;
+
+      if (resizing.direction === 'col' || resizing.direction === 'both') {
+        newCol = Math.max(1, Math.min(columns, resizing.startCol + Math.round(deltaX / step)));
+      }
+      if (resizing.direction === 'row' || resizing.direction === 'both') {
+        newRow = Math.max(1, resizing.startRow + Math.round(deltaY / step));
+      }
+
+      updateSpan(resizing.index, { col: newCol, row: newRow });
+    };
+
+    const handleMouseUp = () => {
+      setResizing(null);
+    };
+
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleMouseUp);
+
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseup', handleMouseUp);
+    };
+  }, [resizing, columns, updateSpan]);
+
   // Render unified image component with delete overlay
   const renderGalleryImage = (url: string, index: number) => (
     <div className="gallery-image-wrapper">
@@ -302,24 +393,45 @@ export function GalleryNodeView({
                 ›
               </button>
             </div>
-          ) : displayMode === 'masonry' ? (
-            <div className="gallery-masonry" style={{ columnCount: columns }}>
-              {images.map((url, index) => (
-                <div key={index} className="gallery-masonry-item">
-                  {renderGalleryImage(url, index)}
-                </div>
-              ))}
-            </div>
           ) : displayMode === 'grid' ? (
             <div
+              ref={gridRef}
               className="gallery-grid"
-              style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}
+              style={{
+                gridTemplateColumns: `repeat(${columns}, 1fr)`,
+              }}
             >
-              {images.map((url, index) => (
-                <div key={index} className="gallery-grid-item">
-                  {renderGalleryImage(url, index)}
-                </div>
-              ))}
+              {images.map((url, index) => {
+                const span = getSpan(index);
+                return (
+                  <div
+                    key={index}
+                    className={`gallery-grid-item ${resizing?.index === index ? 'is-resizing' : ''}`}
+                    style={{
+                      gridColumn: `span ${span.col}`,
+                      gridRow: `span ${span.row}`,
+                    }}
+                  >
+                    {renderGalleryImage(url, index)}
+                    {selected && (
+                      <>
+                        <div
+                          className="gallery-resize-handle gallery-resize-handle-e"
+                          onMouseDown={(e) => handleResizeStart(e, index, 'col')}
+                        />
+                        <div
+                          className="gallery-resize-handle gallery-resize-handle-s"
+                          onMouseDown={(e) => handleResizeStart(e, index, 'row')}
+                        />
+                        <div
+                          className="gallery-resize-handle gallery-resize-handle-se"
+                          onMouseDown={(e) => handleResizeStart(e, index, 'both')}
+                        />
+                      </>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           ) : (
             <div className="gallery-list">
@@ -357,12 +469,11 @@ export function GalleryNodeView({
               className="gallery-select"
             >
               <option value="carousel">Carousel</option>
-              <option value="masonry">Masonry</option>
               <option value="grid">Grid</option>
               <option value="list">List</option>
             </select>
           </div>
-          {(displayMode === 'masonry' || displayMode === 'grid') && (
+          {displayMode === 'grid' && (
             <div className="gallery-control-group">
               <label>Columns:</label>
               <input
