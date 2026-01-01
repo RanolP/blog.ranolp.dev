@@ -124,7 +124,7 @@ export function EditorClient({ initialContent, postId }: EditorClientProps) {
   return (
     <EditorContent
       editor={editor}
-      className="prose prose-sm sm:prose-base lg:prose-lg xl:prose-xl max-w-none dark:prose-invert focus:outline-none min-h-[300px]"
+      className="prose prose-sm sm:prose-base lg:prose-lg xl:prose-xl max-w-none dark:prose-invert tiptap-content focus:outline-none min-h-[300px]"
     />
   );
 }

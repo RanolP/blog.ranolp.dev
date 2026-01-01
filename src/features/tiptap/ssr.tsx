@@ -1,6 +1,6 @@
 import { Editor } from '@tiptap/core';
 import { generateHTML } from '@tiptap/html';
-import { defaultExtensions } from './config';
+import { defaultExtensions, ssrExtensions } from './config';
 import type { JSONContent } from '@tiptap/core';
 
 export interface TiptapSSRProps {
@@ -26,7 +26,7 @@ export interface TiptapSSRProps {
 export function TiptapSSR({
   content,
   className,
-  extensions = defaultExtensions,
+  extensions = ssrExtensions, // Use SSR extensions by default (without NodeView)
 }: TiptapSSRProps) {
   let html: string;
 
@@ -50,7 +50,7 @@ export function TiptapSSR({
 export function createSSREditor(content?: JSONContent | string) {
   return new Editor({
     element: undefined, // Opt-in to SSR mode
-    extensions: defaultExtensions,
+    extensions: ssrExtensions, // Use SSR extensions (without NodeView)
     content,
     enableContentCheck: true, // Enable schema enforcement
   });
@@ -62,7 +62,7 @@ export function createSSREditor(content?: JSONContent | string) {
  */
 export function tiptapToHTML(
   content: JSONContent | string,
-  extensions = defaultExtensions,
+  extensions = ssrExtensions, // Use SSR extensions by default
 ): string {
   if (typeof content === 'string') {
     return content;

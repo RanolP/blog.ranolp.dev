@@ -523,11 +523,16 @@ body {
   width: 1.25rem;
   height: 1.25rem;
   flex-shrink: 0;
+  color: white;
 }
 
 .mention-platform-icon {
   flex-shrink: 0;
   color: white;
+}
+
+.dark .mention-platform-github {
+  color: #24292e;
 }
 
 .dark .mention-platform-github .mention-platform-icon {

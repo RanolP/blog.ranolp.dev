@@ -1,0 +1,28 @@
+{
+  "content": {
+    "type": "doc",
+    "content": [
+      {
+        "type": "heading",
+        "attrs": {
+          "level": 1
+        },
+        "content": [
+          {
+            "type": "text",
+            "text": "한음사 주최 〈음성합성엔진 연말 파티〉 후기"
+          }
+        ]
+      },
+      {
+        "type": "paragraph"
+      }
+    ]
+  },
+  "id": "BhUm5AIG5p",
+  "metadata": {
+    "publishedAt": null,
+    "lastModifiedAt": 1767129691
+  },
+  "slug": "BhUm5AIG5p"
+}

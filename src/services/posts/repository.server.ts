@@ -127,6 +127,7 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
  * @param post - The post to write
  */
 export async function writePost(post: Post): Promise<void> {
+  console.log('Writing post:', post.content);
   // Validate the post data before writing
   v.parse(PostSchema, post);
 
