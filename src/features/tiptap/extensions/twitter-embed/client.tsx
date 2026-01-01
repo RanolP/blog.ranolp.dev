@@ -3,6 +3,7 @@
 import { EmbeddedTweet, TweetNotFound } from 'react-tweet';
 import type { Tweet } from 'react-tweet/api';
 import { useEffect, useState } from 'react';
+import { useTweet } from './context';
 
 interface TweetClientProps {
   tweetId: string;
@@ -10,13 +11,18 @@ interface TweetClientProps {
 }
 
 export function TweetClient({ tweetId, initialTweet }: TweetClientProps) {
-  const [tweet, setTweet] = useState<Tweet | null>(initialTweet ?? null);
+  // First try to get tweet from context (pre-fetched in loader)
+  const contextTweet = useTweet(tweetId);
+  const providedTweet = initialTweet ?? contextTweet ?? null;
+
+  const [tweet, setTweet] = useState<Tweet | null>(providedTweet);
   const [error, setError] = useState<Error | null>(null);
-  const [loading, setLoading] = useState(!initialTweet);
+  const [loading, setLoading] = useState(!providedTweet);
 
   useEffect(() => {
-    // If we already have initial tweet data, skip fetching
-    if (initialTweet) {
+    // If we already have tweet data from props or context, skip fetching
+    if (providedTweet) {
+      setTweet(providedTweet);
       setLoading(false);
       return;
     }
@@ -55,7 +61,7 @@ export function TweetClient({ tweetId, initialTweet }: TweetClientProps) {
     return () => {
       cancelled = true;
     };
-  }, [tweetId, initialTweet]);
+  }, [tweetId, providedTweet]);
 
   if (loading) {
     return (

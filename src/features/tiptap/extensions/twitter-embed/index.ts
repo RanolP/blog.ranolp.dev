@@ -4,6 +4,15 @@ import { TwitterEmbedNodeView } from './node-view';
 
 // Re-export client component for client-side usage
 export { TweetClient } from './client';
+// Re-export context for tweet data management
+export {
+  TweetIndexProvider,
+  useTweetIndex,
+  useTweet,
+  type TweetIndex,
+} from './context';
+// Re-export utilities
+export { findTweetIds, extractTweetId } from './utils';
 // Note: TweetServer should be imported directly from './server' where needed
 // to avoid bundling server-only code in client bundles
 

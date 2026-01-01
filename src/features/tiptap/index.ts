@@ -28,6 +28,12 @@ export {
   TwitterEmbed,
   createTwitterEmbedExtensionForSSR,
   TweetClient,
+  TweetIndexProvider,
+  useTweetIndex,
+  useTweet,
+  findTweetIds,
+  extractTweetId,
+  type TweetIndex,
 } from './extensions/twitter-embed';
 export {
   YouTubeEmbed,
