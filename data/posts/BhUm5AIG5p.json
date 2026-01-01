@@ -10,7 +10,7 @@
         "content": [
           {
             "type": "text",
-            "text": "한음사 주최 〈음성합성엔진 연말 파티〉 후기"
+            "text": "한음사 주최 〈음성합성엔진 연말 파티〉 후기 (2024)"
           }
         ]
       },
@@ -196,6 +196,7 @@
             "attrs": {
               "url": "https://hangulize.org/",
               "title": "한글라이즈",
+              "customTitle": null,
               "favicon": "https://hangulize.org/favicon.ico",
               "hostname": "hangulize.org"
             }
@@ -411,7 +412,7 @@
   "id": "BhUm5AIG5p",
   "metadata": {
     "publishedAt": 1734793200,
-    "lastModifiedAt": 1767282466
+    "lastModifiedAt": 1767283578
   },
   "slug": "year-end--korea-voice-banks-2024"
 }
