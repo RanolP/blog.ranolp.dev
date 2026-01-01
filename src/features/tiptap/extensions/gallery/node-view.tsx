@@ -1,5 +1,3 @@
-'use client';
-
 import { NodeViewWrapper } from '@tiptap/react';
 import type { NodeViewProps } from '@tiptap/react';
 import { useState, useRef, useEffect, useCallback } from 'react';
@@ -14,6 +12,10 @@ const IMAGE_ERROR_PLACEHOLDER =
 const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
   (e.target as HTMLImageElement).src = IMAGE_ERROR_PLACEHOLDER;
 };
+
+function getWebpUrl(url: string): string {
+  return url.replace(/\.avif$/i, '.webp');
+}
 
 export function GalleryNodeView({
   node,
@@ -79,7 +81,9 @@ export function GalleryNodeView({
       if (file && response?.body?.url) {
         // Always append to existing images - use ref to get fresh value
         const currentImages = imagesRef.current;
-        updateAttributesRef.current({ images: [...currentImages, response.body.url] });
+        updateAttributesRef.current({
+          images: [...currentImages, response.body.url],
+        });
         instance.removeFile(file.id);
       }
       setUploadProgress({ progress: 0, fileName: null });
@@ -236,11 +240,7 @@ export function GalleryNodeView({
 
   // Resize handlers
   const handleResizeStart = useCallback(
-    (
-      e: React.MouseEvent,
-      index: number,
-      direction: 'col' | 'row' | 'both',
-    ) => {
+    (e: React.MouseEvent, index: number, direction: 'col' | 'row' | 'both') => {
       e.preventDefault();
       e.stopPropagation();
       const span = getSpan(index);
@@ -268,7 +268,10 @@ export function GalleryNodeView({
       let newRow = resizing.startRow;
 
       if (resizing.direction === 'col' || resizing.direction === 'both') {
-        newCol = Math.max(1, Math.min(columns, resizing.startCol + Math.round(deltaX / step)));
+        newCol = Math.max(
+          1,
+          Math.min(columns, resizing.startCol + Math.round(deltaX / step)),
+        );
       }
       if (resizing.direction === 'row' || resizing.direction === 'both') {
         newRow = Math.max(1, resizing.startRow + Math.round(deltaY / step));
@@ -291,26 +294,44 @@ export function GalleryNodeView({
   }, [resizing, columns, updateSpan]);
 
   // Render unified image component with delete overlay
-  const renderGalleryImage = (url: string, index: number) => (
-    <div className="gallery-image-wrapper">
-      <img
-        src={url}
-        alt={`Gallery image ${index + 1}`}
-        className="gallery-image"
-        onError={handleImageError}
-      />
-      {selected && (
-        <button
-          type="button"
-          onClick={() => handleRemoveImage(index)}
-          className="gallery-delete-overlay"
-          aria-label="Delete image"
-        >
-          ×
-        </button>
-      )}
-    </div>
-  );
+  const renderGalleryImage = (url: string, index: number) => {
+    const webpUrl = getWebpUrl(url);
+    const isAvif = url.toLowerCase().endsWith('.avif');
+
+    return (
+      <div className="gallery-image-wrapper">
+        {isAvif ? (
+          <picture>
+            <source srcSet={url} type="image/avif" />
+            <source srcSet={webpUrl} type="image/webp" />
+            <img
+              src={webpUrl}
+              alt={`Gallery image ${index + 1}`}
+              className="gallery-image"
+              onError={handleImageError}
+            />
+          </picture>
+        ) : (
+          <img
+            src={url}
+            alt={`Gallery image ${index + 1}`}
+            className="gallery-image"
+            onError={handleImageError}
+          />
+        )}
+        {selected && (
+          <button
+            type="button"
+            onClick={() => handleRemoveImage(index)}
+            className="gallery-delete-overlay"
+            aria-label="Delete image"
+          >
+            ×
+          </button>
+        )}
+      </div>
+    );
+  };
 
   if (images.length === 0) {
     return (
@@ -406,7 +427,9 @@ export function GalleryNodeView({
                 return (
                   <div
                     key={index}
-                    className={`gallery-grid-item ${resizing?.index === index ? 'is-resizing' : ''}`}
+                    className={`gallery-grid-item ${
+                      resizing?.index === index ? 'is-resizing' : ''
+                    }`}
                     style={{
                       gridColumn: `span ${span.col}`,
                       gridRow: `span ${span.row}`,
@@ -417,15 +440,21 @@ export function GalleryNodeView({
                       <>
                         <div
                           className="gallery-resize-handle gallery-resize-handle-e"
-                          onMouseDown={(e) => handleResizeStart(e, index, 'col')}
+                          onMouseDown={(e) =>
+                            handleResizeStart(e, index, 'col')
+                          }
                         />
                         <div
                           className="gallery-resize-handle gallery-resize-handle-s"
-                          onMouseDown={(e) => handleResizeStart(e, index, 'row')}
+                          onMouseDown={(e) =>
+                            handleResizeStart(e, index, 'row')
+                          }
                         />
                         <div
                           className="gallery-resize-handle gallery-resize-handle-se"
-                          onMouseDown={(e) => handleResizeStart(e, index, 'both')}
+                          onMouseDown={(e) =>
+                            handleResizeStart(e, index, 'both')
+                          }
                         />
                       </>
                     )}

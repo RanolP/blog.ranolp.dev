@@ -1,0 +1,302 @@
+{
+  "__typename": "Tweet",
+  "lang": "ko",
+  "favorite_count": 182,
+  "possibly_sensitive": false,
+  "created_at": "2024-11-26T03:28:00.000Z",
+  "display_text_range": [
+    0,
+    189
+  ],
+  "entities": {
+    "hashtags": [],
+    "urls": [
+      {
+        "display_url": "hanumsa2.wpcomstaging.com/?page_id=107&u…",
+        "expanded_url": "https://hanumsa2.wpcomstaging.com/?page_id=107&uid=199&mod=document",
+        "indices": [
+          0,
+          23
+        ],
+        "url": "https://t.co/IZ0MXmfeNI"
+      }
+    ],
+    "user_mentions": [],
+    "symbols": [],
+    "media": [
+      {
+        "display_url": "pic.x.com/GWd5u8CAsN",
+        "expanded_url": "https://x.com/KoreaVoiceBanks/status/1861250525360193770/photo/1",
+        "indices": [
+          190,
+          213
+        ],
+        "url": "https://t.co/GWd5u8CAsN"
+      }
+    ]
+  },
+  "id_str": "1861250525360193770",
+  "text": "https://t.co/IZ0MXmfeNI\n한음사에서 비공식 음성합성엔진 연말파티를 주최합니다. \n많은 기업과 뮤지션, 이티스트 분들, 작곡가분들이 초청되어 무대를 빛내주실 예정이오니 많은 참여 바랍니다.   \n\n일시 : 12월 20일 금요일 6시부터 10시까지  \n장소 : 광나루역 &lt;빛의 라운지&gt;   \n입장료 : 33000원 https://t.co/GWd5u8CAsN",
+  "user": {
+    "id_str": "1653441853679865858",
+    "name": "한국 음합엔 캐릭터 사랑회",
+    "screen_name": "KoreaVoiceBanks",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/1997625211425071104/6XzMJhRF_normal.jpg",
+    "highlighted_label": {
+      "description": "Automated",
+      "badge": {
+        "url": "https://pbs.twimg.com/semantic_core_img/1428827730364096519/4ZXpTBhS?format=png&name=orig"
+      },
+      "user_label_type": "AutomatedLabel"
+    }
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1861250525360193770"
+    ],
+    "editable_until_msecs": "1732595280000",
+    "is_edit_eligible": false,
+    "edits_remaining": "5"
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/GWd5u8CAsN",
+      "expanded_url": "https://x.com/KoreaVoiceBanks/status/1861250525360193770/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        190,
+        213
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/GdR9T-EbkAA0Kbe.jpg",
+      "original_info": {
+        "height": 2245,
+        "width": 1587,
+        "focus_rects": [
+          {
+            "x": 0,
+            "y": 734,
+            "w": 1587,
+            "h": 889
+          },
+          {
+            "x": 0,
+            "y": 385,
+            "w": 1587,
+            "h": 1587
+          },
+          {
+            "x": 0,
+            "y": 274,
+            "w": 1587,
+            "h": 1809
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 1123,
+            "h": 2245
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 1587,
+            "h": 2245
+          }
+        ]
+      },
+      "sizes": {
+        "large": {
+          "h": 2048,
+          "resize": "fit",
+          "w": 1448
+        },
+        "medium": {
+          "h": 1200,
+          "resize": "fit",
+          "w": 848
+        },
+        "small": {
+          "h": 680,
+          "resize": "fit",
+          "w": 481
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/GWd5u8CAsN"
+    },
+    {
+      "display_url": "pic.x.com/GWd5u8CAsN",
+      "expanded_url": "https://x.com/KoreaVoiceBanks/status/1861250525360193770/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        190,
+        213
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/GdR9UZZa0AAcDgy.jpg",
+      "original_info": {
+        "height": 2245,
+        "width": 1587,
+        "focus_rects": [
+          {
+            "x": 0,
+            "y": 1356,
+            "w": 1587,
+            "h": 889
+          },
+          {
+            "x": 0,
+            "y": 658,
+            "w": 1587,
+            "h": 1587
+          },
+          {
+            "x": 0,
+            "y": 436,
+            "w": 1587,
+            "h": 1809
+          },
+          {
+            "x": 168,
+            "y": 0,
+            "w": 1123,
+            "h": 2245
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 1587,
+            "h": 2245
+          }
+        ]
+      },
+      "sizes": {
+        "large": {
+          "h": 2048,
+          "resize": "fit",
+          "w": 1448
+        },
+        "medium": {
+          "h": 1200,
+          "resize": "fit",
+          "w": 848
+        },
+        "small": {
+          "h": 680,
+          "resize": "fit",
+          "w": 481
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/GWd5u8CAsN"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "x": 0,
+          "y": 734,
+          "w": 1587,
+          "h": 889
+        },
+        {
+          "x": 0,
+          "y": 385,
+          "w": 1587,
+          "h": 1587
+        },
+        {
+          "x": 0,
+          "y": 274,
+          "w": 1587,
+          "h": 1809
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1123,
+          "h": 2245
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1587,
+          "h": 2245
+        }
+      ],
+      "expandedUrl": "https://x.com/KoreaVoiceBanks/status/1861250525360193770/photo/1",
+      "url": "https://pbs.twimg.com/media/GdR9T-EbkAA0Kbe.jpg",
+      "width": 1587,
+      "height": 2245
+    },
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "x": 0,
+          "y": 1356,
+          "w": 1587,
+          "h": 889
+        },
+        {
+          "x": 0,
+          "y": 658,
+          "w": 1587,
+          "h": 1587
+        },
+        {
+          "x": 0,
+          "y": 436,
+          "w": 1587,
+          "h": 1809
+        },
+        {
+          "x": 168,
+          "y": 0,
+          "w": 1123,
+          "h": 2245
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 1587,
+          "h": 2245
+        }
+      ],
+      "expandedUrl": "https://x.com/KoreaVoiceBanks/status/1861250525360193770/photo/1",
+      "url": "https://pbs.twimg.com/media/GdR9UZZa0AAcDgy.jpg",
+      "width": 1587,
+      "height": 2245
+    }
+  ],
+  "conversation_count": 6,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

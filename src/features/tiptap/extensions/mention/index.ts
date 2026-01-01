@@ -1,5 +1,6 @@
 import Mention from '@tiptap/extension-mention';
 import type { MentionOptions } from '@tiptap/extension-mention';
+import { mergeAttributes } from '@tiptap/core';
 import { ReactRenderer, ReactNodeViewRenderer } from '@tiptap/react';
 import { MentionNodeView } from './node-view';
 import { MentionList } from './menu';
@@ -328,12 +329,9 @@ export function createMentionExtensionForSSR() {
         },
       };
     },
-    // No addNodeView for SSR - this ensures renderHTML is used
-  }).configure({
-    HTMLAttributes: {
-      class: 'mention',
-    },
-    renderHTML({ node }) {
+    // IMPORTANT: override `renderHTML` on the extension itself (not via `.configure`)
+    // so it is consistently used by `generateHTML()` on both server and client.
+    renderHTML({ node, HTMLAttributes }) {
       const attrs = node.attrs as MentionItem;
       const platform = attrs.id?.startsWith('tw:')
         ? 'twitter'
@@ -429,10 +427,14 @@ export function createMentionExtensionForSSR() {
 
       return [
         'span',
-        {
+        mergeAttributes(HTMLAttributes, {
           class: `mention mention-${platform || 'default'}`,
+          // keep legacy attribute (used by our CSS/hooks) and add TipTap mention attrs
           'data-mention-id': attrs.id,
-        },
+          'data-type': 'mention',
+          'data-id': attrs.id,
+          'data-label': attrs.label ?? attrs.id,
+        }),
         [
           'a',
           {
@@ -444,6 +446,10 @@ export function createMentionExtensionForSSR() {
           content,
         ],
       ] as const;
+    },
+  }).configure({
+    HTMLAttributes: {
+      class: 'mention',
     },
   });
 }

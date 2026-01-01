@@ -1,5 +1,3 @@
-'use client';
-
 import { useFetcher } from 'react-router';
 import { Icon } from '@iconify/react';
 import { BackButton } from '~/components/BackButton';

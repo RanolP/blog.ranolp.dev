@@ -1,15 +1,9 @@
-'use client';
-
 import React from 'react';
 import { NodeViewWrapper } from '@tiptap/react';
 import { Icon } from '@iconify/react';
 import type { ReactNodeViewProps } from '@tiptap/react';
 import type { MentionItem } from './types';
-import {
-  twitterIconData,
-  githubIconData,
-  verifiedIconData,
-} from './icons';
+import { twitterIconData, githubIconData, verifiedIconData } from './icons';
 
 export function MentionNodeView({ node }: ReactNodeViewProps) {
   const attrs = node.attrs as MentionItem;

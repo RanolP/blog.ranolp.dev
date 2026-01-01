@@ -1,0 +1,285 @@
+{
+  "__typename": "Tweet",
+  "lang": "ko",
+  "favorite_count": 4,
+  "possibly_sensitive": false,
+  "created_at": "2024-12-20T11:20:18.000Z",
+  "display_text_range": [
+    0,
+    87
+  ],
+  "entities": {
+    "hashtags": [],
+    "urls": [],
+    "user_mentions": [],
+    "symbols": [],
+    "media": [
+      {
+        "display_url": "pic.x.com/U34ODVAJ5F",
+        "expanded_url": "https://x.com/ssogari_dev/status/1870066695232205201/photo/1",
+        "indices": [
+          88,
+          111
+        ],
+        "url": "https://t.co/U34ODVAJ5F"
+      }
+    ]
+  },
+  "id_str": "1870066695232205201",
+  "text": "한음사 연말파티 입구에서는 세레나데 유니버스에 나왔던 음악들의 PV 영상이 재생되고 있습니다. 다시금 추억에 잠기며 머리 속에서 멜로디가 맴도는 기분입니다. https://t.co/U34ODVAJ5F",
+  "user": {
+    "id_str": "1130246016257519617",
+    "name": "【쏘가리】팔로우 리밋-ing",
+    "screen_name": "ssogari_dev",
+    "is_blue_verified": false,
+    "profile_image_shape": "Circle",
+    "verified": false,
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/1981622872650010624/wyFCeAbZ_normal.jpg"
+  },
+  "edit_control": {
+    "edit_tweet_ids": [
+      "1870066695232205201"
+    ],
+    "editable_until_msecs": "1734697218000",
+    "is_edit_eligible": true,
+    "edits_remaining": "5"
+  },
+  "mediaDetails": [
+    {
+      "display_url": "pic.x.com/U34ODVAJ5F",
+      "expanded_url": "https://x.com/ssogari_dev/status/1870066695232205201/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        88,
+        111
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/GfPPu5XasAAkqn8.jpg",
+      "original_info": {
+        "height": 2731,
+        "width": 4096,
+        "focus_rects": [
+          {
+            "x": 0,
+            "y": 0,
+            "w": 4096,
+            "h": 2294
+          },
+          {
+            "x": 171,
+            "y": 0,
+            "w": 2731,
+            "h": 2731
+          },
+          {
+            "x": 338,
+            "y": 0,
+            "w": 2396,
+            "h": 2731
+          },
+          {
+            "x": 853,
+            "y": 0,
+            "w": 1366,
+            "h": 2731
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 4096,
+            "h": 2731
+          }
+        ]
+      },
+      "sizes": {
+        "large": {
+          "h": 1366,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 800,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 453,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/U34ODVAJ5F"
+    },
+    {
+      "display_url": "pic.x.com/U34ODVAJ5F",
+      "expanded_url": "https://x.com/ssogari_dev/status/1870066695232205201/photo/1",
+      "ext_media_availability": {
+        "status": "Available"
+      },
+      "indices": [
+        88,
+        111
+      ],
+      "media_url_https": "https://pbs.twimg.com/media/GfPPu7daAAAUQ2s.jpg",
+      "original_info": {
+        "height": 2731,
+        "width": 4096,
+        "focus_rects": [
+          {
+            "x": 0,
+            "y": 389,
+            "w": 4096,
+            "h": 2294
+          },
+          {
+            "x": 1365,
+            "y": 0,
+            "w": 2731,
+            "h": 2731
+          },
+          {
+            "x": 1700,
+            "y": 0,
+            "w": 2396,
+            "h": 2731
+          },
+          {
+            "x": 2491,
+            "y": 0,
+            "w": 1366,
+            "h": 2731
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 4096,
+            "h": 2731
+          }
+        ]
+      },
+      "sizes": {
+        "large": {
+          "h": 1366,
+          "resize": "fit",
+          "w": 2048
+        },
+        "medium": {
+          "h": 800,
+          "resize": "fit",
+          "w": 1200
+        },
+        "small": {
+          "h": 453,
+          "resize": "fit",
+          "w": 680
+        },
+        "thumb": {
+          "h": 150,
+          "resize": "crop",
+          "w": 150
+        }
+      },
+      "type": "photo",
+      "url": "https://t.co/U34ODVAJ5F"
+    }
+  ],
+  "photos": [
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "x": 0,
+          "y": 0,
+          "w": 4096,
+          "h": 2294
+        },
+        {
+          "x": 171,
+          "y": 0,
+          "w": 2731,
+          "h": 2731
+        },
+        {
+          "x": 338,
+          "y": 0,
+          "w": 2396,
+          "h": 2731
+        },
+        {
+          "x": 853,
+          "y": 0,
+          "w": 1366,
+          "h": 2731
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 4096,
+          "h": 2731
+        }
+      ],
+      "expandedUrl": "https://x.com/ssogari_dev/status/1870066695232205201/photo/1",
+      "url": "https://pbs.twimg.com/media/GfPPu5XasAAkqn8.jpg",
+      "width": 4096,
+      "height": 2731
+    },
+    {
+      "backgroundColor": {
+        "red": 204,
+        "green": 214,
+        "blue": 221
+      },
+      "cropCandidates": [
+        {
+          "x": 0,
+          "y": 389,
+          "w": 4096,
+          "h": 2294
+        },
+        {
+          "x": 1365,
+          "y": 0,
+          "w": 2731,
+          "h": 2731
+        },
+        {
+          "x": 1700,
+          "y": 0,
+          "w": 2396,
+          "h": 2731
+        },
+        {
+          "x": 2491,
+          "y": 0,
+          "w": 1366,
+          "h": 2731
+        },
+        {
+          "x": 0,
+          "y": 0,
+          "w": 4096,
+          "h": 2731
+        }
+      ],
+      "expandedUrl": "https://x.com/ssogari_dev/status/1870066695232205201/photo/1",
+      "url": "https://pbs.twimg.com/media/GfPPu7daAAAUQ2s.jpg",
+      "width": 4096,
+      "height": 2731
+    }
+  ],
+  "conversation_count": 0,
+  "news_action_type": "conversation",
+  "isEdited": false,
+  "isStaleEdit": false
+}

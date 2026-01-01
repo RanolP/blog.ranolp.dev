@@ -2,8 +2,10 @@ import { Node, nodePasteRule, mergeAttributes } from '@tiptap/core';
 import { ReactNodeViewRenderer } from '@tiptap/react';
 import { TwitterEmbedNodeView } from './node-view';
 
-// Re-export client component for SSR usage
+// Re-export client component for client-side usage
 export { TweetClient } from './client';
+// Re-export server component for SSR usage
+export { TweetServer } from './server';
 
 declare module '@tiptap/core' {
   interface Commands<ReturnType> {

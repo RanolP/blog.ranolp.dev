@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import { NodeViewWrapper } from '@tiptap/react';
 import type { NodeViewProps } from '@tiptap/react';

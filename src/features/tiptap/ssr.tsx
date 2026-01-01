@@ -2,7 +2,7 @@ import { Editor } from '@tiptap/core';
 import { generateHTML } from '@tiptap/html';
 import { defaultExtensions, ssrExtensions } from './config';
 import type { JSONContent } from '@tiptap/core';
-import { TweetClient } from './extensions/twitter-embed';
+import { TweetServer } from './extensions/twitter-embed/server';
 import { GalleryClient } from './extensions/gallery';
 
 export interface TiptapSSRProps {
@@ -54,7 +54,7 @@ export function TiptapSSR({
       if (url) {
         const tweetId = /\/status\/(\d+)/g.exec(url)?.[1];
         if (tweetId) {
-          parts.push(<TweetClient key={parts.length} tweetId={tweetId} />);
+          parts.push(<TweetServer key={parts.length} tweetId={tweetId} />);
         }
       }
     } else if (node.type === 'gallery') {

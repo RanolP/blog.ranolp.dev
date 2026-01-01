@@ -1,4 +1,3 @@
-'use server';
 
 import { writeFile, mkdir } from 'node:fs/promises';
 import { join } from 'node:path';

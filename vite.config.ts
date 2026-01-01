@@ -1,17 +1,22 @@
-import { unstable_reactRouterRSC as reactRouterRsc } from '@react-router/dev/vite';
+import { reactRouter } from '@react-router/dev/vite';
 import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
-import rsc from '@vitejs/plugin-rsc';
 
 export default defineConfig({
-  plugins: [tailwindcss(), reactRouterRsc(), rsc(), tsconfigPaths()],
+  plugins: [
+    tailwindcss(),
+    reactRouter().filter(
+      (x) =>
+        // because react-tweet exposes index.client.js, which can be used on both side.
+        x.name !== 'react-router:dot-client',
+    ),
+    tsconfigPaths(),
+  ],
   optimizeDeps: {
-    include: ['react-router/dom', 'react-tweet'],
+    include: ['react-router/dom'],
   },
   ssr: {
-    // Bundle react-tweet instead of treating it as external
-    // This ensures CSS modules are properly processed
     noExternal: ['react-tweet'],
   },
 });

@@ -3,7 +3,9 @@
 .twitter-embed {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .twitter-embed-fallback {
