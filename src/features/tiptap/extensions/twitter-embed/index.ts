@@ -1,11 +1,9 @@
-import {
-  Node,
-  nodePasteRule,
-  mergeAttributes,
-  type RawCommands,
-} from '@tiptap/core';
+import { Node, nodePasteRule, mergeAttributes } from '@tiptap/core';
 import { ReactNodeViewRenderer } from '@tiptap/react';
-import { TwitterEmbedNode } from './twitter-embed-node';
+import { TwitterEmbedNodeView } from './node-view';
+
+// Re-export client component for SSR usage
+export { TweetClient } from './client';
 
 declare module '@tiptap/core' {
   interface Commands<ReturnType> {
@@ -104,6 +102,20 @@ export const TwitterEmbed = Node.create({
   },
 
   addNodeView() {
-    return ReactNodeViewRenderer(TwitterEmbedNode);
+    return ReactNodeViewRenderer(TwitterEmbedNodeView);
   },
 });
+
+/**
+ * Create Twitter embed extension for SSR
+ * Since we use React Server Components, we don't need renderHTML for Twitter embeds
+ * They're extracted and rendered directly as React components in TiptapSSR
+ */
+export function createTwitterEmbedExtensionForSSR() {
+  return TwitterEmbed.extend({
+    addNodeView() {
+      return null;
+    },
+    // No renderHTML needed - Twitter embeds are handled by React Server Components
+  });
+}

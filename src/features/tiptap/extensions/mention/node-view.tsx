@@ -4,9 +4,9 @@ import React from 'react';
 import { NodeViewWrapper } from '@tiptap/react';
 import { Icon } from '@iconify/react';
 import type { ReactNodeViewProps } from '@tiptap/react';
-import type { MentionItem } from './mention-menu';
+import type { MentionItem } from './types';
 
-export function MentionNode({ node }: ReactNodeViewProps) {
+export function MentionNodeView({ node }: ReactNodeViewProps) {
   const attrs = node.attrs as MentionItem;
   const platform = attrs.id?.startsWith('tw:')
     ? 'twitter'

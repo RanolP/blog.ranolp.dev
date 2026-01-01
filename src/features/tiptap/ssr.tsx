@@ -2,7 +2,7 @@ import { Editor } from '@tiptap/core';
 import { generateHTML } from '@tiptap/html';
 import { defaultExtensions, ssrExtensions } from './config';
 import type { JSONContent } from '@tiptap/core';
-import { TweetClient } from './tweet-client';
+import { TweetClient } from './extensions/twitter-embed';
 
 export interface TiptapSSRProps {
   content: string | JSONContent;

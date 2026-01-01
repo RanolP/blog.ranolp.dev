@@ -1,0 +1,135 @@
+/* Heading Styles */
+.ProseMirror h1,
+.ProseMirror h2,
+.ProseMirror h3,
+.ProseMirror h4,
+.ProseMirror h5,
+.ProseMirror h6 {
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.4;
+}
+
+.ProseMirror h1 {
+  font-size: 2em;
+}
+
+.ProseMirror h2 {
+  font-size: 1.5em;
+}
+
+.ProseMirror h3 {
+  font-size: 1.25em;
+}
+
+/* Non-editable # symbols before headings based on level */
+.ProseMirror h1::before {
+  content: '# ';
+  opacity: 0.3;
+  pointer-events: none;
+  user-select: none;
+}
+
+.ProseMirror h2::before {
+  content: '## ';
+  opacity: 0.3;
+  pointer-events: none;
+  user-select: none;
+}
+
+.ProseMirror h3::before {
+  content: '### ';
+  opacity: 0.3;
+  pointer-events: none;
+  user-select: none;
+}
+
+.ProseMirror h4::before {
+  content: '#### ';
+  opacity: 0.3;
+  pointer-events: none;
+  user-select: none;
+}
+
+.ProseMirror h5::before {
+  content: '##### ';
+  opacity: 0.3;
+  pointer-events: none;
+  user-select: none;
+}
+
+.ProseMirror h6::before {
+  content: '###### ';
+  opacity: 0.3;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* SSR/tiptap-content heading styles */
+.tiptap-content h1,
+.tiptap-content h2,
+.tiptap-content h3,
+.tiptap-content h4,
+.tiptap-content h5,
+.tiptap-content h6 {
+  font-weight: 600;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  line-height: 1.4;
+}
+
+.tiptap-content h1 {
+  font-size: 2em;
+}
+
+.tiptap-content h2 {
+  font-size: 1.5em;
+}
+
+.tiptap-content h3 {
+  font-size: 1.25em;
+}
+
+/* Non-editable # symbols before headings in rendered content */
+.tiptap-content h1::before {
+  content: '# ';
+  opacity: 0.3;
+  pointer-events: none;
+  user-select: none;
+}
+
+.tiptap-content h2::before {
+  content: '## ';
+  opacity: 0.3;
+  pointer-events: none;
+  user-select: none;
+}
+
+.tiptap-content h3::before {
+  content: '### ';
+  opacity: 0.3;
+  pointer-events: none;
+  user-select: none;
+}
+
+.tiptap-content h4::before {
+  content: '#### ';
+  opacity: 0.3;
+  pointer-events: none;
+  user-select: none;
+}
+
+.tiptap-content h5::before {
+  content: '##### ';
+  opacity: 0.3;
+  pointer-events: none;
+  user-select: none;
+}
+
+.tiptap-content h6::before {
+  content: '###### ';
+  opacity: 0.3;
+  pointer-events: none;
+  user-select: none;
+}

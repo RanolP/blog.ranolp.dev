@@ -1,0 +1,21 @@
+/* Horizontal Rule Styles */
+.ProseMirror hr {
+  border: none;
+  border-top: 2px solid var(--oc-gray-3);
+  margin: 2em 0;
+}
+
+.dark .ProseMirror hr {
+  border-top-color: var(--oc-gray-6);
+}
+
+/* SSR/tiptap-content horizontal rule styles */
+.tiptap-content hr {
+  border: none;
+  border-top: 2px solid var(--oc-gray-3);
+  margin: 2em 0;
+}
+
+.dark .tiptap-content hr {
+  border-top-color: var(--oc-gray-6);
+}

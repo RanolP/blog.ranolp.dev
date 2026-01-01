@@ -1,0 +1,19 @@
+/* Link Styles */
+.tiptap-link {
+  color: var(--oc-blue-7);
+  text-decoration: underline;
+}
+
+.dark .tiptap-link {
+  color: var(--oc-blue-4);
+}
+
+/* SSR/tiptap-content link styles */
+.tiptap-content .tiptap-link {
+  color: var(--oc-blue-7);
+  text-decoration: underline;
+}
+
+.dark .tiptap-content .tiptap-link {
+  color: var(--oc-blue-4);
+}

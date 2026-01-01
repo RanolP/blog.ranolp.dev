@@ -1,0 +1,5 @@
+/* Base Tiptap Editor Styles */
+.ProseMirror {
+  outline: none;
+  min-height: 300px;
+}

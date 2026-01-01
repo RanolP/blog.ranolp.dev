@@ -17,15 +17,7 @@ import {
   size,
 } from '@floating-ui/react';
 import { posToDOMRect } from '@tiptap/react';
-
-export interface MentionItem {
-  id: string;
-  label: string;
-  username?: string;
-  displayName?: string;
-  avatar?: string;
-  verified?: boolean;
-}
+import type { MentionItem } from './types';
 
 interface MentionListProps {
   items: MentionItem[];

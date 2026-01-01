@@ -1,0 +1,23 @@
+/**
+ * Tiptap Styles Barrel
+ * Import this file to include all Tiptap-related styles
+ */
+
+/* Open Color palette */
+@import 'open-color/open-color.css';
+
+/* Core styles (built-in modules) */
+@import './core/base.css';
+@import './core/paragraph.css';
+@import './core/list.css';
+@import './core/blockquote.css';
+@import './core/code.css';
+@import './core/text.css';
+@import './core/horizontal-rule.css';
+
+/* Extension styles */
+@import './extensions/heading/heading.css';
+@import './extensions/link/link.css';
+@import './extensions/placeholder/placeholder.css';
+@import './extensions/mention/mention.css';
+@import './extensions/twitter-embed/twitter-embed.css';

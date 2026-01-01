@@ -1,0 +1,27 @@
+/* Blockquote Styles */
+.ProseMirror blockquote {
+  border-left: 4px solid var(--oc-gray-3);
+  padding-left: 1em;
+  margin: 1em 0;
+  font-style: italic;
+  color: var(--oc-gray-6);
+}
+
+.dark .ProseMirror blockquote {
+  border-left-color: var(--oc-gray-6);
+  color: var(--oc-gray-5);
+}
+
+/* SSR/tiptap-content blockquote styles */
+.tiptap-content blockquote {
+  border-left: 4px solid var(--oc-gray-3);
+  padding-left: 1em;
+  margin: 1em 0;
+  font-style: italic;
+  color: var(--oc-gray-6);
+}
+
+.dark .tiptap-content blockquote {
+  border-left-color: var(--oc-gray-6);
+  color: var(--oc-gray-5);
+}

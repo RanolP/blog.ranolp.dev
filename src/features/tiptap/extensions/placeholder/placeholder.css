@@ -1,0 +1,18 @@
+/* Placeholder styles - only show on empty h1 headings */
+/* Use ::after for placeholder text since ::before is used for "# " symbol */
+.ProseMirror h1.is-empty::after {
+  color: var(--oc-gray-5);
+  content: attr(data-placeholder);
+  display: inline-block;
+  pointer-events: none;
+}
+
+.ProseMirror h1.is-empty > .ProseMirror-trailingBreak {
+  display: none;
+}
+
+.dark .ProseMirror h1.is-empty::after,
+.dark .ProseMirror.is-editor-empty h1:first-child::after,
+.dark .ProseMirror h1:first-child.is-empty::after {
+  color: var(--oc-gray-6);
+}

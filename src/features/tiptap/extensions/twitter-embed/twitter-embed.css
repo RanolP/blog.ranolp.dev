@@ -1,0 +1,28 @@
+/* Twitter Embed Styles */
+/* Using react-tweet library for rendering tweets */
+.twitter-embed {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.twitter-embed-fallback {
+  display: inline-block;
+  padding: 1em;
+  color: var(--oc-cyan-4);
+  text-decoration: none;
+}
+
+.twitter-embed-error {
+  padding: 2em;
+  text-align: center;
+  border: 1px solid var(--oc-gray-3);
+  border-radius: 0.5rem;
+  background-color: var(--oc-gray-0);
+}
+
+.dark .twitter-embed-error {
+  border-color: var(--oc-gray-7);
+  background-color: var(--oc-gray-8);
+  color: var(--oc-gray-4);
+}

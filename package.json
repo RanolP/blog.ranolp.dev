@@ -32,6 +32,7 @@
     "isbot": "^5.1.31",
     "nanoid": "^5.1.6",
     "octokit": "^5.0.5",
+    "open-color": "^1.9.1",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-router": "7.10.1",

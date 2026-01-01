@@ -1,0 +1,25 @@
+/* Paragraph Styles */
+.ProseMirror p {
+  margin: 0.75em 0;
+}
+
+.ProseMirror p:first-child {
+  margin-top: 0;
+}
+
+.ProseMirror p:last-child {
+  margin-bottom: 0;
+}
+
+/* SSR/tiptap-content paragraph styles */
+.tiptap-content p {
+  margin: 0.75em 0;
+}
+
+.tiptap-content p:first-child {
+  margin-top: 0;
+}
+
+.tiptap-content p:last-child {
+  margin-bottom: 0;
+}

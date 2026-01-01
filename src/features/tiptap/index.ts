@@ -13,10 +13,24 @@ export {
 } from './ssr';
 
 // Configuration
-export { defaultExtensions, defaultEditorOptions } from './config';
+export { defaultExtensions, ssrExtensions, defaultEditorOptions } from './config';
 
-// Custom extensions
-export { PostDocument } from './document';
+// Extensions
+export { PostDocument } from './extensions/document';
+export { HeadingWithoutMarkdown } from './extensions/heading';
+export { TiptapLink } from './extensions/link';
+export { TiptapPlaceholder } from './extensions/placeholder';
+export {
+  TiptapMention,
+  createMentionExtensionForSSR,
+  MentionList,
+  type MentionItem,
+} from './extensions/mention';
+export {
+  TwitterEmbed,
+  createTwitterEmbedExtensionForSSR,
+  TweetClient,
+} from './extensions/twitter-embed';
 
 // Re-export commonly used types
 export type { JSONContent } from '@tiptap/core';

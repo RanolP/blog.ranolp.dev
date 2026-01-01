@@ -4,7 +4,7 @@ import { NodeViewWrapper } from '@tiptap/react';
 import type { NodeViewProps } from '@tiptap/react';
 import { Tweet } from 'react-tweet';
 
-export function TwitterEmbedNode({ node }: NodeViewProps) {
+export function TwitterEmbedNodeView({ node }: NodeViewProps) {
   const url = node.attrs.url as string;
   const tweetIdRegex = /\/status\/(\d+)/g;
   const id = tweetIdRegex.exec(url)?.[1];
