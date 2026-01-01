@@ -18,7 +18,14 @@ export function MentionNode({ node }: ReactNodeViewProps) {
     attrs.displayName || attrs.username || attrs.label || attrs.id;
   // Remove any existing @ prefix and add our own
   const displayName = rawDisplayName.replace(/^@+/, '');
-  const displayNameWithAt = `@${displayName}`;
+  const username = attrs.username?.replace(/^@+/, '') || displayName;
+  // Determine if we should show displayName separately
+  const showDisplayName =
+    attrs.displayName && attrs.displayName !== username;
+  // For alt text, use the full format
+  const displayNameWithAt = showDisplayName
+    ? `${attrs.displayName} @${username}`
+    : `@${username}`;
 
   // Generate URL based on platform
   const getMentionUrl = () => {
@@ -89,7 +96,14 @@ export function MentionNode({ node }: ReactNodeViewProps) {
             </span>
           )}
           <span className="mention-text">
-            <span className="mention-name">{displayNameWithAt}</span>
+            {showDisplayName ? (
+              <>
+                <span className="mention-name">{attrs.displayName}</span>{' '}
+                <span className="mention-handle">@{username}</span>
+              </>
+            ) : (
+              <span className="mention-handle">@{username}</span>
+            )}
             {attrs.verified && platform === 'twitter' && (
               <Icon
                 icon="mdi:check-circle"

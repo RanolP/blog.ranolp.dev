@@ -381,7 +381,14 @@ function createMentionExtensionForSSR() {
         attrs.displayName || attrs.username || attrs.label || attrs.id;
       // Remove any existing @ prefix and add our own
       const displayName = rawDisplayName.replace(/^@+/, '');
-      const displayNameWithAt = `@${displayName}`;
+      const username = attrs.username?.replace(/^@+/, '') || displayName;
+      // Determine if we should show displayName separately
+      const showDisplayName =
+        attrs.displayName && attrs.displayName !== username;
+      // For alt text, use the full format
+      const displayNameWithAt = showDisplayName
+        ? `${attrs.displayName} @${username}`
+        : `@${username}`;
 
       // Generate URL based on platform
       const getMentionUrl = () => {
@@ -474,12 +481,18 @@ function createMentionExtensionForSSR() {
         (displayName[0] || '@').toUpperCase(),
       ]);
 
-      // Text content
-      content.push([
-        'span',
-        { class: 'mention-text' },
-        ['span', { class: 'mention-name' }, displayNameWithAt],
-      ]);
+      // Text content - split displayName and username for styling
+      const textContent: any[] = ['span', { class: 'mention-text' }];
+      if (showDisplayName) {
+        textContent.push(
+          ['span', { class: 'mention-name' }, attrs.displayName],
+          ' ',
+          ['span', { class: 'mention-handle' }, `@${username}`],
+        );
+      } else {
+        textContent.push(['span', { class: 'mention-handle' }, `@${username}`]);
+      }
+      content.push(textContent);
 
       return [
         'span',
@@ -662,16 +675,13 @@ export const defaultExtensions: Extensions = [
     },
     renderLabel({ node }) {
       const attrs = node.attrs as MentionItem;
-      // Use displayName or username if available, otherwise fall back to id
-      if (attrs.displayName) {
-        return `@${attrs.displayName}`;
+      // Format as: displayName @username (or just @username if no displayName or if displayName === username)
+      const username =
+        attrs.username?.replace(/^@+/, '') || attrs.id.replace(/^(tw|gh):/, '');
+      if (attrs.displayName && attrs.displayName !== username) {
+        return `${attrs.displayName} @${username}`;
       }
-      if (attrs.username) {
-        return `@${attrs.username}`;
-      }
-      // Remove the 'tw:' or 'gh:' prefix from id for display
-      const id = attrs.id.replace(/^(tw|gh):/, '');
-      return `@${id}`;
+      return `@${username}`;
     },
   }),
   Placeholder.configure({
